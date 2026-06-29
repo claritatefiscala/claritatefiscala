@@ -1,0 +1,72 @@
+<svg width="800" height="800" viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2d1b4e"/>
+      <stop offset="100%" style="stop-color:#3d2460"/>
+    </linearGradient>
+    <linearGradient id="accent3" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#a78bfa"/>
+      <stop offset="100%" style="stop-color:#c4b5fd"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="800" fill="url(#bg3)"/>
+
+  <!-- Decoratiuni -->
+  <circle cx="680" cy="130" r="190" fill="none" stroke="rgba(167,139,250,0.1)" stroke-width="1"/>
+  <circle cx="680" cy="130" r="130" fill="none" stroke="rgba(167,139,250,0.07)" stroke-width="1"/>
+  <circle cx="100" cy="700" r="210" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="1"/>
+
+  <!-- Linie sus -->
+  <rect x="60" y="70" width="120" height="3" fill="url(#accent3)" rx="2"/>
+
+  <!-- Eticheta -->
+  <text x="60" y="120" font-family="'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="600" letter-spacing="3" fill="#a78bfa">INSTRUMENT EXCEL</text>
+
+  <!-- Titlu -->
+  <text x="60" y="220" font-size="52" font-weight="700" fill="#ffffff" letter-spacing="-0.5">Calculator</text>
+  <text x="60" y="295" font-size="66" font-weight="700" fill="#a78bfa" letter-spacing="-1">Taxe PFA</text>
+  <text x="60" y="355" font-size="40" font-weight="400" fill="rgba(255,255,255,0.65)" letter-spacing="2">2026</text>
+
+  <!-- Linie separator -->
+  <rect x="60" y="385" width="680" height="1" fill="rgba(167,139,250,0.25)"/>
+
+  <!-- Subtitlu -->
+  <text x="60" y="420" font-family="'Helvetica Neue', Arial, sans-serif" font-size="15" fill="rgba(255,255,255,0.6)">Calculează instant impozit · CAS · CASS · Actualizat 2026</text>
+
+  <!-- Mock calculator visual -->
+  <rect x="60" y="445" width="310" height="130" rx="10" fill="rgba(255,255,255,0.06)" stroke="rgba(167,139,250,0.3)" stroke-width="1"/>
+  <text x="80" y="472" font-family="'Helvetica Neue', Arial, sans-serif" font-size="12" fill="rgba(255,255,255,0.5)">Venit net anual</text>
+  <text x="80" y="496" font-family="'Helvetica Neue', Arial, sans-serif" font-size="20" font-weight="700" fill="#ffffff">90.000 lei</text>
+  <rect x="80" y="508" width="270" height="1" fill="rgba(255,255,255,0.1)"/>
+  <text x="80" y="530" font-family="'Helvetica Neue', Arial, sans-serif" font-size="12" fill="rgba(255,255,255,0.4)">Impozit venit</text>
+  <text x="280" y="530" text-anchor="end" font-family="'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="600" fill="#a78bfa">6.885 lei</text>
+  <text x="80" y="552" font-family="'Helvetica Neue', Arial, sans-serif" font-size="12" fill="rgba(255,255,255,0.4)">CAS + CASS</text>
+  <text x="280" y="552" text-anchor="end" font-family="'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="600" fill="#a78bfa">21.150 lei</text>
+  <text x="80" y="565" font-family="'Helvetica Neue', Arial, sans-serif" font-size="10" fill="rgba(255,255,255,0.25)">(exemplu ilustrativ, sistem real)</text>
+
+  <!-- Features -->
+  <text x="420" y="472" font-family="'Helvetica Neue', Arial, sans-serif" font-size="15" fill="#a78bfa">✓</text>
+  <text x="442" y="472" font-family="'Helvetica Neue', Arial, sans-serif" font-size="14" fill="rgba(255,255,255,0.8)">Normă de venit, Sistem real, PFA vs SRL</text>
+
+  <text x="420" y="500" font-family="'Helvetica Neue', Arial, sans-serif" font-size="15" fill="#a78bfa">✓</text>
+  <text x="442" y="500" font-family="'Helvetica Neue', Arial, sans-serif" font-size="14" fill="rgba(255,255,255,0.8)">Plafoane CAS și CASS actualizate 2026</text>
+
+  <text x="420" y="528" font-family="'Helvetica Neue', Arial, sans-serif" font-size="15" fill="#a78bfa">✓</text>
+  <text x="442" y="528" font-family="'Helvetica Neue', Arial, sans-serif" font-size="14" fill="rgba(255,255,255,0.8)">Compatibil Excel + Google Sheets</text>
+
+  <text x="420" y="556" font-family="'Helvetica Neue', Arial, sans-serif" font-size="15" fill="#a78bfa">✓</text>
+  <text x="442" y="556" font-family="'Helvetica Neue', Arial, sans-serif" font-size="14" fill="rgba(255,255,255,0.8)">Rezultate instant, fără formule</text>
+
+  <!-- Linie separator jos -->
+  <rect x="60" y="622" width="680" height="1" fill="rgba(255,255,255,0.08)"/>
+
+  <!-- Footer -->
+  <text x="60" y="668" font-family="'Helvetica Neue', Arial, sans-serif" font-size="18" font-weight="700" fill="#a78bfa" letter-spacing="0.5">Fiscalitate fără panică</text>
+  <text x="60" y="692" font-family="'Helvetica Neue', Arial, sans-serif" font-size="12" fill="rgba(255,255,255,0.3)">Informații cu caracter orientativ. Consultă un expert fiscal pentru situația ta specifică.</text>
+
+  <!-- Badge format -->
+  <rect x="610" y="636" width="130" height="44" rx="8" fill="rgba(167,139,250,0.12)" stroke="#a78bfa" stroke-width="1"/>
+  <text x="675" y="653" text-anchor="middle" font-family="'Helvetica Neue', Arial, sans-serif" font-size="11" fill="#a78bfa" font-weight="600">FIȘIER EXCEL</text>
+  <text x="675" y="671" text-anchor="middle" font-family="'Helvetica Neue', Arial, sans-serif" font-size="11" fill="rgba(255,255,255,0.4)">.xlsx descărcabil</text>
+</svg>

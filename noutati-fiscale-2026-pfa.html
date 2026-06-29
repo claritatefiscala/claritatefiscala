@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ce schimbări aduce 2026 pentru PFA-uri · Claritate Fiscală</title>
+  <meta name="description" content="POS obligatoriu, e-Factura 5 zile, CASS maxim 291.600 lei, salariu minim 4.325 lei — tot ce s-a schimbat în 2026 pentru PFA-uri, explicat simplu." />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --navy:   #1a2744;
+      --navy-2: #243258;
+      --gold:   #c9a84c;
+      --gold-lt:#e8d5a3;
+      --cream:  #faf8f4;
+      --white:  #ffffff;
+      --text:   #2c2c2c;
+      --muted:  #6b7280;
+      --border: #e5e1d8;
+      --radius: 12px;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; color: var(--text); background: var(--white); line-height: 1.7; }
+
+    /* NAV */
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--border);
+      padding: 0 5%;
+      display: flex; align-items: center; justify-content: space-between;
+      height: 64px;
+    }
+    .nav-logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1rem; color: var(--navy);
+      text-decoration: none; font-weight: 700;
+    }
+    .nav-logo span { color: var(--gold); }
+    .nav-back {
+      font-size: 0.85rem; color: var(--muted);
+      text-decoration: none; display: flex; align-items: center; gap: 0.4rem;
+      transition: color .2s;
+    }
+    .nav-back:hover { color: var(--navy); }
+
+    /* HERO ARTICOL */
+    .article-hero {
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-2) 60%, #2e4070 100%);
+      color: var(--white);
+      padding: 64px 5% 56px;
+    }
+    .article-hero-inner { max-width: 760px; margin: 0 auto; }
+    .article-cat {
+      display: inline-block;
+      background: rgba(201,168,76,0.2);
+      color: var(--gold-lt);
+      border: 1px solid rgba(201,168,76,0.35);
+      font-size: 0.72rem; font-weight: 600;
+      text-transform: uppercase; letter-spacing: 0.08em;
+      padding: 0.3rem 0.8rem; border-radius: 20px;
+      margin-bottom: 1.2rem;
+    }
+    .article-hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.7rem, 4vw, 2.4rem);
+      line-height: 1.25; margin-bottom: 1rem;
+    }
+    .article-hero .lead {
+      font-size: 1.05rem; color: rgba(255,255,255,0.82);
+      margin-bottom: 1.5rem; max-width: 640px;
+    }
+    .article-meta { font-size: 0.8rem; color: rgba(255,255,255,0.5); }
+
+    /* BODY */
+    .article-body {
+      max-width: 760px; margin: 0 auto;
+      padding: 3rem 5% 5rem;
+    }
+
+    .article-body h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.4rem; color: var(--navy);
+      margin: 2.5rem 0 0.8rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid var(--gold-lt);
+    }
+    .article-body h3 {
+      font-size: 1.05rem; font-weight: 600;
+      color: var(--navy); margin: 1.8rem 0 0.5rem;
+    }
+    .article-body p { margin-bottom: 1rem; font-size: 0.97rem; }
+    .article-body ul, .article-body ol {
+      margin: 0.5rem 0 1rem 1.4rem;
+      font-size: 0.97rem;
+    }
+    .article-body li { margin-bottom: 0.4rem; }
+
+    /* CALLOUT */
+    .callout {
+      background: var(--cream);
+      border-left: 4px solid var(--gold);
+      border-radius: 0 var(--radius) var(--radius) 0;
+      padding: 1rem 1.2rem;
+      margin: 1.5rem 0;
+    }
+    .callout.danger { border-color: #e05252; background: #fff5f5; }
+    .callout strong { color: var(--navy); }
+
+    /* TABLE */
+    .tbl-wrap { overflow-x: auto; margin: 1.5rem 0; }
+    table { width: 100%; border-collapse: collapse; font-size: 0.88rem; }
+    th {
+      background: var(--navy); color: var(--white);
+      padding: 0.7rem 1rem; text-align: left; font-weight: 600;
+    }
+    td { padding: 0.65rem 1rem; border-bottom: 1px solid var(--border); }
+    tr:nth-child(even) td { background: var(--cream); }
+    .tag-new {
+      display: inline-block;
+      background: var(--gold); color: var(--navy);
+      font-size: 0.65rem; font-weight: 700;
+      text-transform: uppercase; padding: 0.1rem 0.4rem;
+      border-radius: 4px; margin-left: 0.4rem; vertical-align: middle;
+    }
+
+    /* CTA */
+    .cta-box {
+      background: linear-gradient(135deg, var(--navy), var(--navy-2));
+      color: var(--white);
+      border-radius: var(--radius);
+      padding: 2rem 2.5rem;
+      margin: 3rem 0 0;
+      text-align: center;
+    }
+    .cta-box h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.3rem; color: var(--white);
+      margin-bottom: 0.6rem;
+    }
+    .cta-box p { color: rgba(255,255,255,0.75); margin-bottom: 1.4rem; font-size: 0.93rem; }
+    .btn-gold {
+      display: inline-block;
+      background: var(--gold); color: var(--navy);
+      font-weight: 700; font-size: 0.9rem;
+      padding: 0.75rem 2rem; border-radius: 8px;
+      text-decoration: none; transition: opacity .2s;
+    }
+    .btn-gold:hover { opacity: 0.88; }
+
+    /* FOOTER */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 1.5rem 5%;
+      text-align: center;
+      font-size: 0.8rem; color: var(--muted);
+    }
+    footer a { color: var(--gold); text-decoration: none; }
+
+    @media (max-width: 600px) {
+      .article-hero { padding: 48px 5% 40px; }
+      .article-body { padding: 2rem 5% 4rem; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">Claritate <span>Fiscală</span></a>
+  <a href="index.html" class="nav-back">← Înapoi la site</a>
+</nav>
+
+<header class="article-hero">
+  <div class="article-hero-inner">
+    <span class="article-cat">PFA · Noutăți 2026</span>
+    <h1>Ce schimbări aduce 2026 pentru PFA-uri</h1>
+    <p class="lead">POS obligatoriu, e-Factura cu termen mai scurt, CASS plafon crescut și salariu minim nou. Tot ce trebuie să știi pentru a nu fi luat prin surprindere.</p>
+    <div class="article-meta">Alina Savu · Claritate Fiscală · Actualizat 2026</div>
+  </div>
+</header>
+
+<article class="article-body">
+
+  <p>Fiecare an aduce modificări fiscale — uneori minore, alteori semnificative. Anul 2026 nu face excepție. Unele schimbări afectează direct bugetul unui PFA, altele sunt mai degrabă obligații administrative. Le-am adunat pe toate într-un singur loc, ca să nu trebuiești să cauți prin zeci de articole.</p>
+
+  <div class="callout">
+    <strong>Notă:</strong> Informațiile de mai jos au caracter orientativ. Legislația se poate modifica. Pentru situația ta specifică, consultă un expert contabil.
+  </div>
+
+  <h2>1. POS obligatoriu — amendă de până la 50.000 lei</h2>
+
+  <p>Orice PFA înregistrată la ONRC care încasează plăți prin alte mijloace decât exclusiv transfer bancar trebuie să accepte și plata cu cardul. În practică, dacă ai contact direct cu publicul și încasezi cash sau prin alte metode, obligația te vizează — nu contează dacă ai un magazin fizic, oferi servicii la domiciliu sau vinzi online.</p>
+
+  <p>Ce se acceptă ca metodă de plată electronică:</p>
+  <ul>
+    <li>POS fizic (terminal card)</li>
+    <li>SoftPOS (aplicație pe telefon)</li>
+    <li>Link de plată online</li>
+  </ul>
+
+  <div class="callout danger">
+    <strong>Atenție la amenzi:</strong> Refuzul de a accepta plata cu cardul = 5.000–7.500 lei. Neimplementarea unui sistem de plată electronică = <strong>20.000–50.000 lei</strong> (OUG 193/2002, art. 3 alin. 2 lit. c, modificat prin Legea 239/2025). Excepție: PFA-uri cu operațiuni exclusiv prin conturi bancare (B2B).
+  </div>
+
+  <p>Dacă vinzi ghiduri digitale sau servicii exclusiv online, un link de plată (Stripe, PayPal, Revolut Business) satisface această obligație. Nu ai nevoie neapărat de POS fizic.</p>
+
+  <h2>2. e-Factura: 5 zile LUCRĂTOARE, nu calendaristice</h2>
+
+  <p>Sistemul RO e-Factura era deja obligatoriu din 2024. Ce s-a schimbat în 2026 este <strong>termenul de transmitere</strong>: de la 5 zile calendaristice la <strong>5 zile lucrătoare</strong> de la data emiterii facturii.</p>
+
+  <p>La prima vedere pare o relaxare — mai ai timp. În practică, trebuie să fii mai atent, pentru că nu mai e vorba de zile consecutive, ci de zile în care ANAF este activ.</p>
+
+  <div class="callout danger">
+    <strong>Amendă pentru nerespectare:</strong> pentru transmiterea cu întârziere, amenda este fixă (nu procentuală): 1.000–2.500 lei pentru PFA și persoane fizice, 2.500–5.000 lei pentru firme mijlocii, 5.000–10.000 lei pentru firme mari. Penalitatea de <strong>15% din valoarea facturii</strong> se aplică doar dacă o factură B2B nu este transmisă deloc prin e-Factura, nu pentru o transmitere întârziată.
+  </div>
+
+  <p>Soluție practică: transmite factura în e-Factura în aceeași zi sau cel târziu a doua zi după emitere. Nu lăsa să se acumuleze.</p>
+
+  <h2>3. Salariu minim: 4.325 lei din iulie 2026</h2>
+
+  <p>Prin HG 146/2026, salariul minim brut crește de la 4.050 lei/lună la <strong>4.325 lei/lună</strong> începând cu 1 iulie 2026. De ce contează pentru un PFA? Pentru că salariul minim este referința pentru calculul plafoanelor CAS și CASS.</p>
+
+  <div class="tbl-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Perioadă</th>
+          <th>Salariu minim</th>
+          <th>Plafon CAS min (12×)</th>
+          <th>Plafon CASS min (6×)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Ian–iun 2026</td><td>4.050 lei/lună</td><td>48.600 lei</td><td>24.300 lei</td></tr>
+        <tr><td>Iul–dec 2026 <span class="tag-new">NOU</span></td><td>4.325 lei/lună</td><td>~51.900 lei</td><td>~25.950 lei</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p>Dacă ești la normă de venit sau folosești calculatorul de taxe, verifică dacă plafoanele s-au actualizat după iulie.</p>
+
+  <h2>4. CASS maxim 2026: 291.600 lei (72 salarii minime)</h2>
+
+  <p>Plafonul maxim al bazei de calcul CASS a crescut față de 2025. Concret:</p>
+
+  <div class="tbl-wrap">
+    <table>
+      <thead>
+        <tr><th>An</th><th>Plafon maxim CASS</th><th>CASS maxim de plătit</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>2025</td><td>243.000 lei (60 sal.min.)</td><td>24.300 lei/an</td></tr>
+        <tr><td>2026 <span class="tag-new">NOU</span></td><td>291.600 lei (72 sal.min.)</td><td>29.160 lei/an</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p>Dacă venitul tău net depășește 291.600 lei, CASS rămâne plafonat la 29.160 lei/an — nu crește mai mult indiferent de cât câștigi. Dacă ești sub acest prag, CASS este 10% din venitul net.</p>
+
+  <h2>5. Plafonul TVA: 395.000 lei</h2>
+
+  <p>Plafonul de scutire TVA a fost majorat de la 300.000 lei la <strong>395.000 lei</strong> cifră de afaceri anuală. Dacă ești sub acest prag, nu ești obligat să te înregistrezi ca plătitor de TVA.</p>
+
+  <p>Dacă depășești 395.000 lei în cursul anului, trebuie să depui D700 <strong>înainte</strong> de tranzacția care provoacă depășirea — nu după. Nerespectarea atrage penalități și obligația retroactivă de a colecta TVA.</p>
+
+  <h2>6. Dividende 16% și modificări SRL — relevant dacă iei în calcul forma juridică</h2>
+
+  <p>Din 1 ianuarie 2026, impozitul pe dividende a crescut de la 10% la <strong>16%</strong>. Această modificare nu afectează direct PFA-urile (care nu distribuie dividende), dar contează dacă te gândești să treci la SRL sau dacă ai deja un SRL.</p>
+
+  <p>De asemenea, capitalul social minim al SRL-urilor nou înființate a crescut la 500 lei. Dacă cifra de afaceri depășește 400.000 lei, capitalul social trebuie majorat la 5.000 lei până la 18 decembrie 2027.</p>
+
+  <h2>Ce nu s-a schimbat</h2>
+
+  <p>Cotele de bază rămân aceleași: impozit pe venit 10%, CAS 25%, CASS 10%. Termenul principal de depunere D212 este tot <strong>25 mai</strong>. Plafonul pentru norma de venit rămâne 25.000 euro (≈ 126.038 lei la cursul mediu BNR 2025).</p>
+
+  <h2>Rezumat rapid</h2>
+
+  <div class="tbl-wrap">
+    <table>
+      <thead>
+        <tr><th>Modificare</th><th>Ce înseamnă pentru tine</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>POS obligatoriu</td><td>Acceptă plata cu cardul sau link de plată online</td></tr>
+        <tr><td>e-Factura 5 zile lucrătoare</td><td>Transmite factura rapid, nu lăsa să expire termenul</td></tr>
+        <tr><td>Salariu minim 4.325 lei (iul)</td><td>Recalculează plafoanele CAS/CASS de la iulie</td></tr>
+        <tr><td>CASS max 291.600 lei</td><td>Dacă ai venituri mari, plătești mai mult CASS</td></tr>
+        <tr><td>Plafon TVA 395.000 lei</td><td>Mai mult spațiu înainte de obligația TVA</td></tr>
+        <tr><td>Dividende 16%</td><td>SRL devine mai puțin avantajos față de PFA</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p>Dacă vrei să înțelegi exact cum se calculează taxele în 2026 — CAS, CASS, impozit pe venit, normă vs sistem real — ghidul complet PFA fără panică acoperă toate scenariile cu exemple numerice concrete.</p>
+
+  <div class="cta-box">
+    <h3>Ghid PFA fără panică — Actualizat 2026</h3>
+    <p>Calcule complete, plafoane la zi, greșeli de evitat. Tot ce ai nevoie să știi despre taxele unui PFA, explicat fără jargon.</p>
+    <a href="index.html#ghiduri" class="btn-gold">Vezi ghidul →</a>
+  </div>
+
+</article>
+
+<footer>
+  <p>© 2026 Alina Savu · <a href="index.html">Claritate Fiscală</a> · <a href="mailto:claritate.fiscala@gmail.com">claritate.fiscala@gmail.com</a></p>
+  <p style="margin-top:0.4rem; font-size:0.75rem;">Informații cu caracter orientativ. Consultă un expert fiscal pentru situația ta specifică.</p>
+</footer>
+
+</body>
+</html>

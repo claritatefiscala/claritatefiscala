@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Claritate Fiscală · Alina Savu</title>
+  <link rel="icon" type="image/svg+xml" href="icon_brand.svg" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --navy:    #1a2744;
+      --navy-2:  #243258;
+      --gold:    #c9a84c;
+      --gold-lt: #e8d5a3;
+      --cream:   #faf8f4;
+      --white:   #ffffff;
+      --text:    #2c2c2c;
+      --muted:   #6b7280;
+      --border:  #e5e1d8;
+      --radius:  12px;
+    }
+
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--text);
+      background: var(--white);
+      line-height: 1.6;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--border);
+      padding: 0 5%;
+      display: flex; align-items: center; justify-content: space-between;
+      height: 64px;
+    }
+    .nav-logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.15rem;
+      color: var(--navy);
+      text-decoration: none;
+      font-weight: 700;
+      letter-spacing: 0.01em;
+    }
+    .nav-logo span { color: var(--gold); }
+    .nav-links { display: flex; gap: 2rem; list-style: none; }
+    .nav-links a {
+      text-decoration: none;
+      color: var(--muted);
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: color .2s;
+    }
+    .nav-links a:hover { color: var(--navy); }
+    .nav-cta {
+      background: var(--navy);
+      color: var(--white) !important;
+      padding: 0.45rem 1.1rem;
+      border-radius: 6px;
+      font-size: 0.85rem !important;
+      transition: background .2s !important;
+    }
+    .nav-cta:hover { background: var(--navy-2) !important; color: var(--white) !important; }
+
+    /* ── HERO ── */
+    .hero {
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-2) 60%, #2e4070 100%);
+      color: var(--white);
+      padding: 100px 5% 90px;
+      display: flex; align-items: center; gap: 4rem;
+    }
+    .hero-text { flex: 1; max-width: 560px; }
+    .hero-badge {
+      display: inline-block;
+      background: rgba(201,168,76,0.2);
+      border: 1px solid rgba(201,168,76,0.5);
+      color: var(--gold-lt);
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 0.35rem 0.9rem;
+      border-radius: 100px;
+      margin-bottom: 1.4rem;
+    }
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 4vw, 3rem);
+      line-height: 1.2;
+      margin-bottom: 1.2rem;
+    }
+    .hero h1 span { color: var(--gold); }
+    .hero p {
+      font-size: 1.05rem;
+      color: rgba(255,255,255,0.8);
+      margin-bottom: 2rem;
+      max-width: 460px;
+    }
+    .hero-btns { display: flex; gap: 1rem; flex-wrap: wrap; }
+    .btn-primary {
+      background: var(--gold);
+      color: var(--navy);
+      padding: 0.75rem 1.6rem;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      text-decoration: none;
+      transition: filter .2s;
+    }
+    .btn-primary:hover { filter: brightness(1.08); }
+    .btn-outline {
+      background: transparent;
+      border: 1px solid rgba(255,255,255,0.4);
+      color: var(--white);
+      padding: 0.75rem 1.6rem;
+      border-radius: 8px;
+      font-weight: 500;
+      font-size: 0.95rem;
+      text-decoration: none;
+      transition: background .2s;
+    }
+    .btn-outline:hover { background: rgba(255,255,255,0.08); }
+
+    .hero-photo {
+      flex-shrink: 0;
+      width: 260px; height: 300px;
+      border-radius: 16px;
+      background: rgba(255,255,255,0.08);
+      border: 2px solid rgba(201,168,76,0.3);
+      display: flex; align-items: center; justify-content: center;
+      flex-direction: column;
+      gap: 0.8rem;
+      color: rgba(255,255,255,0.4);
+      font-size: 0.8rem;
+      text-align: center;
+      padding: 1rem;
+    }
+    .hero-photo svg { opacity: 0.3; }
+
+    /* ── STATS BAR ── */
+    .stats-bar {
+      background: var(--cream);
+      border-bottom: 1px solid var(--border);
+      padding: 1.6rem 5%;
+      display: flex; justify-content: center; gap: 0;
+    }
+    .stat {
+      text-align: center;
+      padding: 0 3rem;
+      border-right: 1px solid var(--border);
+    }
+    .stat:last-child { border-right: none; }
+    .stat-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.7rem;
+      color: var(--navy);
+      font-weight: 700;
+      line-height: 1;
+    }
+    .stat-lbl { font-size: 0.78rem; color: var(--muted); margin-top: 0.3rem; }
+
+    /* ── SECTIONS ── */
+    section { padding: 80px 5%; }
+    .section-label {
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.6rem;
+    }
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.5rem, 3vw, 2.2rem);
+      color: var(--navy);
+      max-width: 520px;
+      line-height: 1.25;
+      margin-bottom: 1rem;
+    }
+    .section-sub { color: var(--muted); max-width: 540px; margin-bottom: 3rem; }
+
+    /* ── DESPRE ── */
+    .despre { background: var(--white); }
+    .despre-inner {
+      display: flex; gap: 4rem; align-items: center;
+    }
+    .despre-img {
+      flex-shrink: 0;
+      width: 280px; height: 320px;
+      border-radius: 16px;
+      background: var(--navy);
+      display: flex; align-items: center; justify-content: center;
+      flex-direction: column; gap: 0.6rem;
+      text-align: center; padding: 1rem;
+    }
+    .despre-img-initial {
+      font-family: 'Playfair Display', serif;
+      font-size: 5rem;
+      color: var(--gold);
+      font-weight: 700;
+      line-height: 1;
+    }
+    .despre-img-name { color: rgba(255,255,255,0.7); font-size: 0.9rem; font-weight: 500; }
+    .despre-img-brand { color: var(--gold-lt); font-size: 0.75rem; }
+    .despre-text { flex: 1; }
+    .despre-text p { color: #444; margin-bottom: 1rem; }
+    .check-list { list-style: none; margin-bottom: 2rem; }
+    .check-list li {
+      padding: 0.4rem 0;
+      padding-left: 1.6rem;
+      position: relative;
+      color: #444;
+      font-size: 0.95rem;
+    }
+    .check-list li::before {
+      content: '✓';
+      position: absolute; left: 0;
+      color: var(--gold);
+      font-weight: 700;
+    }
+
+    /* ── GHIDURI ── */
+    .ghiduri { background: var(--cream); }
+    .ghiduri-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 1.5rem;
+    }
+    .ghid-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 0;
+      display: flex; flex-direction: column;
+      overflow: hidden;
+      transition: box-shadow .2s, transform .2s;
+      text-decoration: none; color: inherit;
+    }
+    .ghid-card:hover { box-shadow: 0 8px 32px rgba(26,39,68,0.1); transform: translateY(-2px); }
+    .ghid-card.pachet {
+      border-color: rgba(201,168,76,0.4);
+    }
+    .ghid-cover {
+      width: 100%;
+      aspect-ratio: 3 / 2;
+      overflow: hidden;
+      background: var(--cream);
+      flex-shrink: 0;
+    }
+    .ghid-cover img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      object-position: top;
+      display: block;
+    }
+    .ghid-body {
+      padding: 1.2rem 1.4rem;
+      display: flex; flex-direction: column;
+      flex: 1;
+    }
+    .ghid-tag {
+      font-size: 0.7rem; font-weight: 600;
+      text-transform: uppercase; letter-spacing: 0.06em;
+      color: var(--gold); margin-bottom: 0.4rem;
+    }
+    .ghid-card h3 { font-size: 1rem; font-weight: 600; color: var(--navy); margin-bottom: 0.5rem; }
+    .ghid-card p { font-size: 0.85rem; color: var(--muted); flex: 1; margin-bottom: 1.2rem; }
+    .ghid-footer { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; }
+    .ghid-price {
+      font-weight: 700; font-size: 1.1rem; color: var(--navy);
+    }
+    .ghid-price-old {
+      text-decoration: line-through;
+      color: var(--muted);
+      font-size: 0.8rem;
+      font-weight: 400;
+      margin-right: 0.3rem;
+    }
+    .ghid-price span { font-size: 0.75rem; font-weight: 400; color: var(--muted); }
+    .btn-buy {
+      background: var(--navy);
+      color: var(--white);
+      padding: 0.45rem 1rem;
+      border-radius: 6px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background .2s;
+    }
+    .btn-buy:hover { background: var(--navy-2); }
+    .ghid-badge {
+      background: #ecfdf5; color: #059669;
+      font-size: 0.7rem; font-weight: 600;
+      padding: 0.2rem 0.6rem; border-radius: 100px;
+      margin-left: 0.5rem; vertical-align: middle;
+    }
+    .savings-badge {
+      background: rgba(201,168,76,0.12);
+      border: 1px solid rgba(201,168,76,0.35);
+      color: var(--gold);
+      font-size: 0.7rem; font-weight: 700;
+      padding: 0.2rem 0.6rem; border-radius: 100px;
+      display: inline-block; margin-bottom: 0.8rem;
+    }
+    .subsection-label {
+      font-size: 0.8rem; font-weight: 700;
+      letter-spacing: 0.08em; text-transform: uppercase;
+      color: var(--muted);
+      margin: 2.5rem 0 1.2rem;
+      display: flex; align-items: center; gap: 1rem;
+    }
+    .subsection-label::after {
+      content: ''; flex: 1;
+      height: 1px; background: var(--border);
+    }
+
+    /* ── NOUTATI ── */
+    .noutati { background: var(--white); }
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 1.5rem;
+    }
+    .blog-card {
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      transition: box-shadow .2s;
+      text-decoration: none; color: inherit;
+    }
+    .blog-card:hover { box-shadow: 0 6px 24px rgba(26,39,68,0.09); }
+    .blog-img {
+      height: 160px;
+      background: linear-gradient(135deg, var(--navy) 0%, #2e4070 100%);
+      display: flex; align-items: center; justify-content: center;
+      color: rgba(255,255,255,0.3); font-size: 0.8rem;
+    }
+    .blog-img-emoji { font-size: 2.5rem; }
+    .blog-body { padding: 1.2rem 1.4rem; }
+    .blog-cat {
+      font-size: 0.7rem; font-weight: 600;
+      text-transform: uppercase; letter-spacing: 0.06em;
+      color: var(--gold); margin-bottom: 0.4rem;
+    }
+    .blog-card h3 { font-size: 0.95rem; font-weight: 600; color: var(--navy); margin-bottom: 0.5rem; line-height: 1.4; }
+    .blog-card p { font-size: 0.82rem; color: var(--muted); margin-bottom: 0.8rem; }
+    .blog-meta { font-size: 0.75rem; color: #aaa; }
+
+    /* ── SOCIAL / NEWSLETTER ── */
+    .social-section {
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-2) 100%);
+      color: var(--white);
+      text-align: center;
+      padding: 80px 5%;
+    }
+    .social-section .section-title { color: var(--white); margin: 0 auto 0.8rem; }
+    .social-section > p { color: rgba(255,255,255,0.75); margin-bottom: 2.5rem; max-width: 460px; margin-left: auto; margin-right: auto; }
+    .social-buttons {
+      display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;
+      margin-bottom: 2.5rem;
+    }
+    .social-btn {
+      display: flex; align-items: center; gap: 0.6rem;
+      padding: 0.75rem 1.6rem;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-decoration: none;
+      transition: filter .2s;
+    }
+    .social-btn.instagram {
+      background: linear-gradient(135deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+      color: white;
+    }
+    .social-btn.facebook {
+      background: #1877f2;
+      color: white;
+    }
+    .social-btn:hover { filter: brightness(1.1); }
+    .newsletter-divider {
+      border-top: 1px solid rgba(255,255,255,0.15);
+      padding-top: 2rem;
+      margin-top: 0.5rem;
+    }
+    .newsletter-coming {
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.5);
+      margin-bottom: 1rem;
+    }
+    .newsletter-form {
+      display: flex; gap: 0.6rem; justify-content: center; flex-wrap: wrap;
+      max-width: 460px; margin: 0 auto;
+    }
+    .newsletter-form input {
+      flex: 1; min-width: 220px;
+      padding: 0.75rem 1.1rem;
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: 8px;
+      background: rgba(255,255,255,0.1);
+      color: var(--white);
+      font-size: 0.9rem;
+      outline: none;
+    }
+    .newsletter-form input::placeholder { color: rgba(255,255,255,0.45); }
+    .newsletter-form button {
+      background: var(--gold);
+      color: var(--navy);
+      border: none; cursor: pointer;
+      padding: 0.75rem 1.4rem;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      transition: filter .2s;
+    }
+    .newsletter-form button:hover { filter: brightness(1.08); }
+    .newsletter-note { font-size: 0.75rem; color: rgba(255,255,255,0.35); margin-top: 0.8rem; }
+
+    /* ── FOOTER ── */
+    footer {
+      background: #111827;
+      color: rgba(255,255,255,0.5);
+      padding: 2.5rem 5%;
+      display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;
+      font-size: 0.82rem;
+    }
+    footer a { color: rgba(255,255,255,0.5); text-decoration: none; }
+    footer a:hover { color: rgba(255,255,255,0.8); }
+    .footer-links { display: flex; gap: 1.5rem; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 768px) {
+      .hero { flex-direction: column; gap: 2rem; padding: 60px 5%; }
+      .hero-photo { width: 100%; max-width: 300px; height: 200px; }
+      .despre-inner { flex-direction: column; }
+      .despre-img { width: 100%; height: 180px; }
+      .stats-bar { flex-wrap: wrap; gap: 1rem; }
+      .stat { border-right: none; border-bottom: 1px solid var(--border); padding: 0.8rem 1.5rem; }
+      .stat:last-child { border-bottom: none; }
+      nav .nav-links { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a class="nav-logo" href="#">Claritate <span>Fiscală</span></a>
+  <ul class="nav-links">
+    <li><a href="#despre">Despre</a></li>
+    <li><a href="#ghiduri">Ghiduri</a></li>
+    <li><a href="#noutati">Noutăți</a></li>
+    <li><a href="#social" class="nav-cta">Urmărește-mă</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-text">
+    <div class="hero-badge">Contabil · 10+ ani experiență în fiscalitate</div>
+    <h1>Fiscalitate pe <span>înțelesul tău</span></h1>
+    <p>Ghiduri clare și resurse practice pentru PFA-uri și antreprenori. Înțelegi exact ce taxe plătești, când le plătești și cum să eviți greșelile costisitoare.</p>
+    <div class="hero-btns">
+      <a href="#ghiduri" class="btn-primary">Vezi ghidurile</a>
+      <a href="#despre" class="btn-outline">Despre mine</a>
+    </div>
+  </div>
+  <div class="hero-photo">
+    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+      <circle cx="12" cy="8" r="4"/><path d="M6 20v-2a6 6 0 0 1 12 0v2"/>
+    </svg>
+    Fotografia ta aici
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stats-bar">
+  <div class="stat">
+    <div class="stat-num">10+</div>
+    <div class="stat-lbl">Ani experiență în contabilitate</div>
+  </div>
+  <div class="stat">
+    <div class="stat-num">2026</div>
+    <div class="stat-lbl">Ghiduri actualizate la zi</div>
+  </div>
+  <div class="stat">
+    <div class="stat-num">100%</div>
+    <div class="stat-lbl">Fără jargon · cu exemple reale</div>
+  </div>
+</div>
+
+<!-- DESPRE -->
+<section class="despre" id="despre">
+  <div class="despre-inner">
+    <div class="despre-img">
+      <div class="despre-img-initial">A</div>
+      <div class="despre-img-name">Alina Savu</div>
+      <div class="despre-img-brand">Claritate Fiscală</div>
+    </div>
+    <div class="despre-text">
+      <div class="section-label">Despre mine</div>
+      <h2 class="section-title">De ce am creat aceste resurse</h2>
+      <p>Sunt Alina Savu — contabil cu peste 10 ani de experiență în fiscalitate.</p>
+      <p>De-a lungul anilor, am văzut de prea multe ori cum antreprenorii și freelancerii plătesc mai mult decât trebuie sau primesc amenzi evitabile — nu din rea-voință, ci din lipsă de informații clare și accesibile.</p>
+      <p>Claritate Fiscală este răspunsul meu la această problemă: resurse practice scrise pentru antreprenori, nu pentru contabili. Fiecare ghid are exemple cu calcule reale, legislație actualizată și explicații pe înțelesul oricui.</p>
+      <!-- ↑ Alina: modifică paragraful de mai sus cum dorești — îl scriem împreună -->
+      <ul class="check-list">
+        <li>Informații actualizate cu legislația 2026 în vigoare</li>
+        <li>Exemple practice cu calcule reale, nu teorie abstractă</li>
+        <li>Scrise pentru antreprenori, nu pentru contabili</li>
+        <li>Descărcabile instant după plată</li>
+      </ul>
+      <a href="#ghiduri" class="btn-primary" style="display:inline-block">Descoperă ghidurile →</a>
+    </div>
+  </div>
+</section>
+
+<!-- GHIDURI -->
+<section class="ghiduri" id="ghiduri">
+  <div class="section-label">Produse digitale</div>
+  <h2 class="section-title">Ghiduri practice de fiscalitate</h2>
+  <p class="section-sub">Resurse pe care le descarci imediat și le folosești de azi. Actualizate cu legislația 2026 în vigoare.</p>
+
+  <!-- Produse individuale -->
+  <div class="subsection-label">Produse individuale</div>
+  <div class="ghiduri-grid">
+
+    <a href="https://payhip.com/b/UC4Gg" class="ghid-card">
+      <div class="ghid-cover">
+        <img src="coperta_ghid_pfa.svg" alt="PFA fără panică — Ghid Complet 2026" />
+      </div>
+      <div class="ghid-body">
+        <div class="ghid-tag">Ghid practic · PDF · 22 pagini</div>
+        <h3>PFA fără panică — Ghid Complet 2026</h3>
+        <p>Forme juridice, înregistrare ONRC, impozit, CAS, CASS, cheltuieli deductibile, radiere/suspendare PFA și declarații obligatorii. Exemple numerice, plafoane 2026.</p>
+        <div class="ghid-footer">
+          <div class="ghid-price">99 lei</div>
+          <span class="btn-buy">Cumpără</span>
+        </div>
+      </div>
+    </a>
+
+    <a href="https://payhip.com/b/73zMl" class="ghid-card">
+      <div class="ghid-cover">
+        <img src="coperta_d212.svg" alt="Ghid Declarația Unică D212 2026" />
+      </div>
+      <div class="ghid-body">
+        <div class="ghid-tag">Ghid practic · PDF · 21 pagini</div>
+        <h3>Ghid Declarația Unică D212 2026</h3>
+        <p>Capitol I (venit 2025) și Capitol II (CASS 2026), NOU: declarația precompletată ANAF, depunere prin SPV, exemple reale și greșeli frecvente de evitat.</p>
+        <div class="ghid-footer">
+          <div class="ghid-price">99 lei</div>
+          <span class="btn-buy">Cumpără</span>
+        </div>
+      </div>
+    </a>
+
+    <a href="https://payhip.com/b/rdK9Z" class="ghid-card">
+      <div class="ghid-cover">
+        <img src="coperta_calculator.svg" alt="Calculator Taxe PFA 2026" />
+      </div>
+      <div class="ghid-body">
+        <div class="ghid-tag">Calculator · Excel · 3 file</div>
+        <h3>Calculator Taxe PFA 2026</h3>
+        <p>Introduci venitul și calculezi instant impozit, CAS și CASS. Normă de venit, sistem real și comparativ PFA vs SRL. Actualizat cu plafoanele 2026.</p>
+        <div class="ghid-footer">
+          <div class="ghid-price">69 lei</div>
+          <span class="btn-buy">Cumpără</span>
+        </div>
+      </div>
+    </a>
+
+  </div>
+
+  <!-- Pachete -->
+  <div class="subsection-label">Pachete — economisești combinând</div>
+  <div class="ghiduri-grid">
+
+    <a href="https://payhip.com/b/GOsr4" class="ghid-card pachet">
+      <div class="ghid-cover">
+        <img src="coperta_pachet_complet.svg" alt="Pachet Complet PFA" />
+      </div>
+      <div class="ghid-body">
+        <div class="ghid-tag">Pachet complet</div>
+        <h3>Pachet Complet PFA</h3>
+        <div class="savings-badge">Economisești 68 lei</div>
+        <p>Ghid PFA Complet 2026 + Ghid D212 2026 + Calculator Taxe PFA 2026 (Excel, 3 file). Tot ce îți trebuie ca PFA, într-un singur pachet.</p>
+        <div class="ghid-footer">
+          <div class="ghid-price">
+            <span class="ghid-price-old">267 lei</span>
+            199 lei
+          </div>
+          <span class="btn-buy">Cumpără</span>
+        </div>
+      </div>
+    </a>
+
+    <a href="https://payhip.com/b/Wg2sw" class="ghid-card pachet">
+      <div class="ghid-cover">
+        <img src="coperta_pachet_pfa_esential.svg" alt="Pachet PFA Esențial" />
+      </div>
+      <div class="ghid-body">
+        <div class="ghid-tag">Pachet duo</div>
+        <h3>Pachet PFA Esențial</h3>
+        <div class="savings-badge">Economisești 19 lei</div>
+        <p>Ghid PFA Complet 2026 + Calculator Taxe PFA 2026 (Excel, 3 file). Înțelegi regulile și calculezi taxele instant. Ideal dacă ești la curent cu D212.</p>
+        <div class="ghid-footer">
+          <div class="ghid-price">
+            <span class="ghid-price-old">168 lei</span>
+            149 lei
+          </div>
+          <span class="btn-buy">Cumpără</span>
+        </div>
+      </div>
+    </a>
+
+    <a href="https://payhip.com/b/lb4mt" class="ghid-card pachet">
+      <div class="ghid-cover">
+        <img src="coperta_pachet_d212_complet.svg" alt="Pachet D212 Complet" />
+      </div>
+      <div class="ghid-body">
+        <div class="ghid-tag">Pachet duo</div>
+        <h3>Pachet D212 Complet</h3>
+        <div class="savings-badge">Economisești 19 lei</div>
+        <p>Ghid D212 2026 + Calculator Taxe PFA 2026 (Excel, 3 file). Completezi corect declarația și verifici sumele înainte să trimiți. Termen: 25 mai 2026.</p>
+        <div class="ghid-footer">
+          <div class="ghid-price">
+            <span class="ghid-price-old">168 lei</span>
+            149 lei
+          </div>
+          <span class="btn-buy">Cumpără</span>
+        </div>
+      </div>
+    </a>
+
+  </div>
+</section>
+
+<!-- NOUTATI -->
+<section class="noutati" id="noutati">
+  <div class="section-label">Noutăți fiscale</div>
+  <h2 class="section-title">Fiscalitate la zi</h2>
+  <p class="section-sub">Modificări legislative explicate simplu. Urmărește-mă pe Instagram și Facebook pentru actualizări gratuite.</p>
+
+  <div class="blog-grid">
+
+    <a href="noutati-fiscale-2026-pfa.html" class="blog-card">
+      <div class="blog-img">
+        <span class="blog-img-emoji">📊</span>
+      </div>
+      <div class="blog-body">
+        <div class="blog-cat">PFA · 2026</div>
+        <h3>Ce schimbări aduce 2026 pentru PFA-uri: CAS, CASS și plafoane noi</h3>
+        <p>Salariul minim crește la 4.325 lei din iulie, plafonul TVA la 395.000 lei, POS obligatoriu. Ce trebuie să știi.</p>
+        <div class="blog-meta">Articol · Claritate Fiscală</div>
+      </div>
+    </a>
+
+    <a href="pfa-vs-srl-2026.html" class="blog-card">
+      <div class="blog-img">
+        <span class="blog-img-emoji">⚖️</span>
+      </div>
+      <div class="blog-body">
+        <div class="blog-cat">Decizie</div>
+        <h3>PFA vs SRL în 2026: calculul complet pe care trebuie să îl faci</h3>
+        <p>Impozit dividende 16%, micro SRL 1% — cum se schimbă ecuația PFA vs SRL față de 2025.</p>
+        <div class="blog-meta">Articol · Claritate Fiscală</div>
+      </div>
+    </a>
+
+    <a href="greseli-d212.html" class="blog-card">
+      <div class="blog-img">
+        <span class="blog-img-emoji">📋</span>
+      </div>
+      <div class="blog-body">
+        <div class="blog-cat">D212 · Termen 25 mai</div>
+        <h3>Declarația Unică D212: cele mai frecvente greșeli și cum le eviți</h3>
+        <p>Capitol I și II — unde greșesc cei mai mulți PFA-uri și ce poți face ca să depui corect din prima.</p>
+        <div class="blog-meta">Articol · Claritate Fiscală</div>
+      </div>
+    </a>
+
+    <a href="cheltuieli-deductibile-pfa.html" class="blog-card">
+      <div class="blog-img">
+        <span class="blog-img-emoji">🧾</span>
+      </div>
+      <div class="blog-body">
+        <div class="blog-cat">Sistem real · Cheltuieli</div>
+        <h3>Ce cheltuieli poate deduce un PFA la sistemul real în 2026</h3>
+        <p>Lista completă: 100% deductibile, parțial deductibile (mașina, telefonul) și ce documente trebuie să ai.</p>
+        <div class="blog-meta">Articol · Claritate Fiscală</div>
+      </div>
+    </a>
+
+    <a href="norma-de-venit-vs-sistem-real.html" class="blog-card">
+      <div class="blog-img">
+        <span class="blog-img-emoji">⚖️</span>
+      </div>
+      <div class="blog-body">
+        <div class="blog-cat">PFA · Regim fiscal</div>
+        <h3>Normă de venit vs sistem real: care te avantajează în 2026</h3>
+        <p>Calcule comparative cu exemple reale, plafonul 126.038 lei și cum alegi regimul potrivit pentru PFA-ul tău.</p>
+        <div class="blog-meta">Articol · Claritate Fiscală</div>
+      </div>
+    </a>
+
+    <a href="tva-pentru-pfa.html" class="blog-card">
+      <div class="blog-img">
+        <span class="blog-img-emoji">📊</span>
+      </div>
+      <div class="blog-body">
+        <div class="blog-cat">PFA · TVA</div>
+        <h3>TVA pentru PFA: când te înregistrezi și ce se schimbă în 2026</h3>
+        <p>Pragul de 395.000 lei, formularul D700, decontul D300 și ce obligații apar după înregistrare.</p>
+        <div class="blog-meta">Articol · Claritate Fiscală</div>
+      </div>
+    </a>
+
+  </div>
+</section>
+
+<!-- SOCIAL / NEWSLETTER -->
+<section class="social-section" id="social">
+  <div class="section-label" style="color:var(--gold-lt)">Rămâi la curent</div>
+  <h2 class="section-title">Noutăți fiscale gratuite</h2>
+  <p>Urmărește-mă pe Instagram și Facebook pentru explicații fiscale actualizate, exemple practice și noutăți legislative — fără abonament.</p>
+
+  <div class="social-buttons">
+    <a href="https://www.instagram.com/fiscalitate_fara_panica/" target="_blank" class="social-btn instagram">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+      Instagram
+    </a>
+    <a href="https://www.facebook.com/FiscalitateFaraPanica" target="_blank" class="social-btn facebook">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+      Facebook
+    </a>
+  </div>
+
+  <div class="newsletter-divider">
+    <p class="newsletter-coming">📬 Newsletter în curând — lasă adresa ta și te anunț la lansare:</p>
+    <form class="newsletter-form" onsubmit="return false;">
+      <input type="email" placeholder="adresa@ta.ro" />
+      <button type="submit">Înscrie-mă</button>
+    </form>
+    <p class="newsletter-note">Te vei abona la newsletter-ul Claritate Fiscală. Te poți dezabona oricând.</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div>© 2026 Alina Savu · Claritate Fiscală · Toate drepturile rezervate</div>
+  <div class="footer-links">
+    <a href="politica-de-confidentialitate.html">Politică confidențialitate</a>
+    <a href="termeni-si-conditii.html">Termeni și condiții</a>
+    <a href="mailto:claritate.fiscala@gmail.com">Contact</a>
+    <a href="https://anpc.ro" target="_blank" rel="noopener">ANPC</a>
+  </div>
+</footer>
+
+</body>
+</html>

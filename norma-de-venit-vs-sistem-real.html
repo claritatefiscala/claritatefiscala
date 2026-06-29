@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Normă de venit vs sistem real: care te avantajează în 2026 · Claritate Fiscală</title>
+  <meta name="description" content="Normă de venit sau sistem real? Calcule comparative cu exemple reale, plafonul 126.038 lei și cum alegi regimul potrivit pentru PFA în 2026." />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --navy:   #1a2744;
+      --navy-2: #243258;
+      --gold:   #c9a84c;
+      --gold-lt:#e8d5a3;
+      --cream:  #faf8f4;
+      --white:  #ffffff;
+      --text:   #2c2c2c;
+      --muted:  #6b7280;
+      --border: #e5e1d8;
+      --radius: 12px;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; color: var(--text); background: var(--white); line-height: 1.7; }
+
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(255,255,255,0.95); backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--border); padding: 0 5%;
+      display: flex; align-items: center; justify-content: space-between; height: 64px;
+    }
+    .nav-logo { font-family: 'Playfair Display', serif; font-size: 1.1rem; color: var(--navy); text-decoration: none; font-weight: 700; }
+    .nav-logo span { color: var(--gold); }
+    .nav-back { font-size: 0.85rem; color: var(--muted); text-decoration: none; display: flex; align-items: center; gap: 0.4rem; transition: color .2s; }
+    .nav-back:hover { color: var(--navy); }
+
+    .article-hero {
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-2) 60%, #2e4070 100%);
+      color: var(--white); padding: 64px 5% 56px;
+    }
+    .article-hero-inner { max-width: 760px; margin: 0 auto; }
+    .article-cat {
+      display: inline-block; background: rgba(201,168,76,0.2); color: var(--gold-lt);
+      border: 1px solid rgba(201,168,76,0.35); font-size: 0.72rem; font-weight: 600;
+      text-transform: uppercase; letter-spacing: 0.08em; padding: 0.3rem 0.8rem;
+      border-radius: 20px; margin-bottom: 1.2rem;
+    }
+    .article-hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(1.7rem, 4vw, 2.4rem); line-height: 1.25; margin-bottom: 1rem; }
+    .article-hero .lead { font-size: 1.05rem; color: rgba(255,255,255,0.82); margin-bottom: 1.5rem; max-width: 640px; }
+    .article-meta { font-size: 0.8rem; color: rgba(255,255,255,0.5); }
+
+    .article-body { max-width: 760px; margin: 0 auto; padding: 3rem 5% 5rem; }
+    .article-body h2 { font-family: 'Playfair Display', serif; font-size: 1.4rem; color: var(--navy); margin: 2.5rem 0 0.8rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--gold-lt); }
+    .article-body h3 { font-size: 1.05rem; font-weight: 600; color: var(--navy); margin: 1.8rem 0 0.5rem; }
+    .article-body p { margin-bottom: 1rem; font-size: 0.97rem; }
+    .article-body ul, .article-body ol { margin: 0.5rem 0 1rem 1.4rem; font-size: 0.97rem; }
+    .article-body li { margin-bottom: 0.4rem; }
+
+    .callout { background: var(--cream); border-left: 4px solid var(--gold); border-radius: 0 var(--radius) var(--radius) 0; padding: 1rem 1.2rem; margin: 1.5rem 0; }
+    .callout.danger { border-color: #e05252; background: #fff5f5; }
+    .callout strong { color: var(--navy); }
+
+    .regime-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1.5rem 0; }
+    .regime-card { border-radius: var(--radius); padding: 1.2rem 1.4rem; }
+    .regime-card.norma { background: #eff6ff; border: 1px solid #bfdbfe; }
+    .regime-card.real { background: #f0fdf4; border: 1px solid #bbf7d0; }
+    .regime-card h4 { font-size: 0.95rem; font-weight: 700; margin-bottom: 0.7rem; }
+    .regime-card.norma h4 { color: #1d4ed8; }
+    .regime-card.real h4 { color: #15803d; }
+    .regime-card ul { margin-left: 1rem; font-size: 0.88rem; }
+    .regime-card li { margin-bottom: 0.35rem; }
+
+    .calc-box { background: var(--cream); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.4rem 1.6rem; margin: 1.5rem 0; }
+    .calc-box h4 { color: var(--navy); font-size: 0.97rem; margin-bottom: 0.8rem; font-weight: 600; border-bottom: 1px solid var(--border); padding-bottom: 0.5rem; }
+    .calc-row { display: flex; justify-content: space-between; padding: 0.3rem 0; font-size: 0.9rem; border-bottom: 1px dashed var(--border); }
+    .calc-row:last-child { border-bottom: none; font-weight: 700; color: var(--navy); font-size: 0.95rem; padding-top: 0.5rem; }
+    .calc-row span:last-child { font-family: 'Playfair Display', serif; }
+    .calc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1.5rem 0; }
+
+    .tbl-wrap { overflow-x: auto; margin: 1.5rem 0; }
+    table { width: 100%; border-collapse: collapse; font-size: 0.88rem; }
+    th { background: var(--navy); color: var(--white); padding: 0.7rem 1rem; text-align: left; font-weight: 600; }
+    td { padding: 0.65rem 1rem; border-bottom: 1px solid var(--border); }
+    tr:nth-child(even) td { background: var(--cream); }
+
+    .cta-box { background: linear-gradient(135deg, var(--navy), var(--navy-2)); color: var(--white); border-radius: var(--radius); padding: 2rem 2.5rem; margin: 3rem 0 0; text-align: center; }
+    .cta-box h3 { font-family: 'Playfair Display', serif; font-size: 1.3rem; color: var(--white); margin-bottom: 0.6rem; }
+    .cta-box p { color: rgba(255,255,255,0.75); margin-bottom: 1.4rem; font-size: 0.93rem; }
+    .btn-gold { display: inline-block; background: var(--gold); color: var(--navy); font-weight: 700; font-size: 0.9rem; padding: 0.75rem 2rem; border-radius: 8px; text-decoration: none; transition: opacity .2s; }
+    .btn-gold:hover { opacity: 0.88; }
+
+    footer { border-top: 1px solid var(--border); padding: 1.5rem 5%; text-align: center; font-size: 0.8rem; color: var(--muted); }
+    footer a { color: var(--gold); text-decoration: none; }
+
+    @media (max-width: 600px) {
+      .article-hero { padding: 48px 5% 40px; }
+      .article-body { padding: 2rem 5% 4rem; }
+      .regime-grid, .calc-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">Claritate <span>Fiscală</span></a>
+  <a href="index.html" class="nav-back">← Înapoi la site</a>
+</nav>
+
+<header class="article-hero">
+  <div class="article-hero-inner">
+    <span class="article-cat">PFA · Regim fiscal</span>
+    <h1>Normă de venit vs sistem real: care te avantajează în 2026</h1>
+    <p class="lead">Cele două regimuri de impozitare pentru PFA explicate simplu, cu calcule reale. Cum alegi corect de la început și ce se întâmplă dacă depășești plafonul.</p>
+    <div class="article-meta">Alina Savu · Claritate Fiscală · Actualizat 2026</div>
+  </div>
+</header>
+
+<article class="article-body">
+
+  <p>Când îți înregistrezi PFA-ul, una dintre primele decizii pe care trebuie să o iei este: <strong>normă de venit sau sistem real?</strong> Alegerea greșită poate însemna taxe semnificativ mai mari sau muncă administrativă inutilă. Iată tot ce trebuie să știi.</p>
+
+  <div class="callout">
+    <strong>Notă:</strong> Regimul de impozitare se alege prin Declarația Unică (D212), depusă în 30 de zile de la înregistrarea PFA sau până pe 25 mai pentru venitul anului următor.
+  </div>
+
+  <h2>Ce este norma de venit</h2>
+
+  <p>La norma de venit, ANAF stabilește pentru fiecare cod CAEN și județ un <strong>venit forfetar anual (norma)</strong>. Plătești impozit, CAS și CASS pe acel venit fix, indiferent cât ai câștigat în realitate — mai mult sau mai puțin.</p>
+
+  <p>Normele de venit se publică anual pe site-ul ANAF și variază semnificativ în funcție de județ și activitate. De exemplu, norma pentru IT în București poate fi diferită față de același cod CAEN în Vaslui.</p>
+
+  <h3>Cine poate fi la normă de venit</h3>
+  <ul>
+    <li>Codul tău CAEN se regăsește în nomenclatorul ANAF (nu toate activitățile au normă)</li>
+    <li>Veniturile brute din 2025 <strong>nu au depășit 126.038 lei</strong> (echivalentul a 25.000 euro la cursul mediu BNR 2025)</li>
+    <li>Dacă în 2025 ai depășit acest plafon → ești obligat la sistem real din 2026</li>
+  </ul>
+
+  <div class="callout danger">
+    <strong>Plafonul de 126.038 lei este critic.</strong> Dacă îl depășești în cursul anului, nu treci automat — dar la declarația pentru anul următor ești obligat să treci la sistem real. Monitorizează-ți veniturile pe parcursul anului.
+  </div>
+
+  <h2>Ce este sistemul real</h2>
+
+  <p>În sistemul real, impozitele se calculează pe <strong>venitul net efectiv</strong> = venituri totale minus cheltuielile deductibile documentate. Cu cât ai mai multe cheltuieli legate de activitate, cu atât venitul net este mai mic și taxele mai mici.</p>
+
+  <p>Dezavantajul: trebuie să ții evidența veniturilor și cheltuielilor pe parcursul anului și să ai documentele justificative în ordine.</p>
+
+  <h2>Comparativ rapid</h2>
+
+  <div class="regime-grid">
+    <div class="regime-card norma">
+      <h4>🔵 Normă de venit</h4>
+      <ul>
+        <li>Venit fix stabilit de ANAF</li>
+        <li>Taxe predictibile indiferent de venit real</li>
+        <li>Nu ții evidența cheltuielilor</li>
+        <li>Avantajos dacă câștigi mult mai mult decât norma</li>
+        <li>Dezavantajos dacă câștigi mai puțin decât norma</li>
+        <li>Plafon: max. 126.038 lei/an</li>
+      </ul>
+    </div>
+    <div class="regime-card real">
+      <h4>🟢 Sistem real</h4>
+      <ul>
+        <li>Taxe pe venitul net real</li>
+        <li>Cheltuielile reduc baza impozabilă</li>
+        <li>Mai multă administrare (facturi, evidențe)</li>
+        <li>Avantajos dacă ai cheltuieli mari deductibile</li>
+        <li>Obligatoriu dacă depășești 126.038 lei</li>
+        <li>Fără plafon superior</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>Calcul comparativ — exemple practice</h2>
+
+  <p>Venit brut: <strong>80.000 lei/an</strong>. Normă ANAF: <strong>40.000 lei</strong>. Cheltuielile deductibile reale schimbă complet ecuația — iată cele două scenarii opuse.</p>
+
+  <div class="callout info">
+    <strong>Cum funcționează calculul în sistem real:</strong> baza impozit = venit net − CAS − CASS. Ambele contribuții sunt deductibile din baza impozabilă. La normă de venit, impozitul se aplică direct pe valoarea normei, fără deduceri.
+  </div>
+
+  <h3>Scenariul A — cheltuieli mici: norma câștigă clar</h3>
+
+  <div class="calc-grid">
+    <div class="calc-box">
+      <h4>🔵 Normă de venit (40.000 lei)</h4>
+      <div class="calc-row"><span>Normă ANAF</span><span>40.000 lei</span></div>
+      <div class="calc-row"><span>CASS 10% × 40.000</span><span>4.000 lei</span></div>
+      <div class="calc-row"><span>CAS (40.000 &lt; 48.600)</span><span>0 lei</span></div>
+      <div class="calc-row"><span>Impozit 10% × 40.000</span><span>4.000 lei</span></div>
+      <div class="calc-row"><span>Total taxe</span><span>8.000 lei</span></div>
+    </div>
+    <div class="calc-box">
+      <h4>🟢 Sistem real — cheltuieli: 10.000 lei</h4>
+      <div class="calc-row"><span>Venituri brute</span><span>80.000 lei</span></div>
+      <div class="calc-row"><span>Cheltuieli deductibile</span><span>– 10.000 lei</span></div>
+      <div class="calc-row"><span>Venit net</span><span>70.000 lei</span></div>
+      <div class="calc-row"><span>CASS 10% × 70.000</span><span>7.000 lei</span></div>
+      <div class="calc-row"><span>CAS 25% × 48.600 ⚠️</span><span>12.150 lei</span></div>
+      <div class="calc-row"><span>Baza impozit (net−CAS−CASS)</span><span>50.850 lei</span></div>
+      <div class="calc-row"><span>Impozit 10% × 50.850</span><span>5.085 lei</span></div>
+      <div class="calc-row"><span>Total taxe</span><span>24.235 lei</span></div>
+    </div>
+  </div>
+  <p>→ Norma economisește <strong>16.235 lei</strong> față de sistem real. Motivul: venitul net (70.000 lei) depășește pragul CAS de 48.600 lei, ceea ce adaugă automat 12.150 lei contribuție de pensie.</p>
+
+  <h3>Scenariul B — cheltuieli mari: sistem real câștigă</h3>
+
+  <div class="calc-grid">
+    <div class="calc-box">
+      <h4>🔵 Normă de venit (40.000 lei)</h4>
+      <div class="calc-row"><span>Total taxe (același)</span><span>8.000 lei</span></div>
+    </div>
+    <div class="calc-box">
+      <h4>🟢 Sistem real — cheltuieli: 50.000 lei</h4>
+      <div class="calc-row"><span>Venituri brute</span><span>80.000 lei</span></div>
+      <div class="calc-row"><span>Cheltuieli deductibile</span><span>– 50.000 lei</span></div>
+      <div class="calc-row"><span>Venit net</span><span>30.000 lei</span></div>
+      <div class="calc-row"><span>CASS 10% × 30.000</span><span>3.000 lei</span></div>
+      <div class="calc-row"><span>CAS (30.000 &lt; 48.600)</span><span>0 lei</span></div>
+      <div class="calc-row"><span>Baza impozit (net−CASS)</span><span>27.000 lei</span></div>
+      <div class="calc-row"><span>Impozit 10% × 27.000</span><span>2.700 lei</span></div>
+      <div class="calc-row"><span>Total taxe</span><span>5.700 lei</span></div>
+    </div>
+  </div>
+  <p>→ Sistem real economisește <strong>2.300 lei</strong> față de normă — când cheltuielile profesionale sunt mari și reduc venitul net sub pragul CAS.</p>
+
+  <div class="callout">
+    <strong>Regula practică:</strong> Pragul CAS (48.600 lei venit net) este decisiv. Dacă venitul tău net în sistem real ar depăși 48.600 lei, se adaugă CAS 12.150 lei — ceea ce face norma de venit semnificativ mai avantajoasă în aproape orice scenariu cu cheltuieli mici.
+  </div>
+
+  <h2>Cum alegi regimul potrivit</h2>
+
+  <div class="tbl-wrap">
+    <table>
+      <thead>
+        <tr><th>Situație</th><th>Regim recomandat</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Norma ANAF este mult mai mică decât venitul tău real</td><td><strong>Normă de venit</strong> — plătești mai puțin</td></tr>
+        <tr><td>Ai cheltuieli profesionale mari (echipamente, software, contabil)</td><td><strong>Sistem real</strong> — cheltuielile reduc baza</td></tr>
+        <tr><td>Venitul tău real este aproape de normă</td><td>Calculează ambele variante înainte de decizie</td></tr>
+        <tr><td>Venitul depășește 126.038 lei</td><td><strong>Sistem real</strong> — obligatoriu</td></tr>
+        <tr><td>Vrei simplitate administrativă maximă</td><td><strong>Normă de venit</strong> — nu ții evidența cheltuielilor</td></tr>
+        <tr><td>Codul tău CAEN nu are normă publicată</td><td><strong>Sistem real</strong> — singura opțiune</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>Poți schimba regimul?</h2>
+
+  <p>Da. Regimul de impozitare se poate modifica anual, prin Declarația Unică (D212) depusă până pe <strong>25 mai</strong>. Dacă vrei să treci de la normă la sistem real (sau invers) de la 1 ianuarie 2027, declari acest lucru în D212 din 2026.</p>
+
+  <p>Excepție: dacă ai depășit plafonul de 126.038 lei în cursul anului, trecerea la sistem real devine obligatorie și nu mai poți reveni la normă.</p>
+
+  <div class="callout">
+    <strong>Regula de aur:</strong> Nu alege niciodată regimul „din ureche". Calculează întotdeauna ambele variante pe venitul tău estimat, cu cheltuielile tale reale. O diferență de câteva mii de lei pe an merită 30 de minute de calcul.
+  </div>
+
+  <div class="callout" style="font-size:0.85rem; margin-top:2.5rem;">
+    <strong>Informații valabile iunie 2026.</strong> Plafoanele CAS/CASS se calculează în funcție de salariul minim în vigoare la 1 ianuarie 2026 (4.050 lei). Verifică pe <a href="https://anaf.ro" target="_blank" rel="noopener" style="color:var(--navy)">anaf.ro</a> și consultă un expert contabil înainte de a lua decizii fiscale.
+  </div>
+
+  <div class="cta-box">
+    <h3>Calculează instant care regim e mai bun pentru tine</h3>
+    <p>Calculatorul Taxe PFA 2026 compară norma de venit cu sistemul real pe venitul tău specific. Introduci venitul, norma din județ și cheltuielile — rezultatul îți arată exact cât plătești în fiecare scenariu.</p>
+    <a href="index.html#ghiduri" class="btn-gold">Descarcă Calculatorul →</a>
+  </div>
+
+</article>
+
+<footer>
+  <span>© 2026 Alina Savu · Claritate Fiscală</span>
+  <span style="margin: 0 0.5rem">·</span>
+  <a href="index.html">Înapoi la site</a>
+  <span style="margin: 0 0.5rem">·</span>
+  <a href="termeni-si-conditii.html">Termeni</a>
+  <span style="margin: 0 0.5rem">·</span>
+  <a href="politica-de-confidentialitate.html">Confidențialitate</a>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,85 @@
+<svg width="800" height="800" viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f172a"/>
+      <stop offset="100%" style="stop-color:#1e293b"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#c9a84c"/>
+      <stop offset="100%" style="stop-color:#f0d080"/>
+    </linearGradient>
+    <linearGradient id="shine" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#c9a84c;stop-opacity:0.25"/>
+      <stop offset="100%" style="stop-color:#c9a84c;stop-opacity:0.05"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="800" fill="url(#bg)"/>
+
+  <!-- Cercuri decorative -->
+  <circle cx="720" cy="80" r="220" fill="none" stroke="rgba(201,168,76,0.08)" stroke-width="1.5"/>
+  <circle cx="720" cy="80" r="160" fill="none" stroke="rgba(201,168,76,0.05)" stroke-width="1"/>
+  <circle cx="60" cy="760" r="260" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="1"/>
+
+  <!-- Banner "PACHET COMPLET" sus -->
+  <rect x="0" y="0" width="800" height="58" fill="url(#gold)"/>
+  <text x="400" y="37" text-anchor="middle" font-family="'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="800" letter-spacing="4" fill="#1a2744">✦ PACHET COMPLET ✦</text>
+
+  <!-- Linie aurie subtire -->
+  <rect x="60" y="100" width="80" height="3" fill="url(#gold)" rx="2"/>
+
+  <!-- Label -->
+  <text x="60" y="145" font-family="'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="600" letter-spacing="3" fill="#c9a84c">TOATE 3 RESURSELE · ECONOMISEȘTI 68 LEI</text>
+
+  <!-- Titlu -->
+  <text x="60" y="240" font-size="60" font-weight="700" fill="#ffffff" font-family="Georgia, serif" letter-spacing="-1">Fiscalitate</text>
+  <text x="60" y="308" font-size="60" font-weight="700" fill="url(#gold)" font-family="Georgia, serif" letter-spacing="-1">fără panică</text>
+  <text x="60" y="358" font-size="28" font-weight="300" fill="rgba(255,255,255,0.6)" font-family="'Helvetica Neue', Arial, sans-serif" letter-spacing="2">Pachet complet PFA</text>
+
+  <!-- Separator -->
+  <rect x="60" y="385" width="680" height="1" fill="rgba(201,168,76,0.2)"/>
+
+  <!-- Ce include — 3 carduri -->
+  <text x="60" y="415" font-family="'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="600" letter-spacing="2" fill="rgba(255,255,255,0.4)">CE INCLUDE:</text>
+
+  <!-- Card 1: Ghid PFA -->
+  <rect x="60" y="430" width="195" height="110" rx="10" fill="rgba(26,39,68,0.8)" stroke="rgba(201,168,76,0.4)" stroke-width="1"/>
+  <text x="80" y="458" font-family="'Helvetica Neue', Arial, sans-serif" font-size="18">📄</text>
+  <text x="107" y="457" font-family="'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="700" fill="#c9a84c">GHID PFA</text>
+  <text x="80" y="476" font-family="'Helvetica Neue', Arial, sans-serif" font-size="11" fill="rgba(255,255,255,0.6)">2026</text>
+  <text x="80" y="496" font-family="'Helvetica Neue', Arial, sans-serif" font-size="11" fill="rgba(255,255,255,0.5)">22 pagini PDF</text>
+  <text x="80" y="514" font-family="'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="700" fill="rgba(255,255,255,0.4)" text-decoration="line-through">99 lei</text>
+  <text x="110" y="514" font-family="'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="700" fill="#c9a84c"> inclus</text>
+
+  <!-- Card 2: Ghid D212 -->
+  <rect x="303" y="430" width="195" height="110" rx="10" fill="rgba(26,58,42,0.8)" stroke="rgba(74,222,128,0.35)" stroke-width="1"/>
+  <text x="323" y="458" font-family="'Helvetica Neue', Arial, sans-serif" font-size="18">📋</text>
+  <text x="350" y="457" font-family="'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="700" fill="#4ade80">GHID D212</text>
+  <text x="323" y="476" font-family="'Helvetica Neue', Arial, sans-serif" font-size="11" fill="rgba(255,255,255,0.6)">2026</text>
+  <text x="323" y="496" font-family="'Helvetica Neue', Arial, sans-serif" font-size="11" fill="rgba(255,255,255,0.5)">21 pagini PDF</text>
+  <text x="323" y="514" font-family="'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="700" fill="rgba(255,255,255,0.4)" text-decoration="line-through">99 lei</text>
+  <text x="353" y="514" font-family="'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="700" fill="#4ade80"> inclus</text>
+
+  <!-- Card 3: Calculator -->
+  <rect x="546" y="430" width="195" height="110" rx="10" fill="rgba(45,27,78,0.8)" stroke="rgba(167,139,250,0.35)" stroke-width="1"/>
+  <text x="566" y="458" font-family="'Helvetica Neue', Arial, sans-serif" font-size="18">📊</text>
+  <text x="593" y="457" font-family="'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="700" fill="#a78bfa">CALCULATOR</text>
+  <text x="566" y="476" font-family="'Helvetica Neue', Arial, sans-serif" font-size="11" fill="rgba(255,255,255,0.6)">Taxe PFA 2026</text>
+  <text x="566" y="496" font-family="'Helvetica Neue', Arial, sans-serif" font-size="11" fill="rgba(255,255,255,0.5)">Excel · 3 file</text>
+  <text x="566" y="514" font-family="'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="700" fill="rgba(255,255,255,0.4)" text-decoration="line-through">69 lei</text>
+  <text x="596" y="514" font-family="'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="700" fill="#a78bfa"> inclus</text>
+
+  <!-- Separator -->
+  <rect x="60" y="568" width="680" height="1" fill="rgba(255,255,255,0.07)"/>
+
+  <!-- Pret final -->
+  <text x="60" y="620" font-family="'Helvetica Neue', Arial, sans-serif" font-size="14" fill="rgba(255,255,255,0.45)">267 lei separat  →  acum doar</text>
+  <text x="60" y="680" font-size="72" font-weight="800" fill="url(#gold)" font-family="'Helvetica Neue', Arial, sans-serif" letter-spacing="-2">199 lei</text>
+
+  <!-- Separator jos -->
+  <rect x="60" y="710" width="680" height="1" fill="rgba(255,255,255,0.07)"/>
+
+  <!-- Footer -->
+  <text x="60" y="748" font-family="'Helvetica Neue', Arial, sans-serif" font-size="16" font-weight="700" fill="#c9a84c">Fiscalitate fără panică</text>
+  <text x="60" y="768" font-family="'Helvetica Neue', Arial, sans-serif" font-size="11" fill="rgba(255,255,255,0.25)">Informații cu caracter orientativ. Consultă un expert fiscal pentru situația ta specifică.</text>
+</svg>

@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cheltuieli deductibile PFA: lista completă 2026 · Claritate Fiscală</title>
+  <meta name="description" content="Ce cheltuieli poți deduce ca PFA în sistem real: echipamente, mașină, telefon, birou acasă. Lista completă cu procente și documente necesare." />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --navy:   #1a2744;
+      --navy-2: #243258;
+      --gold:   #c9a84c;
+      --gold-lt:#e8d5a3;
+      --cream:  #faf8f4;
+      --white:  #ffffff;
+      --text:   #2c2c2c;
+      --muted:  #6b7280;
+      --border: #e5e1d8;
+      --radius: 12px;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; color: var(--text); background: var(--white); line-height: 1.7; }
+
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(255,255,255,0.95); backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--border); padding: 0 5%;
+      display: flex; align-items: center; justify-content: space-between; height: 64px;
+    }
+    .nav-logo { font-family: 'Playfair Display', serif; font-size: 1.1rem; color: var(--navy); text-decoration: none; font-weight: 700; }
+    .nav-logo span { color: var(--gold); }
+    .nav-back { font-size: 0.85rem; color: var(--muted); text-decoration: none; display: flex; align-items: center; gap: 0.4rem; transition: color .2s; }
+    .nav-back:hover { color: var(--navy); }
+
+    .article-hero {
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-2) 60%, #2e4070 100%);
+      color: var(--white); padding: 64px 5% 56px;
+    }
+    .article-hero-inner { max-width: 760px; margin: 0 auto; }
+    .article-cat {
+      display: inline-block; background: rgba(201,168,76,0.2); color: var(--gold-lt);
+      border: 1px solid rgba(201,168,76,0.35); font-size: 0.72rem; font-weight: 600;
+      text-transform: uppercase; letter-spacing: 0.08em; padding: 0.3rem 0.8rem;
+      border-radius: 20px; margin-bottom: 1.2rem;
+    }
+    .article-hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(1.7rem, 4vw, 2.4rem); line-height: 1.25; margin-bottom: 1rem; }
+    .article-hero .lead { font-size: 1.05rem; color: rgba(255,255,255,0.82); margin-bottom: 1.5rem; max-width: 640px; }
+    .article-meta { font-size: 0.8rem; color: rgba(255,255,255,0.5); }
+
+    .article-body { max-width: 760px; margin: 0 auto; padding: 3rem 5% 5rem; }
+    .article-body h2 { font-family: 'Playfair Display', serif; font-size: 1.4rem; color: var(--navy); margin: 2.5rem 0 0.8rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--gold-lt); }
+    .article-body h3 { font-size: 1.05rem; font-weight: 600; color: var(--navy); margin: 1.8rem 0 0.5rem; }
+    .article-body p { margin-bottom: 1rem; font-size: 0.97rem; }
+    .article-body ul, .article-body ol { margin: 0.5rem 0 1rem 1.4rem; font-size: 0.97rem; }
+    .article-body li { margin-bottom: 0.4rem; }
+
+    .callout { background: var(--cream); border-left: 4px solid var(--gold); border-radius: 0 var(--radius) var(--radius) 0; padding: 1rem 1.2rem; margin: 1.5rem 0; }
+    .callout.danger { border-color: #e05252; background: #fff5f5; }
+    .callout.success { border-color: #16a34a; background: #f0fdf4; }
+    .callout strong { color: var(--navy); }
+
+    .tbl-wrap { overflow-x: auto; margin: 1.5rem 0; }
+    table { width: 100%; border-collapse: collapse; font-size: 0.88rem; }
+    th { background: var(--navy); color: var(--white); padding: 0.7rem 1rem; text-align: left; font-weight: 600; }
+    td { padding: 0.65rem 1rem; border-bottom: 1px solid var(--border); vertical-align: top; }
+    tr:nth-child(even) td { background: var(--cream); }
+    .tag-100 { display: inline-block; background: #dcfce7; color: #15803d; font-size: 0.7rem; font-weight: 700; padding: 0.1rem 0.5rem; border-radius: 4px; }
+    .tag-50 { display: inline-block; background: #fef9c3; color: #854d0e; font-size: 0.7rem; font-weight: 700; padding: 0.1rem 0.5rem; border-radius: 4px; }
+    .tag-no { display: inline-block; background: #fee2e2; color: #dc2626; font-size: 0.7rem; font-weight: 700; padding: 0.1rem 0.5rem; border-radius: 4px; }
+
+    .doc-card { background: var(--cream); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.2rem 1.4rem; margin: 1rem 0; }
+    .doc-card h4 { color: var(--navy); font-size: 0.92rem; margin-bottom: 0.5rem; }
+    .doc-card ul { margin: 0 0 0 1.2rem; font-size: 0.88rem; }
+
+    .cta-box { background: linear-gradient(135deg, var(--navy), var(--navy-2)); color: var(--white); border-radius: var(--radius); padding: 2rem 2.5rem; margin: 3rem 0 0; text-align: center; }
+    .cta-box h3 { font-family: 'Playfair Display', serif; font-size: 1.3rem; color: var(--white); margin-bottom: 0.6rem; }
+    .cta-box p { color: rgba(255,255,255,0.75); margin-bottom: 1.4rem; font-size: 0.93rem; }
+    .btn-gold { display: inline-block; background: var(--gold); color: var(--navy); font-weight: 700; font-size: 0.9rem; padding: 0.75rem 2rem; border-radius: 8px; text-decoration: none; transition: opacity .2s; }
+    .btn-gold:hover { opacity: 0.88; }
+
+    footer { border-top: 1px solid var(--border); padding: 1.5rem 5%; text-align: center; font-size: 0.8rem; color: var(--muted); }
+    footer a { color: var(--gold); text-decoration: none; }
+
+    @media (max-width: 600px) {
+      .article-hero { padding: 48px 5% 40px; }
+      .article-body { padding: 2rem 5% 4rem; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">Claritate <span>Fiscală</span></a>
+  <a href="index.html" class="nav-back">← Înapoi la site</a>
+</nav>
+
+<header class="article-hero">
+  <div class="article-hero-inner">
+    <span class="article-cat">PFA · Sistem real</span>
+    <h1>Cheltuieli deductibile PFA: lista completă 2026</h1>
+    <p class="lead">Ce poți deduce din veniturile PFA, la ce procent și cu ce documente. Tot ce trebuie să știi ca să plătești mai puțin impozit, legal.</p>
+    <div class="article-meta">Alina Savu · Claritate Fiscală · Actualizat 2026</div>
+  </div>
+</header>
+
+<article class="article-body">
+
+  <p>Dacă ești PFA în <strong>sistem real de impozitare</strong>, cheltuielile deductibile sunt cel mai puternic instrument pe care îl ai pentru a reduce baza impozabilă. Fiecare leu cheltuiala deductibilă documentată = impozit mai mic de plătit.</p>
+
+  <p>Regula fundamentală: o cheltuială este deductibilă dacă a fost efectuată <strong>în scopul obținerii de venituri din activitatea PFA</strong> și dacă ai documentul justificativ (factură fiscală, bon fiscal, contract).</p>
+
+  <div class="callout">
+    <strong>Atenție:</strong> Cheltuielile deductibile se aplică exclusiv în <strong>sistemul real</strong>. Dacă ești la normă de venit, nu ții evidența cheltuielilor și nu poți deduce nimic — norma e fixă, indiferent cât cheltuiești.
+  </div>
+
+  <h2>1. Cheltuieli deductibile 100%</h2>
+
+  <p>Acestea reduc integral baza impozabilă, cu condiția să fie legate de activitate și documentate corespunzător.</p>
+
+  <div class="tbl-wrap">
+    <table>
+      <thead>
+        <tr><th>Categorie</th><th>Exemple concrete</th><th>Deductib.</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Echipamente și tehnologie</strong></td>
+          <td>Laptop, monitor, telefon dedicat activității, tabletă, cameră video/foto, microfon, imprimantă</td>
+          <td><span class="tag-100">100%</span></td>
+        </tr>
+        <tr>
+          <td><strong>Software și licențe</strong></td>
+          <td>Adobe Creative Cloud, Microsoft 365, antivirus, hosting site, aplicații specifice domeniului</td>
+          <td><span class="tag-100">100%</span></td>
+        </tr>
+        <tr>
+          <td><strong>Formare profesională</strong></td>
+          <td>Cursuri online, certificări, cărți de specialitate, conferințe, abonamente educaționale</td>
+          <td><span class="tag-100">100%</span></td>
+        </tr>
+        <tr>
+          <td><strong>Servicii profesionale</strong></td>
+          <td>Contabil, avocat, consultant — plătite pentru activitatea PFA</td>
+          <td><span class="tag-100">100%</span></td>
+        </tr>
+        <tr>
+          <td><strong>Consumabile și birou</strong></td>
+          <td>Hârtie, toner, cartușe, mobilier de birou dedicat activității</td>
+          <td><span class="tag-100">100%</span></td>
+        </tr>
+        <tr>
+          <td><strong>Internet și telefonie dedicată</strong></td>
+          <td>Abonament internet sau telefon folosit <em>exclusiv</em> pentru activitate</td>
+          <td><span class="tag-100">100%</span></td>
+        </tr>
+        <tr>
+          <td><strong>Deplasări profesionale</strong></td>
+          <td>Transport, cazare, diurnă — pentru întâlniri cu clienți sau furnizori (cu documente)</td>
+          <td><span class="tag-100">100%</span></td>
+        </tr>
+        <tr>
+          <td><strong>Marketing și publicitate</strong></td>
+          <td>Google/Meta Ads, creare site, design grafic, sesiuni foto/video profesionale</td>
+          <td><span class="tag-100">100%</span></td>
+        </tr>
+        <tr>
+          <td><strong>CAS și CASS</strong></td>
+          <td>Contribuțiile sociale ale PFA-ului (plătite în același an fiscal)</td>
+          <td><span class="tag-100">100%</span></td>
+        </tr>
+        <tr>
+          <td><strong>Chiria spațiului profesional</strong></td>
+          <td>Birou, atelier, studio — dacă ai contract de închiriere pe PFA</td>
+          <td><span class="tag-100">100%</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>2. Cheltuieli deductibile parțial</h2>
+
+  <p>Acestea sunt cheltuieli cu utilizare mixtă (personală + profesională). Legea stabilește procente fixe sau calcule proporționale.</p>
+
+  <div class="tbl-wrap">
+    <table>
+      <thead>
+        <tr><th>Cheltuială</th><th>Deductib.</th><th>Condiții</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Autoturism</strong> — combustibil, asigurare RCA/Casco, reparații, ITP</td>
+          <td><span class="tag-50">50%</span></td>
+          <td>Vehicul cu utilizare mixtă (personal + profesional). 100% dacă vehiculul este exclusiv profesional și documentezi acest lucru.</td>
+        </tr>
+        <tr>
+          <td><strong>Telefon mobil</strong></td>
+          <td><span class="tag-50">50%</span></td>
+          <td>Dacă același număr/abonament este folosit și personal. 100% dacă e un număr dedicat exclusiv activității.</td>
+        </tr>
+        <tr>
+          <td><strong>Internet</strong></td>
+          <td><span class="tag-50">50%</span></td>
+          <td>Dacă conexiunea este și personală. 100% dacă e o conexiune separată, exclusiv pentru activitate.</td>
+        </tr>
+        <tr>
+          <td><strong>Birou la domiciliu</strong></td>
+          <td>Proporțional</td>
+          <td>Formula: suprafața biroului ÷ suprafața totală a locuinței × cheltuieli totale (chirie/utilități). Exemplu: birou 12mp, apartament 60mp → 20% din cheltuielile locuinței.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>3. Ce NU este deductibil</h2>
+
+  <p>Există cheltuieli pe care mulți PFA-uri le deduc greșit. Fiscul le verifică frecvent:</p>
+
+  <ul>
+    <li>Cheltuieli personale (cumpărături, vacanțe, îmbrăcăminte care nu e uniformă de lucru)</li>
+    <li>Amenzi și penalități (nu sunt deductibile prin definiție)</li>
+    <li>TVA pentru care ai deja dreptul de deducere (nu se deduce dublu)</li>
+    <li>Cheltuieli fără document justificativ — fără factură sau bon, nu există deducere</li>
+    <li>Sponsorizările (se pot deduce printr-un mecanism separat, nu direct din venit net)</li>
+  </ul>
+
+  <div class="callout danger">
+    <strong>Greșeala frecventă:</strong> Deducerea 100% a unui autoturism fără să ai dovezi că e folosit exclusiv profesional. ANAF poate respinge deducerea la control și aplica majorări. Dacă mașina e mixtă, rămâi la 50% în siguranță.
+  </div>
+
+  <h2>4. Documentele de care ai nevoie</h2>
+
+  <p>Regula generală: fiecare cheltuială deductibilă trebuie susținută de documente pe care le păstrezi minimum 5 ani.</p>
+
+  <div class="doc-card">
+    <h4>📄 Documente acceptate</h4>
+    <ul>
+      <li><strong>Factură fiscală</strong> — cel mai solid document; trebuie să fie pe numele PFA-ului (sau pe numele tău cu CNP) și să menționeze CUI-ul furnizorului</li>
+      <li><strong>Bon fiscal</strong> — acceptat pentru sume mici, dacă menționează CNP-ul sau CUI-ul cumpărătorului</li>
+      <li><strong>Contract de prestări servicii</strong> — pentru servicii recurente (contabilitate, marketing etc.)</li>
+      <li><strong>Ordin de deplasare</strong> — pentru deplasări profesionale</li>
+      <li><strong>Stat de plată</strong> — dacă ai angajați</li>
+    </ul>
+  </div>
+
+  <div class="callout success">
+    <strong>Sfat practic:</strong> Deschide un cont bancar separat pentru PFA și plătește toate cheltuielile profesionale de acolo. Extrasul de cont devine o dovadă suplimentară și simplifică enorm evidența la final de an.
+  </div>
+
+  <h2>5. Cheltuielile deductibile și CAS/CASS — efectul în practică</h2>
+
+  <p>Cheltuielile deductibile reduc <strong>venitul net</strong>, care este baza de calcul atât pentru impozit (10%), cât și pentru CASS (10%) și, indirect, pentru CAS. Efectul este cumulat:</p>
+
+  <p>Exemplu: ai 100.000 lei venituri brute și 25.000 lei cheltuieli deductibile (echipamente, software, contabil, marketing):</p>
+
+  <div class="tbl-wrap">
+    <table>
+      <thead>
+        <tr><th>Indicator</th><th>Fără cheltuieli</th><th>Cu 25.000 lei cheltuieli</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Venit net</td><td>100.000 lei</td><td>75.000 lei</td></tr>
+        <tr><td>CAS</td><td>24.300 lei</td><td>12.150 lei</td></tr>
+        <tr><td>CASS (10%)</td><td>10.000 lei</td><td>7.500 lei</td></tr>
+        <tr><td>Baza impozit (venit net – CAS – CASS)</td><td>65.700 lei</td><td>55.350 lei</td></tr>
+        <tr><td>Impozit (10%)</td><td>6.570 lei</td><td>5.535 lei</td></tr>
+        <tr><td><strong>Total taxe</strong></td><td><strong>40.870 lei</strong></td><td><strong>25.185 lei</strong></td></tr>
+        <tr><td><strong>Economie</strong></td><td>—</td><td><strong>15.685 lei</strong></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p>Cu alte cuvinte, 25.000 lei cheltuieli documentate au generat o economie fiscală de 15.685 lei — mult mai mult decât ai recupera doar din impozitul pe venit. Motivul: CAS nu se calculează proporțional cu venitul, ci în praguri fixe, pe trepte de venit net raportate la salariul minim (4.050 lei în 2026). Sub 48.600 lei (12 salarii minime) venit net, CAS e opțional. Între 48.600 și 97.199 lei, CAS este fix 12.150 lei. De la 97.200 lei în sus, CAS este fix 24.300 lei. În exemplul de mai sus, cheltuielile au scăzut venitul net de la 100.000 la 75.000 lei — exact suficient pentru a trece din treapta superioară (24.300 lei CAS) în cea inferioară (12.150 lei CAS), de unde și economia mare. Merită să ții evidența.</p>
+
+  <div class="callout" style="font-size:0.85rem; margin-top:2.5rem;">
+    <strong>Informații valabile iunie 2026.</strong> Cotele de deductibilitate (50% auto, telefon etc.) sunt conform Codului Fiscal în vigoare. Verifică pe <a href="https://anaf.ro" target="_blank" rel="noopener" style="color:var(--navy)">anaf.ro</a> și consultă un expert contabil înainte de a lua decizii fiscale.
+  </div>
+
+  <div class="cta-box">
+    <h3>Vrei să calculezi exact cât plătești în 2026?</h3>
+    <p>Ghidul PFA fără panică include lista completă a cheltuielilor deductibile + exemple de calcul. Calculatorul Excel îți arată instant impozit, CAS și CASS pe venitul tău real.</p>
+    <a href="index.html#ghiduri" class="btn-gold">Vezi Ghidul PFA și Calculatorul →</a>
+  </div>
+
+</article>
+
+<footer>
+  <span>© 2026 Alina Savu · Claritate Fiscală</span>
+  <span style="margin: 0 0.5rem">·</span>
+  <a href="index.html">Înapoi la site</a>
+  <span style="margin: 0 0.5rem">·</span>
+  <a href="termeni-si-conditii.html">Termeni</a>
+  <span style="margin: 0 0.5rem">·</span>
+  <a href="politica-de-confidentialitate.html">Confidențialitate</a>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,68 @@
+<svg width="800" height="800" viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg" font-family="Georgia, 'Times New Roman', serif">
+  <defs>
+    <linearGradient id="bg2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a3a2a"/>
+      <stop offset="100%" style="stop-color:#1e4d35"/>
+    </linearGradient>
+    <linearGradient id="accent2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#4ade80"/>
+      <stop offset="100%" style="stop-color:#86efac"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="800" fill="url(#bg2)"/>
+
+  <!-- Decoratiuni -->
+  <circle cx="700" cy="100" r="200" fill="none" stroke="rgba(74,222,128,0.08)" stroke-width="1"/>
+  <circle cx="700" cy="100" r="140" fill="none" stroke="rgba(74,222,128,0.06)" stroke-width="1"/>
+  <circle cx="80" cy="730" r="220" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="1"/>
+
+  <!-- Linie sus -->
+  <rect x="60" y="70" width="120" height="3" fill="url(#accent2)" rx="2"/>
+
+  <!-- Eticheta -->
+  <text x="60" y="120" font-family="'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="600" letter-spacing="3" fill="#4ade80">GHID PRACTIC</text>
+
+  <!-- Badge termen urgent -->
+  <rect x="60" y="140" width="210" height="36" rx="6" fill="rgba(74,222,128,0.15)" stroke="#4ade80" stroke-width="1"/>
+  <text x="165" y="163" text-anchor="middle" font-family="'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="700" fill="#4ade80">⚡ Termen: 25 MAI 2026</text>
+
+  <!-- Titlu -->
+  <text x="60" y="270" font-size="52" font-weight="700" fill="#ffffff" letter-spacing="1">Declarația</text>
+  <text x="60" y="340" font-size="72" font-weight="700" fill="#4ade80" letter-spacing="-1">Unică</text>
+  <text x="60" y="405" font-size="52" font-weight="400" fill="rgba(255,255,255,0.75)" letter-spacing="2">D212 · 2026</text>
+
+  <!-- Linie separator -->
+  <rect x="60" y="430" width="680" height="1" fill="rgba(74,222,128,0.25)"/>
+
+  <!-- Subtitlu -->
+  <text x="60" y="468" font-family="'Helvetica Neue', Arial, sans-serif" font-size="15" fill="rgba(255,255,255,0.65)">Ghid complet de completare și depunere · Actualizat 2026</text>
+
+  <!-- Continut -->
+  <text x="60" y="520" font-family="'Helvetica Neue', Arial, sans-serif" font-size="15" fill="#4ade80">✓</text>
+  <text x="82" y="520" font-family="'Helvetica Neue', Arial, sans-serif" font-size="15" fill="rgba(255,255,255,0.85)">Capitol I (venit realizat 2025) + Capitol II (CASS 2026)</text>
+
+  <text x="60" y="548" font-family="'Helvetica Neue', Arial, sans-serif" font-size="15" fill="#4ade80">✓</text>
+  <text x="82" y="548" font-family="'Helvetica Neue', Arial, sans-serif" font-size="15" fill="rgba(255,255,255,0.85)">Calculator CAS, CASS și impozit — exemple reale</text>
+
+  <text x="60" y="576" font-family="'Helvetica Neue', Arial, sans-serif" font-size="15" fill="#4ade80">✓</text>
+  <text x="82" y="576" font-family="'Helvetica Neue', Arial, sans-serif" font-size="15" fill="rgba(255,255,255,0.85)">Depunere online prin SPV — ghid vizual</text>
+
+  <text x="60" y="604" font-family="'Helvetica Neue', Arial, sans-serif" font-size="15" fill="#4ade80">✓</text>
+  <text x="82" y="604" font-family="'Helvetica Neue', Arial, sans-serif" font-size="15" fill="rgba(255,255,255,0.85)">NOU 2026: declarația precompletată ANAF</text>
+
+  <text x="60" y="632" font-family="'Helvetica Neue', Arial, sans-serif" font-size="15" fill="#4ade80">✓</text>
+  <text x="82" y="632" font-family="'Helvetica Neue', Arial, sans-serif" font-size="15" fill="rgba(255,255,255,0.85)">Greșeli frecvente și cum le eviți</text>
+
+  <!-- Linie separator jos -->
+  <rect x="60" y="676" width="680" height="1" fill="rgba(255,255,255,0.08)"/>
+
+  <!-- Footer -->
+  <text x="60" y="723" font-family="'Helvetica Neue', Arial, sans-serif" font-size="18" font-weight="700" fill="#4ade80" letter-spacing="0.5">Fiscalitate fără panică</text>
+  <text x="60" y="746" font-family="'Helvetica Neue', Arial, sans-serif" font-size="12" fill="rgba(255,255,255,0.35)">Informații cu caracter orientativ. Consultă un expert fiscal pentru situația ta specifică.</text>
+
+  <!-- Badge pagini -->
+  <rect x="620" y="691" width="120" height="44" rx="8" fill="rgba(74,222,128,0.12)" stroke="#4ade80" stroke-width="1"/>
+  <text x="680" y="708" text-anchor="middle" font-family="'Helvetica Neue', Arial, sans-serif" font-size="11" fill="#4ade80" font-weight="600">21 PAGINI</text>
+  <text x="680" y="726" text-anchor="middle" font-family="'Helvetica Neue', Arial, sans-serif" font-size="11" fill="rgba(255,255,255,0.45)">PDF descărcabil</text>
+</svg>

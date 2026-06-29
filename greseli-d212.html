@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Declarația Unică D212: greșeli frecvente și cum le eviți · Claritate Fiscală</title>
+  <meta name="description" content="Capitol I vs Capitol II, scutirea de CAS uitată, norma neactualizată — cele mai costisitoare greșeli la completarea D212 și cum le eviți." />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --navy:   #1a2744;
+      --navy-2: #243258;
+      --gold:   #c9a84c;
+      --gold-lt:#e8d5a3;
+      --cream:  #faf8f4;
+      --white:  #ffffff;
+      --text:   #2c2c2c;
+      --muted:  #6b7280;
+      --border: #e5e1d8;
+      --radius: 12px;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; color: var(--text); background: var(--white); line-height: 1.7; }
+
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(255,255,255,0.95); backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--border); padding: 0 5%;
+      display: flex; align-items: center; justify-content: space-between; height: 64px;
+    }
+    .nav-logo { font-family: 'Playfair Display', serif; font-size: 1.1rem; color: var(--navy); text-decoration: none; font-weight: 700; }
+    .nav-logo span { color: var(--gold); }
+    .nav-back { font-size: 0.85rem; color: var(--muted); text-decoration: none; display: flex; align-items: center; gap: 0.4rem; transition: color .2s; }
+    .nav-back:hover { color: var(--navy); }
+
+    .article-hero {
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-2) 60%, #2e4070 100%);
+      color: var(--white); padding: 64px 5% 56px;
+    }
+    .article-hero-inner { max-width: 760px; margin: 0 auto; }
+    .article-cat {
+      display: inline-block; background: rgba(201,168,76,0.2); color: var(--gold-lt);
+      border: 1px solid rgba(201,168,76,0.35); font-size: 0.72rem; font-weight: 600;
+      text-transform: uppercase; letter-spacing: 0.08em; padding: 0.3rem 0.8rem;
+      border-radius: 20px; margin-bottom: 1.2rem;
+    }
+    .article-hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(1.7rem, 4vw, 2.4rem); line-height: 1.25; margin-bottom: 1rem; }
+    .article-hero .lead { font-size: 1.05rem; color: rgba(255,255,255,0.82); margin-bottom: 1.5rem; max-width: 640px; }
+    .article-meta { font-size: 0.8rem; color: rgba(255,255,255,0.5); }
+
+    .article-body { max-width: 760px; margin: 0 auto; padding: 3rem 5% 5rem; }
+    .article-body h2 { font-family: 'Playfair Display', serif; font-size: 1.4rem; color: var(--navy); margin: 2.5rem 0 0.8rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--gold-lt); }
+    .article-body p { margin-bottom: 1rem; font-size: 0.97rem; }
+    .article-body ul, .article-body ol { margin: 0.5rem 0 1rem 1.4rem; font-size: 0.97rem; }
+    .article-body li { margin-bottom: 0.4rem; }
+
+    /* GRESEALA CARD */
+    .mistake-card {
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      margin: 1.5rem 0;
+    }
+    .mistake-header {
+      background: #fff5f5;
+      border-bottom: 1px solid #fecaca;
+      padding: 0.75rem 1.2rem;
+      display: flex; align-items: center; gap: 0.7rem;
+    }
+    .mistake-num {
+      background: #dc2626; color: #fff;
+      font-size: 0.75rem; font-weight: 700;
+      width: 22px; height: 22px; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+    .mistake-header h3 { font-size: 0.95rem; font-weight: 600; color: #dc2626; margin: 0; }
+    .mistake-body { padding: 1rem 1.2rem; }
+    .mistake-body p { margin-bottom: 0.6rem; font-size: 0.92rem; }
+    .mistake-fix {
+      background: #f0fdf4;
+      border: 1px solid #bbf7d0;
+      border-radius: 8px;
+      padding: 0.7rem 1rem;
+      margin-top: 0.6rem;
+      font-size: 0.88rem;
+    }
+    .mistake-fix strong { color: #15803d; }
+
+    .callout { background: var(--cream); border-left: 4px solid var(--gold); border-radius: 0 var(--radius) var(--radius) 0; padding: 1rem 1.2rem; margin: 1.5rem 0; }
+    .callout strong { color: var(--navy); }
+
+    /* STRUCTURA D212 */
+    .d212-structure { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1.5rem 0; }
+    .d212-card { border-radius: var(--radius); padding: 1.2rem 1.4rem; }
+    .d212-card.cap1 { background: #eff6ff; border: 1px solid #bfdbfe; }
+    .d212-card.cap2 { background: #fdf4ff; border: 1px solid #e9d5ff; }
+    .d212-card h4 { font-size: 0.95rem; font-weight: 700; margin-bottom: 0.5rem; }
+    .d212-card.cap1 h4 { color: #1d4ed8; }
+    .d212-card.cap2 h4 { color: #7c3aed; }
+    .d212-card p { font-size: 0.88rem; margin: 0; }
+
+    /* TABEL TERMENE */
+    .tbl-wrap { overflow-x: auto; margin: 1.5rem 0; }
+    table { width: 100%; border-collapse: collapse; font-size: 0.88rem; }
+    th { background: var(--navy); color: var(--white); padding: 0.7rem 1rem; text-align: left; font-weight: 600; }
+    td { padding: 0.65rem 1rem; border-bottom: 1px solid var(--border); }
+    tr:nth-child(even) td { background: var(--cream); }
+    .highlight-row td { background: rgba(201,168,76,0.1) !important; font-weight: 600; }
+
+    /* CHECKLIST */
+    .checklist { list-style: none; margin: 0.5rem 0 1rem 0 !important; }
+    .checklist li { padding: 0.4rem 0; display: flex; align-items: flex-start; gap: 0.6rem; font-size: 0.92rem; }
+    .checklist li::before { content: "✓"; color: #16a34a; font-weight: 700; flex-shrink: 0; margin-top: 0.05rem; }
+
+    .cta-box { background: linear-gradient(135deg, var(--navy), var(--navy-2)); color: var(--white); border-radius: var(--radius); padding: 2rem 2.5rem; margin: 3rem 0 0; text-align: center; }
+    .cta-box h3 { font-family: 'Playfair Display', serif; font-size: 1.3rem; color: var(--white); margin-bottom: 0.6rem; }
+    .cta-box p { color: rgba(255,255,255,0.75); margin-bottom: 1.4rem; font-size: 0.93rem; }
+    .btn-gold { display: inline-block; background: var(--gold); color: var(--navy); font-weight: 700; font-size: 0.9rem; padding: 0.75rem 2rem; border-radius: 8px; text-decoration: none; transition: opacity .2s; }
+    .btn-gold:hover { opacity: 0.88; }
+
+    footer { border-top: 1px solid var(--border); padding: 1.5rem 5%; text-align: center; font-size: 0.8rem; color: var(--muted); }
+    footer a { color: var(--gold); text-decoration: none; }
+
+    @media (max-width: 600px) {
+      .article-hero { padding: 48px 5% 40px; }
+      .article-body { padding: 2rem 5% 4rem; }
+      .d212-structure { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">Claritate <span>Fiscală</span></a>
+  <a href="index.html" class="nav-back">← Înapoi la site</a>
+</nav>
+
+<header class="article-hero">
+  <div class="article-hero-inner">
+    <span class="article-cat">D212 · Termen 25 mai</span>
+    <h1>Declarația Unică D212: cele mai frecvente greșeli și cum le eviți</h1>
+    <p class="lead">Capitol I și Capitol II — unde greșesc cei mai mulți PFA-uri și ce poți face ca să depui corect din prima, fără amenzi și fără stres.</p>
+    <div class="article-meta">Alina Savu · Claritate Fiscală · Actualizat 2026</div>
+  </div>
+</header>
+
+<article class="article-body">
+
+  <p>Declarația Unică (D212) a simplificat enorm sistemul față de ce exista înainte. Cu toate astea, greșelile la completare rămân frecvente — și unele pot costa scump. Din 10 ani de experiență în contabilitate, am văzut aceleași erori repetate an de an.</p>
+
+  <p>Le-am adunat pe cele mai importante mai jos, împreună cu soluția exactă pentru fiecare.</p>
+
+  <div class="callout">
+    <strong>Termen 2026:</strong> Declarația Unică pentru veniturile din 2025 se depune până pe <strong>25 mai 2026</strong>. Există și o bonificație de 3% dacă depui ȘI plătești integral până pe 15 aprilie 2026 (OUG 8/2026).
+  </div>
+
+  <h2>Înainte de greșeli: structura D212 pe scurt</h2>
+
+  <p>D212 are două capitole complet diferite. Confundarea lor este sursa celor mai multe erori:</p>
+
+  <div class="d212-structure">
+    <div class="d212-card cap1">
+      <h4>Capitol I — Estimare 2026</h4>
+      <p>Ce declari: venitul pe care estimezi că îl vei câștiga în <strong>anul curent (2026)</strong>. Pe baza acestei estimări se stabilesc plățile anticipate de CAS și CASS.</p>
+    </div>
+    <div class="d212-card cap2">
+      <h4>Capitol II — Realizat 2025</h4>
+      <p>Ce declari: venitul efectiv câștigat în <strong>anul anterior (2025)</strong>. Se compară cu ce ai plătit anticipat și se calculează diferența de plată sau de rambursat.</p>
+    </div>
+  </div>
+
+  <p>Dacă depui D212 pentru prima dată (PFA înregistrat în 2026), completezi <strong>numai Capitol I</strong>. Nu ai venituri de regularizat pentru 2025.</p>
+
+  <h2>Greșelile cele mai frecvente</h2>
+
+  <div class="mistake-card">
+    <div class="mistake-header">
+      <div class="mistake-num">1</div>
+      <h3>Confunzi Capitol I cu Capitol II</h3>
+    </div>
+    <div class="mistake-body">
+      <p>Capitol I = ce estimezi pentru VIITOR. Capitol II = ce ai câștigat în TRECUT. Completarea inversă duce la calcule greșite ale taxelor și poate genera diferențe la un eventual control ANAF.</p>
+      <p>Mulți completează în Capitol I venitul din 2025 (în loc de estimarea pentru 2026) sau invers — și suma de plată apare complet diferită față de realitate.</p>
+      <div class="mistake-fix">
+        <strong>Soluție:</strong> Înainte de a completa, verifică explicit ce an este afișat în formularul D212. Capitol I = 2026 (estimare). Capitol II = 2025 (realizat). Nu grăbi pasul de selectare.
+      </div>
+    </div>
+  </div>
+
+  <div class="mistake-card">
+    <div class="mistake-header">
+      <div class="mistake-num">2</div>
+      <h3>Nu depui D212 în primele 30 de zile de la înregistrarea PFA</h3>
+    </div>
+    <div class="mistake-body">
+      <p>Prima D212 nu se depune pe 25 mai — se depune în <strong>30 de zile de la data înregistrării la ONRC</strong>. Mulți nou-înregistrați nu știu asta și descoperă obligația prea târziu, după ce primesc o notificare sau o amendă.</p>
+      <div class="mistake-fix">
+        <strong>Soluție:</strong> Notează data înregistrării ONRC și adaugă imediat un reminder la 28 de zile. Prima D212 conține numai Capitol I (estimare venit + alegerea regimului fiscal). Durează 15–20 de minute dacă ai datele pregătite.
+      </div>
+    </div>
+  </div>
+
+  <div class="mistake-card">
+    <div class="mistake-header">
+      <div class="mistake-num">3</div>
+      <h3>Uiți să bifezi scutirea de CAS (dacă ești angajat sau pensionar)</h3>
+    </div>
+    <div class="mistake-body">
+      <p>Angajații care au și PFA pot opta să nu plătească CAS și ca PFA — deoarece CAS este deja reținut din salariu. Pensionarii sunt scutiți automat. Dacă nu bifezi corect secțiunea CAS din D212, plătești contribuția în plus, inutil.</p>
+      <div class="mistake-fix">
+        <strong>Soluție:</strong> În secțiunea CAS din D212, există o bifă specifică: „Am realizat venituri sub plafonul minim și optez pentru neplata CAS" sau opțiunea de scutire pentru angajați/pensionari. Verifică și selectează corect. Suma recuperată poate fi considerabilă — CAS minim = 12.150 lei/an.
+      </div>
+    </div>
+  </div>
+
+  <div class="mistake-card">
+    <div class="mistake-header">
+      <div class="mistake-num">4</div>
+      <h3>Nu verifici norma de venit actualizată înainte de a completa</h3>
+    </div>
+    <div class="mistake-body">
+      <p>ANAF actualizează normele de venit anual, de obicei în martie–aprilie. Norma ta din 2025 poate fi diferită în 2026. Dacă completezi cu norma veche, calculul CAS, CASS și impozit va fi eronat.</p>
+      <div class="mistake-fix">
+        <strong>Soluție:</strong> Accesează anaf.ro → Asistență contribuabili → Norme de venit. Selectează județul și codul CAEN. Verifică că data publicării este din 2026. Apoi completează D212 cu norma actualizată.
+      </div>
+    </div>
+  </div>
+
+  <div class="mistake-card">
+    <div class="mistake-header">
+      <div class="mistake-num">5</div>
+      <h3>Nu ții cont de noul plafon CASS 2026</h3>
+    </div>
+    <div class="mistake-body">
+      <p>Plafonul maxim CASS a crescut de la 243.000 lei (2025) la <strong>291.600 lei (2026)</strong>. Dacă ai venituri mari și folosești un calculator sau o schemă din 2025, vei calcula greșit CASS. Diferența poate fi de câteva mii de lei.</p>
+      <div class="mistake-fix">
+        <strong>Soluție:</strong> Formularul D212 online de pe anaf.ro calculează automat, dar verifică că folosești versiunea V-1.8 sau mai nouă (afișată în footer). CASS maxim 2026 = 29.160 lei/an.
+      </div>
+    </div>
+  </div>
+
+  <div class="mistake-card">
+    <div class="mistake-header">
+      <div class="mistake-num">6</div>
+      <h3>Nu soliciti rambursarea când ai plătit prea mult</h3>
+    </div>
+    <div class="mistake-body">
+      <p>Dacă venitul real din 2025 a fost mai mic decât estimarea din Capitol I depusă anterior, e posibil să fi plătit anticipat mai mult CAS/CASS decât datorai. Banii există la ANAF — dar ANAF nu îi returnează automat. Trebuie să bifezi explicit opțiunea de rambursare.</p>
+      <div class="mistake-fix">
+        <strong>Soluție:</strong> În Capitol II, după calculul regularizării, dacă apare o sumă negativă (adică ai plătit în plus), bifează opțiunea „Solicit restituirea". ANAF procesează rambursarea în 45 de zile calendaristice. Dacă preferi, suma poate fi compensată cu alte obligații viitoare.
+      </div>
+    </div>
+  </div>
+
+  <div class="mistake-card">
+    <div class="mistake-header">
+      <div class="mistake-num">7</div>
+      <h3>Plătești taxele dar nu depui declarația (sau invers)</h3>
+    </div>
+    <div class="mistake-body">
+      <p>Depunerea D212 și plata taxelor sunt două acțiuni separate. Unii depun declarația și uită să plătească. Alții plătesc dar uită să depună. Ambele situații atrag penalități.</p>
+      <div class="mistake-fix">
+        <strong>Soluție:</strong> Tratează cele două ca un pachet: depune D212, notează suma totală de plată, apoi plătește imediat — în aceeași zi dacă e posibil. Termenul pentru ambele este 25 mai 2026. Poți plăti direct din SPV (card Visa/Mastercard) imediat după depunere.
+      </div>
+    </div>
+  </div>
+
+  <h2>Calendarul obligațiilor D212 în 2026</h2>
+
+  <div class="tbl-wrap">
+    <table>
+      <thead>
+        <tr><th>Termen</th><th>Obligație</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>30 zile de la înreg. PFA</td><td>Prima D212 — numai Capitol I (estimare + regim fiscal)</td></tr>
+        <tr class="highlight-row"><td>15 aprilie 2026 ☆</td><td>Termen special: depune D212 + plătește integral → bonificație 3% din impozit (OUG 8/2026)</td></tr>
+        <tr class="highlight-row"><td>25 mai 2026 ★</td><td>Termen standard: depune D212 + plătește CAS, CASS, impozit (venituri 2025)</td></tr>
+        <tr><td>Oricând în cursul anului</td><td>D212 rectificativă — dacă estimarea inițială s-a modificat semnificativ</td></tr>
+        <tr><td>25 mai 2027</td><td>D212 pentru veniturile din 2026</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>Lista de verificare înainte de depunere</h2>
+
+  <ul class="checklist">
+    <li>Am activat contul SPV la e-anaf.ro (obligatoriu pentru depunere)</li>
+    <li>Am verificat norma de venit actualizată 2026 pe anaf.ro (dacă sunt la normă)</li>
+    <li>Am pregătit registrul de încasări și plăți 2025 (dacă sunt în sistem real)</li>
+    <li>Am adunat toate facturile de cheltuieli deductibile din 2025</li>
+    <li>Am bifat corect statutul CAS (angajat? pensionar? scutit?)</li>
+    <li>Am folosit versiunea D212 actualizată (V-1.8+ din anaf.ro/declaratii/duf)</li>
+    <li>Am verificat sumarul obligațiilor înainte de a genera PDF-ul</li>
+    <li>Am salvat confirmarea de depunere din SPV (număr înregistrare ANF-2026-XXXXXXX)</li>
+    <li>Am plătit toate taxele până pe 25 mai 2026</li>
+  </ul>
+
+  <div class="callout">
+    <strong>Sfat practic:</strong> Pune deoparte 30–35% din fiecare încasare într-un cont separat, imediat ce primești banii. Când vine 25 mai, banii sunt acolo — nu trebuie să scoți dintr-o dată o sumă mare din contul curent.
+  </div>
+
+  <p>Ghidul complet D212 acoperă fiecare câmp din formular pas cu pas, cu exemple de calcul pentru sistem real, normă de venit și venituri din chirii — plus capturi din interfața ANAF pentru vizualizare.</p>
+
+  <div class="cta-box">
+    <h3>Ghid Declarația Unică D212 — 2026</h3>
+    <p>Completare pas cu pas, exemple calculate, capturi din formularul ANAF. Depune corect din prima.</p>
+    <a href="index.html#ghiduri" class="btn-gold">Vezi ghidul D212 →</a>
+  </div>
+
+</article>
+
+<footer>
+  <p>© 2026 Alina Savu · <a href="index.html">Claritate Fiscală</a> · <a href="mailto:claritate.fiscala@gmail.com">claritate.fiscala@gmail.com</a></p>
+  <p style="margin-top:0.4rem; font-size:0.75rem;">Informații cu caracter orientativ. Consultă un expert fiscal pentru situația ta specifică.</p>
+</footer>
+
+</body>
+</html>

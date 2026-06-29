@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Politică de Confidențialitate · Claritate Fiscală</title>
+  <meta name="description" content="Politica de confidențialitate Claritate Fiscală — cum sunt colectate și prelucrate datele tale personale în conformitate cu GDPR." />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --navy:   #1a2744;
+      --navy-2: #243258;
+      --gold:   #c9a84c;
+      --gold-lt:#e8d5a3;
+      --cream:  #faf8f4;
+      --white:  #ffffff;
+      --text:   #2c2c2c;
+      --muted:  #6b7280;
+      --border: #e5e1d8;
+      --radius: 12px;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; color: var(--text); background: var(--white); line-height: 1.75; }
+
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(255,255,255,0.95); backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--border); padding: 0 5%;
+      display: flex; align-items: center; justify-content: space-between; height: 64px;
+    }
+    .nav-logo { font-family: 'Playfair Display', serif; font-size: 1.1rem; color: var(--navy); text-decoration: none; font-weight: 700; }
+    .nav-logo span { color: var(--gold); }
+    .nav-back { font-size: 0.85rem; color: var(--muted); text-decoration: none; display: flex; align-items: center; gap: 0.4rem; transition: color .2s; }
+    .nav-back:hover { color: var(--navy); }
+
+    .page-hero {
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-2) 60%, #2e4070 100%);
+      color: var(--white); padding: 56px 5% 48px;
+    }
+    .page-hero-inner { max-width: 760px; margin: 0 auto; }
+    .page-cat {
+      display: inline-block; background: rgba(201,168,76,0.2); color: var(--gold-lt);
+      border: 1px solid rgba(201,168,76,0.35); font-size: 0.72rem; font-weight: 600;
+      text-transform: uppercase; letter-spacing: 0.08em; padding: 0.3rem 0.8rem;
+      border-radius: 20px; margin-bottom: 1.2rem;
+    }
+    .page-hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(1.5rem, 3.5vw, 2.1rem); line-height: 1.25; margin-bottom: 0.8rem; }
+    .page-hero .lead { font-size: 0.97rem; color: rgba(255,255,255,0.75); max-width: 600px; }
+    .page-meta { font-size: 0.78rem; color: rgba(255,255,255,0.45); margin-top: 1.2rem; }
+
+    .page-body { max-width: 760px; margin: 0 auto; padding: 3rem 5% 5rem; }
+
+    .page-body h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.25rem; color: var(--navy);
+      margin: 2.8rem 0 0.7rem;
+      padding-bottom: 0.4rem;
+      border-bottom: 2px solid var(--gold-lt);
+    }
+    .page-body h2:first-of-type { margin-top: 0; }
+    .page-body p { margin-bottom: 1rem; font-size: 0.96rem; }
+    .page-body ul { margin: 0.5rem 0 1rem 1.4rem; font-size: 0.96rem; }
+    .page-body li { margin-bottom: 0.4rem; }
+    .page-body strong { color: var(--navy); }
+    .page-body a { color: var(--gold); text-decoration: none; }
+    .page-body a:hover { text-decoration: underline; }
+
+    .info-box {
+      background: var(--cream);
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--gold);
+      border-radius: 0 var(--radius) var(--radius) 0;
+      padding: 1rem 1.2rem;
+      margin: 1.5rem 0;
+      font-size: 0.92rem;
+    }
+    .info-box strong { color: var(--navy); display: block; margin-bottom: 0.3rem; }
+
+    .data-table { width: 100%; border-collapse: collapse; font-size: 0.9rem; margin: 1.2rem 0; }
+    .data-table th { background: var(--navy); color: var(--white); padding: 0.6rem 1rem; text-align: left; font-weight: 600; }
+    .data-table td { padding: 0.6rem 1rem; border-bottom: 1px solid var(--border); vertical-align: top; }
+    .data-table tr:nth-child(even) td { background: var(--cream); }
+
+    footer { border-top: 1px solid var(--border); padding: 1.5rem 5%; text-align: center; font-size: 0.8rem; color: var(--muted); }
+    footer a { color: var(--gold); text-decoration: none; }
+
+    @media (max-width: 600px) {
+      .page-hero { padding: 44px 5% 36px; }
+      .page-body { padding: 2rem 5% 4rem; }
+      .data-table { font-size: 0.82rem; }
+      .data-table th, .data-table td { padding: 0.5rem 0.7rem; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">Claritate <span>Fiscală</span></a>
+  <a href="index.html" class="nav-back">← Înapoi la site</a>
+</nav>
+
+<header class="page-hero">
+  <div class="page-hero-inner">
+    <span class="page-cat">Legal · GDPR</span>
+    <h1>Politică de Confidențialitate</h1>
+    <p class="lead">Cum colectăm, folosim și protejăm datele tale personale, în conformitate cu Regulamentul European GDPR (UE) 2016/679.</p>
+    <div class="page-meta">Actualizat: iunie 2026 · Claritate Fiscală</div>
+  </div>
+</header>
+
+<div class="page-body">
+
+  <h2>1. Cine suntem (operatorul de date)</h2>
+
+  <p><strong>Alina Savu PFA</strong>, care operează sub denumirea comercială <strong>Claritate Fiscală</strong>, este operatorul datelor tale cu caracter personal în sensul GDPR.</p>
+
+  <p>Contact: <a href="mailto:claritate.fiscala@gmail.com">claritate.fiscala@gmail.com</a></p>
+
+  <h2>2. Ce date colectăm și de ce</h2>
+
+  <table class="data-table">
+    <thead>
+      <tr>
+        <th>Date colectate</th>
+        <th>Scopul prelucrării</th>
+        <th>Temeiul legal</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Nume, adresă de email</td>
+        <td>Livrarea produsului digital achiziționat</td>
+        <td>Executarea contractului (art. 6.1.b GDPR)</td>
+      </tr>
+      <tr>
+        <td>Date de plată (procesate de Stripe)</td>
+        <td>Procesarea tranzacției financiare</td>
+        <td>Executarea contractului (art. 6.1.b GDPR)</td>
+      </tr>
+      <tr>
+        <td>Adresă de email (newsletter)</td>
+        <td>Trimiterea de noutăți fiscale și informații despre produse</td>
+        <td>Consimțământul tău (art. 6.1.a GDPR)</td>
+      </tr>
+      <tr>
+        <td>Date de facturare (dacă sunt solicitate)</td>
+        <td>Obligații contabile și fiscale</td>
+        <td>Obligație legală (art. 6.1.c GDPR)</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>Nu colectăm date sensibile (sănătate, origine etnică, convingeri religioase etc.) și nu construim profiluri de utilizatori.</p>
+
+  <h2>3. Plățile — Stripe</h2>
+
+  <p>Plățile sunt procesate prin <strong>Stripe Payments Europe, Ltd.</strong>, cu sediul în Irlanda. Datele cardului tău bancar sunt transmise direct către Stripe și nu ajung pe serverele noastre. Stripe este certificat PCI DSS nivel 1.</p>
+
+  <p>Stripe acționează ca operator independent pentru datele de plată. Politica de confidențialitate Stripe: <a href="https://stripe.com/en-ro/privacy" target="_blank" rel="noopener">stripe.com/en-ro/privacy</a>.</p>
+
+  <h2>4. Newsletter</h2>
+
+  <p>Dacă te-ai înscris la newsletter, îți vom trimite periodic noutăți fiscale, informații despre produse noi și alte conținuturi relevante pentru PFA-uri. Înscrierea este voluntară.</p>
+
+  <p>Te poți dezabona oricând folosind linkul de dezabonare din orice email primit sau scriind la <a href="mailto:claritate.fiscala@gmail.com">claritate.fiscala@gmail.com</a>. Dezabonarea se procesează în maximum 48 de ore.</p>
+
+  <h2>5. Cui transmitem datele tale</h2>
+
+  <p>Nu vindem și nu cedăm datele tale unor terți în scopuri comerciale. Datele pot fi accesate de:</p>
+  <ul>
+    <li><strong>Stripe</strong> — pentru procesarea plăților</li>
+    <li><strong>Furnizorul de servicii email</strong> (ex. Gmail) — pentru livrarea produselor și comunicări</li>
+    <li><strong>Autorități publice</strong> — dacă suntem obligați prin lege (ex. ANAF, instanțe judecătorești)</li>
+  </ul>
+
+  <p>Toți partenerii cu care lucrăm sunt obligați contractual să protejeze datele tale și să le folosească exclusiv în scopul pentru care le-au primit.</p>
+
+  <h2>6. Cât timp păstrăm datele</h2>
+
+  <ul>
+    <li><strong>Date de comandă și facturare</strong> — 10 ani, conform obligațiilor legale contabile (Legea contabilității nr. 82/1991)</li>
+    <li><strong>Corespondență email</strong> — maxim 3 ani de la ultima interacțiune</li>
+    <li><strong>Date newsletter</strong> — până la dezabonare, după care sunt șterse în 30 de zile</li>
+  </ul>
+
+  <h2>7. Drepturile tale (GDPR)</h2>
+
+  <p>Conform Regulamentului GDPR, ai următoarele drepturi în legătură cu datele tale:</p>
+  <ul>
+    <li><strong>Dreptul de acces</strong> — poți solicita o copie a datelor pe care le deținem despre tine</li>
+    <li><strong>Dreptul la rectificare</strong> — poți cere corectarea datelor inexacte</li>
+    <li><strong>Dreptul la ștergere</strong> — poți cere ștergerea datelor, cu excepția celor pe care suntem obligați legal să le păstrăm</li>
+    <li><strong>Dreptul la restricționarea prelucrării</strong> — poți cere suspendarea temporară a prelucrării</li>
+    <li><strong>Dreptul la portabilitate</strong> — poți solicita datele într-un format structurat, lizibil de mașină</li>
+    <li><strong>Dreptul de a retrage consimțământul</strong> — oricând, pentru prelucrările bazate pe consimțământ (ex. newsletter)</li>
+    <li><strong>Dreptul de a depune plângere</strong> — la Autoritatea Națională de Supraveghere a Prelucrării Datelor cu Caracter Personal (ANSPDCP): <a href="https://www.dataprotection.ro" target="_blank" rel="noopener">dataprotection.ro</a></li>
+  </ul>
+
+  <p>Pentru orice solicitare legată de datele tale, scrie la <a href="mailto:claritate.fiscala@gmail.com">claritate.fiscala@gmail.com</a>. Răspundem în maximum 30 de zile.</p>
+
+  <h2>8. Cookie-uri</h2>
+
+  <p>Acest site nu folosește cookie-uri proprii de urmărire sau analiză. Serviciile terțe integrate (Stripe, Google Fonts) pot plasa cookie-uri tehnice necesare funcționării lor. Google Fonts este apelat pentru încărcarea fonturilor — dacă dorești să eviți complet transferul de date către Google, poți folosi un browser cu blocare DNS sau extensii de tip uBlock Origin.</p>
+
+  <h2>9. Securitatea datelor</h2>
+
+  <p>Luăm măsuri tehnice și organizatorice rezonabile pentru a proteja datele tale: comunicare prin HTTPS, acces restricționat la datele de comandă, parteneri de plată certificați. Cu toate acestea, nicio metodă de transmisie pe internet nu este 100% sigură.</p>
+
+  <h2>10. Modificări ale acestei politici</h2>
+
+  <p>Putem actualiza această politică periodic. Data ultimei modificări este indicată în antetul paginii. Modificările semnificative vor fi comunicate prin email dacă ești abonat la newsletter.</p>
+
+  <div class="info-box">
+    <strong>Întrebări sau solicitări GDPR?</strong>
+    Scrie-ne la <a href="mailto:claritate.fiscala@gmail.com">claritate.fiscala@gmail.com</a> — răspundem în maximum 30 de zile calendaristice.
+  </div>
+
+</div>
+
+<footer>
+  <span>© 2026 Alina Savu · Claritate Fiscală</span>
+  <span style="margin: 0 0.5rem">·</span>
+  <a href="termeni-si-conditii.html">Termeni și condiții</a>
+  <span style="margin: 0 0.5rem">·</span>
+  <a href="index.html">Înapoi la site</a>
+</footer>
+
+</body>
+</html>

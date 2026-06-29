@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Termeni și Condiții · Claritate Fiscală</title>
+  <meta name="description" content="Termenii și condițiile de vânzare pentru produsele digitale Claritate Fiscală — ghiduri PDF și calculator Excel pentru PFA-uri." />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --navy:   #1a2744;
+      --navy-2: #243258;
+      --gold:   #c9a84c;
+      --gold-lt:#e8d5a3;
+      --cream:  #faf8f4;
+      --white:  #ffffff;
+      --text:   #2c2c2c;
+      --muted:  #6b7280;
+      --border: #e5e1d8;
+      --radius: 12px;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; color: var(--text); background: var(--white); line-height: 1.75; }
+
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(255,255,255,0.95); backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--border); padding: 0 5%;
+      display: flex; align-items: center; justify-content: space-between; height: 64px;
+    }
+    .nav-logo { font-family: 'Playfair Display', serif; font-size: 1.1rem; color: var(--navy); text-decoration: none; font-weight: 700; }
+    .nav-logo span { color: var(--gold); }
+    .nav-back { font-size: 0.85rem; color: var(--muted); text-decoration: none; display: flex; align-items: center; gap: 0.4rem; transition: color .2s; }
+    .nav-back:hover { color: var(--navy); }
+
+    .page-hero {
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-2) 60%, #2e4070 100%);
+      color: var(--white); padding: 56px 5% 48px;
+    }
+    .page-hero-inner { max-width: 760px; margin: 0 auto; }
+    .page-cat {
+      display: inline-block; background: rgba(201,168,76,0.2); color: var(--gold-lt);
+      border: 1px solid rgba(201,168,76,0.35); font-size: 0.72rem; font-weight: 600;
+      text-transform: uppercase; letter-spacing: 0.08em; padding: 0.3rem 0.8rem;
+      border-radius: 20px; margin-bottom: 1.2rem;
+    }
+    .page-hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(1.5rem, 3.5vw, 2.1rem); line-height: 1.25; margin-bottom: 0.8rem; }
+    .page-hero .lead { font-size: 0.97rem; color: rgba(255,255,255,0.75); max-width: 600px; }
+    .page-meta { font-size: 0.78rem; color: rgba(255,255,255,0.45); margin-top: 1.2rem; }
+
+    .page-body { max-width: 760px; margin: 0 auto; padding: 3rem 5% 5rem; }
+
+    .page-body h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.25rem; color: var(--navy);
+      margin: 2.8rem 0 0.7rem;
+      padding-bottom: 0.4rem;
+      border-bottom: 2px solid var(--gold-lt);
+    }
+    .page-body h2:first-of-type { margin-top: 0; }
+    .page-body p { margin-bottom: 1rem; font-size: 0.96rem; }
+    .page-body ul { margin: 0.5rem 0 1rem 1.4rem; font-size: 0.96rem; }
+    .page-body li { margin-bottom: 0.4rem; }
+    .page-body strong { color: var(--navy); }
+    .page-body a { color: var(--gold); text-decoration: none; }
+    .page-body a:hover { text-decoration: underline; }
+
+    .info-box {
+      background: var(--cream);
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--gold);
+      border-radius: 0 var(--radius) var(--radius) 0;
+      padding: 1rem 1.2rem;
+      margin: 1.5rem 0;
+      font-size: 0.92rem;
+    }
+    .info-box strong { color: var(--navy); display: block; margin-bottom: 0.3rem; }
+
+    .seller-box {
+      background: var(--cream);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.2rem 1.4rem;
+      margin: 1.5rem 0;
+      font-size: 0.92rem;
+    }
+    .seller-box table { border-collapse: collapse; width: 100%; font-size: 0.9rem; }
+    .seller-box td { padding: 0.3rem 0.8rem 0.3rem 0; vertical-align: top; }
+    .seller-box td:first-child { font-weight: 600; color: var(--navy); white-space: nowrap; padding-right: 1.5rem; }
+
+    footer { border-top: 1px solid var(--border); padding: 1.5rem 5%; text-align: center; font-size: 0.8rem; color: var(--muted); }
+    footer a { color: var(--gold); text-decoration: none; }
+
+    @media (max-width: 600px) {
+      .page-hero { padding: 44px 5% 36px; }
+      .page-body { padding: 2rem 5% 4rem; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">Claritate <span>Fiscală</span></a>
+  <a href="index.html" class="nav-back">← Înapoi la site</a>
+</nav>
+
+<header class="page-hero">
+  <div class="page-hero-inner">
+    <span class="page-cat">Legal · Cumpărători</span>
+    <h1>Termeni și Condiții</h1>
+    <p class="lead">Condițiile de vânzare pentru produsele digitale disponibile pe acest site. Te rugăm să le citești înainte de a efectua o achiziție.</p>
+    <div class="page-meta">Actualizat: iunie 2026 · Claritate Fiscală</div>
+  </div>
+</header>
+
+<div class="page-body">
+
+  <h2>1. Vânzătorul</h2>
+
+  <div class="seller-box">
+    <table>
+      <tr><td>Denumire</td><td>Savu E. Alina Georgiana Persoană Fizică Autorizată</td></tr>
+      <tr><td>Marcă</td><td>Claritate Fiscală</td></tr>
+      <tr><td>CUI</td><td>54954877</td></tr>
+      <tr><td>Nr. Reg. Comerțului</td><td>F2026032043002</td></tr>
+      <tr><td>Sediu profesional</td><td>Mun. Târgoviște, Jud. Dâmbovița, Str. Unirii, Nr. 8C, Bl. C1, Ap. 3</td></tr>
+      <tr><td>Email</td><td><a href="mailto:claritate.fiscala@gmail.com">claritate.fiscala@gmail.com</a></td></tr>
+    </table>
+  </div>
+
+  <p>Prin finalizarea unei comenzi pe acest site, ești de acord cu prezentele Termeni și Condiții.</p>
+
+  <h2>2. Produsele oferite</h2>
+
+  <p>Produsele disponibile pe acest site sunt <strong>produse digitale</strong> (fișiere descărcabile): ghiduri în format PDF și calculatoare în format Excel (.xlsx). Conținutul este destinat persoanelor fizice autorizate (PFA) și antreprenorilor din România care doresc să înțeleagă mai bine obligațiile fiscale.</p>
+
+  <p>Produsele disponibile la momentul publicării acestor termeni:</p>
+  <ul>
+    <li>PFA fără panică — Ghid Complet 2026 (PDF, 22 pagini) — 99 lei</li>
+    <li>Declarația Unică D212 — Ghid complet 2026 (PDF, 21 pagini) — 99 lei</li>
+    <li>Calculator Taxe PFA 2026 (Excel, 3 file) — 69 lei</li>
+    <li>Pachet PFA Esențial (Ghid PFA + Calculator) — 149 lei</li>
+    <li>Pachet D212 Complet (Ghid D212 + Calculator) — 149 lei</li>
+    <li>Pachet Complet PFA (toate 3 produsele) — 199 lei</li>
+  </ul>
+
+  <h2>3. Prețuri</h2>
+
+  <p>Toate prețurile sunt exprimate în lei (RON) și includ TVA, dacă este cazul. Prețurile afișate la momentul achiziției sunt cele valabile. Ne rezervăm dreptul de a modifica prețurile fără notificare prealabilă, fără ca aceasta să afecteze comenzile deja plasate și plătite.</p>
+
+  <h2>4. Procesarea plăților</h2>
+
+  <p>Plățile sunt procesate prin <strong>Stripe</strong>, o platformă internațională de procesare a plăților securizate. Datele cardului tău nu sunt stocate pe serverele noastre — sunt prelucrate exclusiv de Stripe în conformitate cu standardul PCI DSS.</p>
+
+  <p>Plata se poate efectua cu card bancar (Visa, Mastercard, American Express) sau alte metode disponibile prin Stripe la momentul comenzii.</p>
+
+  <h2>5. Livrarea produselor</h2>
+
+  <p>Produsele digitale sunt livrate prin email, la adresa furnizată în momentul achiziției, în termen de <strong>maximum 24 de ore</strong> de la confirmarea plății (de regulă, livrarea se face în câteva ore în zilele lucrătoare).</p>
+
+  <p>Fișierul/fișierele achiziționate sunt trimise ca atașament la email. Dacă nu primești emailul în 24 de ore, verifică folderul Spam sau scrie-ne la <a href="mailto:claritate.fiscala@gmail.com">claritate.fiscala@gmail.com</a>.</p>
+
+  <div class="info-box">
+    <strong>Atenție:</strong> Asigură-te că furnizezi o adresă de email corectă la cumpărare. Nu răspundem pentru nelivrarea produselor cauzată de o adresă greșită introdusă de cumpărător.
+  </div>
+
+  <h2>6. Dreptul de retragere</h2>
+
+  <p>Conform <strong>art. 16 lit. m) din Directiva 2011/83/UE</strong>, transpusă în legislația română prin OUG nr. 34/2014, dreptul de retragere (retur) nu se aplică în cazul conținutului digital furnizat pe suport nematerial (fișiere descărcabile), atunci când executarea contractului a început și consumatorul și-a dat acordul în acest sens, renunțând explicit la dreptul de retragere.</p>
+
+  <p>Prin bifarea căsuței de confirmare la momentul plății și/sau prin descărcarea/accesarea produsului, ești de acord că nu mai poți exercita dreptul de retragere.</p>
+
+  <p><strong>Excepție:</strong> Dacă produsul primit este defect (fișier corupt, inutilizabil) sau diferit de descrierea de pe site, ne poți contacta la <a href="mailto:claritate.fiscala@gmail.com">claritate.fiscala@gmail.com</a> și îți vom trimite fișierul corect sau îți vom returna contravaloarea, la alegerea ta.</p>
+
+  <h2>7. Proprietate intelectuală</h2>
+
+  <p>Toate produsele (ghiduri, calculatoare, texte, grafice, design) sunt proprietatea exclusivă a Alina Savu / Claritate Fiscală și sunt protejate de legislația privind drepturile de autor.</p>
+
+  <p>Achiziționând un produs, primești o <strong>licență personală, neexclusivă, netransferabilă</strong> de utilizare. Nu ai dreptul să:</p>
+  <ul>
+    <li>redistribui, revânzi sau oferi gratuit produsul altor persoane;</li>
+    <li>reproduci conținutul integral sau parțial în publicații proprii sau pe internet fără acordul nostru scris;</li>
+    <li>elimini mențiunile de autor sau să prezinți conținutul ca aparținând altei persoane.</li>
+  </ul>
+
+  <h2>8. Limitarea răspunderii</h2>
+
+  <p>Produsele noastre au caracter <strong>informativ și educațional</strong>. Conținutul nu constituie consultanță fiscală, juridică sau contabilă personalizată și nu înlocuiește sfatul unui expert autorizat (expert contabil, consultant fiscal, avocat).</p>
+
+  <p>Legislația fiscală se modifică frecvent. Deși actualizăm produsele cu informațiile în vigoare la data publicării, nu garantăm că toate informațiile rămân actuale pe termen nelimitat. Verifică întotdeauna informațiile cu un specialist sau pe site-urile oficiale (ANAF, mfinante.gov.ro) înainte de a lua decizii cu impact fiscal.</p>
+
+  <p>Claritate Fiscală nu răspunde pentru prejudicii rezultate din aplicarea informațiilor din produsele noastre fără consultarea unui specialist, sau din modificări legislative intervenite după data publicării produsului.</p>
+
+  <h2>9. Protecția datelor cu caracter personal</h2>
+
+  <p>Datele tale (nume, email, date de plată) sunt folosite exclusiv pentru procesarea comenzii și livrarea produsului. Nu le vindem sau cedăm terților.</p>
+
+  <p>Plățile sunt procesate de Stripe — datele cardului nu ajung pe serverele noastre. Detalii complete în <a href="politica-de-confidentialitate.html">Politica de confidențialitate</a>.</p>
+
+  <h2>10. Litigii și legislație aplicabilă</h2>
+
+  <p>Prezentul contract este guvernat de legislația română. Orice neînțelegere se va soluționa în primă instanță pe cale amiabilă. Dacă nu se ajunge la o soluție, litigiul va fi soluționat de instanțele competente din România.</p>
+
+  <p>Poți accesa platforma europeană de soluționare online a litigiilor la <a href="https://ec.europa.eu/consumers/odr" target="_blank" rel="noopener">ec.europa.eu/consumers/odr</a>.</p>
+
+  <h2>11. Contact</h2>
+
+  <p>Pentru orice întrebare legată de comenzi, produse sau acești termeni, ne poți contacta la:</p>
+
+  <div class="info-box">
+    <strong>Claritate Fiscală · Alina Savu</strong>
+    Email: <a href="mailto:claritate.fiscala@gmail.com">claritate.fiscala@gmail.com</a><br />
+    Răspundem în maximum 1–2 zile lucrătoare.
+  </div>
+
+</div>
+
+<footer>
+  <span>© 2026 Alina Savu · Claritate Fiscală</span>
+  <span style="margin: 0 0.5rem">·</span>
+  <a href="index.html">Înapoi la site</a>
+  <span style="margin: 0 0.5rem">·</span>
+  <a href="mailto:claritate.fiscala@gmail.com">Contact</a>
+</footer>
+
+</body>
+</html>

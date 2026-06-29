@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TVA pentru PFA: când te înregistrezi și ce se schimbă · Claritate Fiscală</title>
+  <meta name="description" content="Pragul TVA 2026 pentru PFA este 395.000 lei. Când ești obligat să te înregistrezi, ce formulare depui și ce se schimbă în activitatea ta. Ghid complet." />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --navy:   #1a2744;
+      --navy-2: #243258;
+      --gold:   #c9a84c;
+      --gold-lt:#e8d5a3;
+      --cream:  #faf8f4;
+      --white:  #ffffff;
+      --text:   #2c2c2c;
+      --muted:  #6b7280;
+      --border: #e5e1d8;
+      --radius: 12px;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; color: var(--text); background: var(--white); line-height: 1.7; }
+
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(255,255,255,0.95); backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--border); padding: 0 5%;
+      display: flex; align-items: center; justify-content: space-between; height: 64px;
+    }
+    .nav-logo { font-family: 'Playfair Display', serif; font-size: 1.1rem; color: var(--navy); text-decoration: none; font-weight: 700; }
+    .nav-logo span { color: var(--gold); }
+    .nav-back { font-size: 0.85rem; color: var(--muted); text-decoration: none; display: flex; align-items: center; gap: 0.4rem; transition: color .2s; }
+    .nav-back:hover { color: var(--navy); }
+
+    .article-hero {
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-2) 60%, #2e4070 100%);
+      color: var(--white); padding: 64px 5% 56px;
+    }
+    .article-hero-inner { max-width: 760px; margin: 0 auto; }
+    .article-cat {
+      display: inline-block; background: rgba(201,168,76,0.2); color: var(--gold-lt);
+      border: 1px solid rgba(201,168,76,0.35); font-size: 0.72rem; font-weight: 600;
+      text-transform: uppercase; letter-spacing: 0.08em; padding: 0.3rem 0.8rem;
+      border-radius: 20px; margin-bottom: 1.2rem;
+    }
+    .article-hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(1.7rem, 4vw, 2.4rem); line-height: 1.25; margin-bottom: 1rem; }
+    .article-hero .lead { font-size: 1.05rem; color: rgba(255,255,255,0.82); margin-bottom: 1.5rem; max-width: 640px; }
+    .article-meta { font-size: 0.8rem; color: rgba(255,255,255,0.5); }
+
+    .article-body { max-width: 760px; margin: 0 auto; padding: 3rem 5% 5rem; }
+    .article-body h2 { font-family: 'Playfair Display', serif; font-size: 1.4rem; color: var(--navy); margin: 2.5rem 0 0.8rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--gold-lt); }
+    .article-body h3 { font-size: 1.05rem; font-weight: 600; color: var(--navy); margin: 1.8rem 0 0.5rem; }
+    .article-body p { margin-bottom: 1rem; font-size: 0.97rem; }
+    .article-body ul, .article-body ol { margin: 0.5rem 0 1rem 1.4rem; font-size: 0.97rem; }
+    .article-body li { margin-bottom: 0.4rem; }
+    .article-body strong { color: var(--navy); }
+
+    .callout { background: var(--cream); border-left: 4px solid var(--gold); border-radius: 0 var(--radius) var(--radius) 0; padding: 1rem 1.2rem; margin: 1.5rem 0; }
+    .callout.danger { border-color: #e05252; background: #fff5f5; }
+    .callout.info { border-color: #3b82f6; background: #eff6ff; }
+    .callout strong { color: var(--navy); }
+
+    .timeline { margin: 1.5rem 0 1rem; padding-left: 0; list-style: none; }
+    .timeline li { position: relative; padding: 0 0 1.2rem 2.2rem; border-left: 2px solid var(--gold-lt); font-size: 0.93rem; }
+    .timeline li:last-child { border-left: 2px solid transparent; padding-bottom: 0; }
+    .timeline li::before {
+      content: ''; position: absolute; left: -7px; top: 4px;
+      width: 12px; height: 12px; border-radius: 50%;
+      background: var(--gold); border: 2px solid var(--white);
+    }
+    .timeline li strong { display: block; color: var(--navy); font-size: 0.96rem; margin-bottom: 0.2rem; }
+
+    .step-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin: 1.5rem 0; }
+    .step-card { background: var(--cream); border: 1px solid var(--border); border-radius: var(--radius); padding: 1rem 1.1rem; text-align: center; }
+    .step-num { font-family: 'Playfair Display', serif; font-size: 1.8rem; color: var(--gold); font-weight: 700; margin-bottom: 0.3rem; }
+    .step-label { font-size: 0.82rem; font-weight: 600; color: var(--navy); margin-bottom: 0.4rem; }
+    .step-desc { font-size: 0.8rem; color: var(--muted); }
+
+    .tbl-wrap { overflow-x: auto; margin: 1.5rem 0; }
+    table { width: 100%; border-collapse: collapse; font-size: 0.88rem; }
+    th { background: var(--navy); color: var(--white); padding: 0.7rem 1rem; text-align: left; font-weight: 600; }
+    td { padding: 0.65rem 1rem; border-bottom: 1px solid var(--border); }
+    tr:nth-child(even) td { background: var(--cream); }
+
+    .highlight-box { background: linear-gradient(135deg, #fff8e7, #fef3cd); border: 1px solid #f6d860; border-radius: var(--radius); padding: 1.3rem 1.5rem; margin: 1.5rem 0; }
+    .highlight-box .big-num { font-family: 'Playfair Display', serif; font-size: 2.2rem; color: var(--navy); font-weight: 700; }
+    .highlight-box .big-label { font-size: 0.85rem; color: var(--muted); margin-top: -0.3rem; }
+
+    .cta-box { background: linear-gradient(135deg, var(--navy), var(--navy-2)); color: var(--white); border-radius: var(--radius); padding: 2rem 2.5rem; margin: 3rem 0 0; text-align: center; }
+    .cta-box h3 { font-family: 'Playfair Display', serif; font-size: 1.3rem; color: var(--white); margin-bottom: 0.6rem; }
+    .cta-box p { color: rgba(255,255,255,0.75); margin-bottom: 1.4rem; font-size: 0.93rem; }
+    .btn-gold { display: inline-block; background: var(--gold); color: var(--navy); font-weight: 700; font-size: 0.9rem; padding: 0.75rem 2rem; border-radius: 8px; text-decoration: none; transition: opacity .2s; }
+    .btn-gold:hover { opacity: 0.88; }
+
+    footer { border-top: 1px solid var(--border); padding: 1.5rem 5%; text-align: center; font-size: 0.8rem; color: var(--muted); }
+    footer a { color: var(--gold); text-decoration: none; }
+
+    @media (max-width: 600px) {
+      .article-hero { padding: 48px 5% 40px; }
+      .article-body { padding: 2rem 5% 4rem; }
+      .step-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">Claritate <span>Fiscală</span></a>
+  <a href="index.html" class="nav-back">← Înapoi la site</a>
+</nav>
+
+<header class="article-hero">
+  <div class="article-hero-inner">
+    <span class="article-cat">PFA · TVA</span>
+    <h1>TVA pentru PFA: când te înregistrezi și ce se schimbă în 2026</h1>
+    <p class="lead">Pragul TVA a crescut la 395.000 lei din 1 septembrie 2025. Când ești obligat să te înregistrezi, ce formulare depui, cum emiti facturile și ce poți deduce — totul explicat simplu.</p>
+    <div class="article-meta">Alina Savu · Claritate Fiscală · Actualizat 2026</div>
+  </div>
+</header>
+
+<article class="article-body">
+
+  <p>Mulți PFA-iști se tem de TVA. Asocierea este de înțeles: înseamnă birocrație în plus, declarații lunare sau trimestriale și relația mai complicată cu clienții. Dar înțelegând mecanismul, lucrurile devin mult mai clare.</p>
+
+  <h2>Pragul TVA în 2026</h2>
+
+  <div class="highlight-box">
+    <div class="big-num">395.000 lei</div>
+    <div class="big-label">Plafonul de scutire TVA în România · din 1 septembrie 2025</div>
+    <p style="font-size:0.9rem; margin-top:0.8rem; margin-bottom:0">Dacă cifra ta de afaceri anuală rămâne <strong>sub acest prag</strong>, ești neplătitor de TVA și nu ai obligații legate de TVA. Depășirea pragului — sau anticiparea depășirii — declanșează înregistrarea obligatorie.</p>
+  </div>
+
+  <p>Până la 1 septembrie 2025, pragul era 300.000 lei. Creșterea la 395.000 lei, prin OG 22/2025, a scos un număr semnificativ de PFA-uri din sfera TVA sau a amânat momentul înregistrării.</p>
+
+  <div class="callout info">
+    <strong>Cifra de afaceri = venituri brute totale</strong> din activitate, nu venitul net. Se iau în calcul toate facturile emise, indiferent de regimul de impozitare (normă de venit sau sistem real).
+  </div>
+
+  <h2>Când ești obligat să te înregistrezi</h2>
+
+  <p>Există două situații distincte:</p>
+
+  <h3>1. Depășire efectivă a pragului în cursul anului</h3>
+  <p>Dacă veniturile tale brute cumulat depășesc 395.000 lei în cursul anului calendaristic, ești obligat să depui <strong>Declarația D700 la data la care ai depășit pragul</strong> (sau cât mai rapid posibil, în aceeași zi sau imediat). Conform <strong>OG 22/2025</strong>, TVA se aplică de la data depășirii, iar ANAF retrodatează înregistrarea la acea dată — chiar dacă D700 a fost depus cu întârziere.</p>
+  <p>Aceasta este o schimbare față de regula anterioară. Nu mai există termenul de „10 ale lunii următoare" — obligația apare <strong>la tranzacția care depășește pragul</strong>.</p>
+
+  <h3>2. Depășire anticipată</h3>
+  <p>Dacă în cursul anului estimezi că vei depăși pragul (ex. ai contractat o lucrare mare), poți solicita înregistrarea anticipată tot prin D700. Este mai bine să te înregistrezi înainte decât să emiți facturi fără TVA pentru o perioadă în care erai obligat să îl aplici.</p>
+
+  <div class="callout danger">
+    <strong>Atenție: depășirea pragului fără înregistrare atrage sancțiuni.</strong> ANAF poate stabili TVA de plată retroactiv, plus majorări de întârziere și amenzi. Nu ignora momentul în care te apropii de 395.000 lei.
+  </div>
+
+  <h2>Înregistrarea voluntară</h2>
+
+  <p>Poți solicita înregistrarea ca plătitor TVA <strong>oricând</strong>, chiar dacă nu ai depășit pragul. Când e avantajos?</p>
+  <ul>
+    <li>Lucrezi cu <strong>clienți persoane juridice (firme)</strong> care sunt plătitori TVA și vor să deducă TVA-ul din facturile tale</li>
+    <li>Ai <strong>achiziții mari</strong> de la furnizori plătitori TVA (ex. echipamente IT, software) și vrei să recuperezi TVA-ul plătit</li>
+    <li>Intenționezi să depășești pragul în curând oricum</li>
+  </ul>
+  <p>Dezavantajul înregistrării voluntare: obligații declarative indiferent de venituri, inclusiv în lunile fără activitate.</p>
+
+  <h2>Pașii înregistrării: D700</h2>
+
+  <div class="step-grid">
+    <div class="step-card">
+      <div class="step-num">1</div>
+      <div class="step-label">Depui D700</div>
+      <div class="step-desc">Online pe SPV (Spațiul Privat Virtual) ANAF sau la ghișeu. Bifezi „Înregistrare în scopuri de TVA".</div>
+    </div>
+    <div class="step-card">
+      <div class="step-num">2</div>
+      <div class="step-label">ANAF procesează</div>
+      <div class="step-desc">Primești certificatul de înregistrare TVA cu CIF-ul (codul de înregistrare în scopuri de TVA) în câteva zile.</div>
+    </div>
+    <div class="step-card">
+      <div class="step-num">3</div>
+      <div class="step-label">Aplici TVA</div>
+      <div class="step-desc">Din momentul înregistrării, toate facturile emit TVA (de regulă 19%). Evidența TVA este obligatorie.</div>
+    </div>
+  </div>
+
+  <h2>Ce se schimbă după înregistrare</h2>
+
+  <h3>Facturile tale</h3>
+  <p>Din momentul înregistrării, pe fiecare factură trebuie să apară:</p>
+  <ul>
+    <li>CIF-ul tău de TVA (RO + CUI)</li>
+    <li>Baza de impozitare (prețul fără TVA)</li>
+    <li>Cota TVA aplicată (19% standard, 9% sau 5% pentru categorii speciale)</li>
+    <li>Suma TVA</li>
+    <li>Total cu TVA</li>
+  </ul>
+
+  <div class="callout">
+    <strong>Exemplu:</strong> Emiți o factură de 1.000 lei (valoare serviciu). Ca plătitor TVA, factura va fi: 1.000 lei + 190 lei TVA = 1.190 lei total. Cei 190 lei nu sunt ai tăi — îi colectezi pentru stat și îi vei plăti prin decontul TVA.
+  </div>
+
+  <h3>Declarațiile obligatorii</h3>
+
+  <div class="tbl-wrap">
+    <table>
+      <thead>
+        <tr><th>Declarație</th><th>Periodicitate</th><th>Termen</th><th>Ce conține</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>D300 — Decont TVA</strong></td>
+          <td>Lunar (CA > 100k €) sau trimestrial</td>
+          <td>25 ale lunii următoare perioadei</td>
+          <td>TVA colectat (vânzări) minus TVA deductibil (achiziții). Diferența se plătește sau se reportează.</td>
+        </tr>
+        <tr>
+          <td><strong>D390 — VIES</strong></td>
+          <td>Lunar (doar dacă ai tranzacții intracomunitare)</td>
+          <td>25 ale lunii următoare</td>
+          <td>Livrări/achiziții de bunuri și servicii din/în UE între plătitori TVA.</td>
+        </tr>
+        <tr>
+          <td><strong>e-Factura (e-TVA)</strong></td>
+          <td>La fiecare factură emisă</td>
+          <td>5 zile lucrătoare de la emitere</td>
+          <td>Transmiterea electronică a facturilor în sistemul național e-Factura (obligatorie pentru B2B din 2024).</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>Deducerea TVA la achiziții</h3>
+  <p>Un avantaj important al calității de plătitor TVA: poți deduce TVA-ul plătit furnizorilor pentru achizițiile folosite în activitate. Dacă ai cumpărat un laptop de 3.000 lei + 570 lei TVA, cei 570 lei se scad din TVA-ul pe care îl datorezi statului.</p>
+
+  <div class="callout info">
+    <strong>Condiție:</strong> Pentru a deduce TVA, furnizorul trebuie să fie și el plătitor TVA, iar achiziția trebuie să aibă legătură cu activitatea ta impozabilă. Păstrează toate facturile și documentele de plată.
+  </div>
+
+  <h2>TVA și e-Factura în 2026</h2>
+
+  <p>Din 2024, facturile B2B (între firme și PFA-uri) trebuie transmise obligatoriu în sistemul <strong>e-Factura</strong> al ANAF. Termenul de transmitere a fost de 5 zile calendaristice până la 31 decembrie 2025; din 1 ianuarie 2026, termenul a devenit <strong>5 zile lucrătoare</strong> de la emitere (OUG 89/2025). Transmiterea se face prin SPV (Spațiul Privat Virtual) sau printr-un soft de facturare integrat cu ANAF.</p>
+
+  <p>Dacă nu ești plătitor TVA, e-Factura nu este obligatorie pentru facturile pe care le emiți (poți totuși să transmiți voluntar). Dar dacă primești facturi de la plătitori TVA, aceștia sunt obligați să le transmită în sistem.</p>
+
+  <h2>Rezumat: ce să reții</h2>
+
+  <ul class="timeline">
+    <li>
+      <strong>Sub 395.000 lei venituri brute → neplătitor TVA</strong>
+      Nu ai obligații TVA. Facturile nu conțin TVA. Nicio declarație D300.
+    </li>
+    <li>
+      <strong>Depășești 395.000 lei → înregistrarea e obligatorie cel târziu la data depășirii</strong>
+      Nu mai există perioadă de grație (OG 22/2025). Devii plătitor TVA chiar din tranzacția care a depășit pragul, nu din luna următoare.
+    </li>
+    <li>
+      <strong>După înregistrare → D300 lunar sau trimestrial</strong>
+      TVA colectat minus TVA deductibil = suma de plată (sau de recuperat de la ANAF).
+    </li>
+    <li>
+      <strong>e-Factura → obligatorie pentru B2B din 2024</strong>
+      Transmitere în SPV ANAF în 5 zile lucrătoare de la emitere (5 zile calendaristice până la 31 dec. 2025).
+    </li>
+  </ul>
+
+  <div class="callout" style="font-size:0.85rem; margin-top:2.5rem;">
+    <strong>Informații valabile iunie 2026.</strong> Pragul TVA 395.000 lei conform OG 22/2025. Regulile privind e-Factura și termenele de depunere se pot modifica. Verifică pe <a href="https://anaf.ro" target="_blank" rel="noopener" style="color:var(--navy)">anaf.ro</a> și consultă un expert contabil înainte de a lua decizii fiscale.
+  </div>
+
+  <div class="cta-box">
+    <h3>Vrei să înțelegi complet obligațiile PFA tale?</h3>
+    <p>Ghidul „PFA fără panică — Ghid Complet 2026" acoperă impozitele, CAS, CASS, TVA și Declarația Unică — totul într-un singur loc, cu exemple și calcule reale.</p>
+    <a href="index.html#ghiduri" class="btn-gold">Vezi ghidurile →</a>
+  </div>
+
+</article>
+
+<footer>
+  <span>© 2026 Alina Savu · Claritate Fiscală</span>
+  <span style="margin: 0 0.5rem">·</span>
+  <a href="index.html">Înapoi la site</a>
+  <span style="margin: 0 0.5rem">·</span>
+  <a href="termeni-si-conditii.html">Termeni</a>
+  <span style="margin: 0 0.5rem">·</span>
+  <a href="politica-de-confidentialitate.html">Confidențialitate</a>
+</footer>
+
+</body>
+</html>

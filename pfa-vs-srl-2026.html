@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PFA vs SRL în 2026: calculul complet · Claritate Fiscală</title>
+  <meta name="description" content="Impozit dividende 16%, micro SRL 1%, CAS și CASS — cum se schimbă ecuația PFA vs SRL în 2026. Ghid de decizie cu calcule reale." />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --navy:   #1a2744;
+      --navy-2: #243258;
+      --gold:   #c9a84c;
+      --gold-lt:#e8d5a3;
+      --cream:  #faf8f4;
+      --white:  #ffffff;
+      --text:   #2c2c2c;
+      --muted:  #6b7280;
+      --border: #e5e1d8;
+      --radius: 12px;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; color: var(--text); background: var(--white); line-height: 1.7; }
+
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--border);
+      padding: 0 5%;
+      display: flex; align-items: center; justify-content: space-between;
+      height: 64px;
+    }
+    .nav-logo { font-family: 'Playfair Display', serif; font-size: 1.1rem; color: var(--navy); text-decoration: none; font-weight: 700; }
+    .nav-logo span { color: var(--gold); }
+    .nav-back { font-size: 0.85rem; color: var(--muted); text-decoration: none; display: flex; align-items: center; gap: 0.4rem; transition: color .2s; }
+    .nav-back:hover { color: var(--navy); }
+
+    .article-hero {
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-2) 60%, #2e4070 100%);
+      color: var(--white); padding: 64px 5% 56px;
+    }
+    .article-hero-inner { max-width: 760px; margin: 0 auto; }
+    .article-cat {
+      display: inline-block; background: rgba(201,168,76,0.2); color: var(--gold-lt);
+      border: 1px solid rgba(201,168,76,0.35); font-size: 0.72rem; font-weight: 600;
+      text-transform: uppercase; letter-spacing: 0.08em; padding: 0.3rem 0.8rem;
+      border-radius: 20px; margin-bottom: 1.2rem;
+    }
+    .article-hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(1.7rem, 4vw, 2.4rem); line-height: 1.25; margin-bottom: 1rem; }
+    .article-hero .lead { font-size: 1.05rem; color: rgba(255,255,255,0.82); margin-bottom: 1.5rem; max-width: 640px; }
+    .article-meta { font-size: 0.8rem; color: rgba(255,255,255,0.5); }
+
+    .article-body { max-width: 760px; margin: 0 auto; padding: 3rem 5% 5rem; }
+    .article-body h2 { font-family: 'Playfair Display', serif; font-size: 1.4rem; color: var(--navy); margin: 2.5rem 0 0.8rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--gold-lt); }
+    .article-body h3 { font-size: 1.05rem; font-weight: 600; color: var(--navy); margin: 1.8rem 0 0.5rem; }
+    .article-body p { margin-bottom: 1rem; font-size: 0.97rem; }
+    .article-body ul, .article-body ol { margin: 0.5rem 0 1rem 1.4rem; font-size: 0.97rem; }
+    .article-body li { margin-bottom: 0.4rem; }
+
+    .callout { background: var(--cream); border-left: 4px solid var(--gold); border-radius: 0 var(--radius) var(--radius) 0; padding: 1rem 1.2rem; margin: 1.5rem 0; }
+    .callout.pfa { border-color: #3b82f6; background: #eff6ff; }
+    .callout.srl { border-color: #10b981; background: #f0fdf4; }
+    .callout strong { color: var(--navy); }
+
+    .tbl-wrap { overflow-x: auto; margin: 1.5rem 0; }
+    table { width: 100%; border-collapse: collapse; font-size: 0.88rem; }
+    th { background: var(--navy); color: var(--white); padding: 0.7rem 1rem; text-align: left; font-weight: 600; }
+    td { padding: 0.65rem 1rem; border-bottom: 1px solid var(--border); }
+    tr:nth-child(even) td { background: var(--cream); }
+    .good { color: #16a34a; font-weight: 600; }
+    .bad { color: #dc2626; }
+
+    /* Decizii card-uri */
+    .decision-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1.5rem 0; }
+    .decision-card { border-radius: var(--radius); padding: 1.2rem 1.4rem; }
+    .decision-card.pfa { background: #eff6ff; border: 1px solid #bfdbfe; }
+    .decision-card.srl { background: #f0fdf4; border: 1px solid #bbf7d0; }
+    .decision-card h4 { font-size: 0.95rem; font-weight: 700; margin-bottom: 0.6rem; }
+    .decision-card.pfa h4 { color: #1d4ed8; }
+    .decision-card.srl h4 { color: #15803d; }
+    .decision-card ul { margin-left: 1rem; font-size: 0.88rem; }
+    .decision-card li { margin-bottom: 0.3rem; }
+
+    .calc-box { background: var(--cream); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.4rem 1.6rem; margin: 1.5rem 0; }
+    .calc-box h4 { color: var(--navy); font-size: 0.95rem; margin-bottom: 0.8rem; font-weight: 600; }
+    .calc-row { display: flex; justify-content: space-between; padding: 0.3rem 0; font-size: 0.9rem; border-bottom: 1px dashed var(--border); }
+    .calc-row:last-child { border-bottom: none; font-weight: 700; color: var(--navy); font-size: 0.95rem; padding-top: 0.5rem; }
+    .calc-row span:last-child { font-family: 'Playfair Display', serif; }
+
+    .cta-box { background: linear-gradient(135deg, var(--navy), var(--navy-2)); color: var(--white); border-radius: var(--radius); padding: 2rem 2.5rem; margin: 3rem 0 0; text-align: center; }
+    .cta-box h3 { font-family: 'Playfair Display', serif; font-size: 1.3rem; color: var(--white); margin-bottom: 0.6rem; }
+    .cta-box p { color: rgba(255,255,255,0.75); margin-bottom: 1.4rem; font-size: 0.93rem; }
+    .btn-gold { display: inline-block; background: var(--gold); color: var(--navy); font-weight: 700; font-size: 0.9rem; padding: 0.75rem 2rem; border-radius: 8px; text-decoration: none; transition: opacity .2s; }
+    .btn-gold:hover { opacity: 0.88; }
+
+    footer { border-top: 1px solid var(--border); padding: 1.5rem 5%; text-align: center; font-size: 0.8rem; color: var(--muted); }
+    footer a { color: var(--gold); text-decoration: none; }
+
+    @media (max-width: 600px) {
+      .article-hero { padding: 48px 5% 40px; }
+      .article-body { padding: 2rem 5% 4rem; }
+      .decision-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">Claritate <span>Fiscală</span></a>
+  <a href="index.html" class="nav-back">← Înapoi la site</a>
+</nav>
+
+<header class="article-hero">
+  <div class="article-hero-inner">
+    <span class="article-cat">Decizie · PFA vs SRL</span>
+    <h1>PFA vs SRL în 2026: calculul complet pe care trebuie să îl faci</h1>
+    <p class="lead">Impozit pe dividende 16%, micro SRL 1% — cum se schimbă ecuația față de 2025 și care formă juridică te avantajează cu adevărat.</p>
+    <div class="article-meta">Alina Savu · Claritate Fiscală · Actualizat 2026</div>
+  </div>
+</header>
+
+<article class="article-body">
+
+  <p>„PFA sau SRL?" este probabil cea mai frecventă întrebare pe care o primesc. Nu există un răspuns universal — depinde de venitul tău, de cheltuieli, de planurile de viitor și de cât de mult contează accesul rapid la bani față de protecția patrimoniului personal.</p>
+
+  <p>În 2026, ecuația s-a schimbat ușor față de 2025. Iată ce trebuie să știi.</p>
+
+  <div class="callout">
+    <strong>Notă:</strong> Calculele de mai jos sunt orientative. Situația ta specifică poate diferi în funcție de domeniu, cheltuieli deductibile, scutiri CAS și alte variabile. Consultă un expert contabil pentru o analiză personalizată.
+  </div>
+
+  <h2>Ce s-a schimbat în 2026</h2>
+
+  <p>Două modificări majore afectează direct comparația PFA vs SRL în 2026:</p>
+
+  <ul>
+    <li><strong>Impozit dividende: 16%</strong> (față de 10% în 2025). SRL-ul devine mai puțin atractiv dacă te bazezi pe dividende pentru a scoate banii din firmă.</li>
+    <li><strong>Micro SRL: cota unică 1%</strong>. A dispărut cota de 3% — acum există o singură cotă de 1%, indiferent de domeniu. Plafonul micro rămâne 100.000 euro (≈ 509.850 lei).</li>
+  </ul>
+
+  <h2>Comparativul complet PFA vs SRL Micro</h2>
+
+  <div class="tbl-wrap">
+    <table>
+      <thead>
+        <tr><th>Criteriu</th><th>PFA</th><th>SRL Micro</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Înregistrare</td><td class="good">1–3 zile, ~100–300 lei</td><td class="bad">5–7 zile, costuri mai mari</td></tr>
+        <tr><td>Capital social</td><td class="good">Nu este necesar</td><td>500 lei (5.000 lei dacă CA > 400k lei)</td></tr>
+        <tr><td>Răspundere</td><td class="bad">Nelimitată (patrimoniu personal)</td><td class="good">Limitată la capitalul social</td></tr>
+        <tr><td>Impozit pe venit/CA</td><td>10% din venit net</td><td class="good">1% din cifra de afaceri (micro)</td></tr>
+        <tr><td>Dividende</td><td class="good">Nu există — banii sunt direct ai tăi</td><td class="bad">16% impozit pe dividende</td></tr>
+        <tr><td>CAS + CASS</td><td>Plafonate, variabile</td><td class="bad">Salariu minim obligatoriu (~CAS + CASS pe acesta)</td></tr>
+        <tr><td>Acces la bani</td><td class="good">Imediat la încasare</td><td class="bad">Prin salariu + dividende</td></tr>
+        <tr><td>Contabilitate</td><td class="good">Simplificată (poți face singur)</td><td class="bad">Obligatoriu contabil autorizat (~300–800 lei/lună)</td></tr>
+        <tr><td>Angajați</td><td class="bad">Maxim 3</td><td class="good">Nelimitat</td></tr>
+        <tr><td>Costuri lunare</td><td class="good">Minime (~0–300 lei)</td><td class="bad">~300–800 lei/lună contabilitate</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>Calculul pe cifre: același venit, forme juridice diferite</h2>
+
+  <p>Să luăm un exemplu concret: <strong>venit brut de 120.000 lei/an</strong>, cheltuieli deductibile de 20.000 lei (la PFA sistem real). La SRL, presupunem că îți acorzi salariul minim (4.050 lei/lună) și restul îl distribui ca dividende.</p>
+
+  <h3>Scenariul A — PFA Sistem Real</h3>
+
+  <div class="calc-box">
+    <h4>PFA Sistem Real · Venit brut 120.000 lei</h4>
+    <div class="calc-row"><span>Venit brut</span><span>120.000 lei</span></div>
+    <div class="calc-row"><span>– Cheltuieli deductibile</span><span>– 20.000 lei</span></div>
+    <div class="calc-row"><span>= Venit net</span><span>100.000 lei</span></div>
+    <div class="calc-row"><span>– CAS (25% × 97.200 lei, plafon 24 sal.min.)</span><span>– 24.300 lei</span></div>
+    <div class="calc-row"><span>– CASS (10% × 100.000 lei)</span><span>– 10.000 lei</span></div>
+    <div class="calc-row"><span>Baza impozit</span><span>65.700 lei</span></div>
+    <div class="calc-row"><span>– Impozit pe venit (10%)</span><span>– 6.570 lei</span></div>
+    <div class="calc-row"><span>Total taxe</span><span>40.870 lei</span></div>
+    <div class="calc-row"><span>💰 Rămâne în buzunar (venit brut – cheltuieli – taxe)</span><span>~59.130 lei/an (~4.928 lei/lună)</span></div>
+  </div>
+
+  <h3>Scenariul B — SRL Micro (cu salariu minim + dividende)</h3>
+
+  <div class="calc-box">
+    <h4>SRL Micro · Cifră de afaceri 120.000 lei</h4>
+    <div class="calc-row"><span>Cifră de afaceri</span><span>120.000 lei</span></div>
+    <div class="calc-row"><span>– Impozit micro 1%</span><span>– 1.200 lei</span></div>
+    <div class="calc-row"><span>– Salariu minim brut (12 × 4.050 lei)</span><span>– 48.600 lei</span></div>
+    <div class="calc-row"><span>– Contribuții angajator (CAM, 2,25%)</span><span>– 1.094 lei</span></div>
+    <div class="calc-row"><span>– Contabilitate (~400 lei/lună)</span><span>– 4.800 lei</span></div>
+    <div class="calc-row"><span>= Profit brut disponibil pentru dividende</span><span>≈ 64.306 lei</span></div>
+    <div class="calc-row"><span>– Impozit dividende 16%</span><span>– 10.289 lei</span></div>
+    <div class="calc-row"><span>Net din dividende</span><span>≈ 54.017 lei</span></div>
+    <div class="calc-row"><span>+ Salariu net primit (≈ 2.363 lei/lună × 12)</span><span>≈ 28.356 lei</span></div>
+    <div class="calc-row"><span>💰 Rămâne în buzunar</span><span>~82.373 lei/an (~6.864 lei/lună)</span></div>
+  </div>
+
+  <p>La 120.000 lei cifră de afaceri, SRL oferă ~1.937 lei/lună în plus față de PFA în acest exemplu — o diferență notabilă, nu una mică, plus complexitatea administrativă semnificativ mai mare a SRL-ului. De reținut: exemplul scade cheltuielile deductibile de 20.000 lei doar din rezultatul PFA; dacă activitatea ar avea aceleași costuri operaționale și sub formă de SRL, profitul disponibil pentru dividende — și diferența finală — ar fi mai mic. Recalculează cu cheltuielile reale ale activității tale înainte de a trage o concluzie.</p>
+
+  <h2>La ce venituri SRL devine mai avantajos?</h2>
+
+  <p>Regula generală: <strong>PFA este mai eficient la venituri mici și medii</strong>. SRL micro devine avantajos când cifra de afaceri depășește aproximativ <strong>50.000–60.000 euro/an</strong> (≈ 250.000–300.000 lei), unde cota de 1% din CA bate cu mult impozitul de 10% din venit net al PFA.</p>
+
+  <p>Cu cât venitul este mai mare și cheltuielile mai mici, cu atât SRL devine mai atractiv din perspectivă fiscală — în ciuda costurilor administrative și a noului impozit de 16% pe dividende.</p>
+
+  <h2>Ghid rapid de decizie</h2>
+
+  <div class="decision-grid">
+    <div class="decision-card pfa">
+      <h4>✓ Alege PFA dacă...</h4>
+      <ul>
+        <li>Ești la început și vrei să testezi cu costuri minime</li>
+        <li>Câștigi sub 120.000–150.000 lei/an</li>
+        <li>Ai cheltuieli mari deductibile</li>
+        <li>Vrei acces imediat la bani</li>
+        <li>Lucrezi singur, fără angajați</li>
+        <li>Ești și angajat (poți scăpa de unele contribuții ca PFA)</li>
+      </ul>
+    </div>
+    <div class="decision-card srl">
+      <h4>✓ Alege SRL dacă...</h4>
+      <ul>
+        <li>Câștigi peste 50.000–60.000 euro/an</li>
+        <li>Vrei să îți protejezi patrimoniul personal</li>
+        <li>Ai nevoie de mai mult de 3 angajați</li>
+        <li>Lucrezi cu clienți corporativi mari care preferă SRL-uri</li>
+        <li>Planifici reinvestiții mari în firmă</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>Ce nu intră în calcul, dar contează</h2>
+
+  <p>Dincolo de cifre, există factori care influențează decizia și care nu apar în niciun tabel:</p>
+
+  <ul>
+    <li><strong>Credibilitate</strong>: unele companii mari lucrează exclusiv cu SRL-uri</li>
+    <li><strong>Separarea patrimoniului</strong>: la PFA, datoriile îți afectează bunurile personale</li>
+    <li><strong>Flexibilitate</strong>: PFA este mai ușor de suspendat sau radiat</li>
+    <li><strong>Timp administrativ</strong>: SRL necesită contabilitate lunară, AGA, depuneri suplimentare</li>
+  </ul>
+
+  <div class="callout">
+    <strong>Concluzie practică:</strong> Dacă abia începi sau câștigi sub 150.000 lei/an, PFA este aproape sigur mai simplu administrativ. Din punct de vedere strict fiscal, diferența față de SRL depinde mult de structura cheltuielilor tale — fă propriul calcul cu cifrele reale ale activității înainte de a decide. Dacă afacerea ta crește, revizuiește calculul anual — pragul de trecere la SRL nu e fix.
+  </div>
+
+  <p>Calculatorul de taxe PFA din pachetul meu îți permite să compari rapid scenariile de normă de venit vs sistem real, și să înțelegi exact cât rămâne la tine după toate taxele.</p>
+
+  <div class="cta-box">
+    <h3>Calculator Taxe PFA 2026</h3>
+    <p>Introduce venitul tău estimat și obții instant: CAS, CASS, impozit pe venit și suma netă rămasă. Actualizat cu plafoanele 2026.</p>
+    <a href="index.html#ghiduri" class="btn-gold">Vezi calculatorul →</a>
+  </div>
+
+</article>
+
+<footer>
+  <p>© 2026 Alina Savu · <a href="index.html">Claritate Fiscală</a> · <a href="mailto:claritate.fiscala@gmail.com">claritate.fiscala@gmail.com</a></p>
+  <p style="margin-top:0.4rem; font-size:0.75rem;">Informații cu caracter orientativ. Consultă un expert fiscal pentru situația ta specifică.</p>
+</footer>
+
+</body>
+</html>
