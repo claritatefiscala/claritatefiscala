@@ -420,6 +420,23 @@
     }
     .newsletter-form button:hover { filter: brightness(1.08); }
     .newsletter-note { font-size: 0.75rem; color: rgba(255,255,255,0.35); margin-top: 0.8rem; }
+    .sib-form-message-panel {
+      display: none;
+      max-width: 460px; margin: 0 auto 1rem;
+      padding: 0.7rem 1rem;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      text-align: left;
+    }
+    .newsletter-gdpr {
+      max-width: 460px; margin: 0.9rem auto 0;
+      font-size: 0.75rem;
+      color: rgba(255,255,255,0.5);
+      text-align: center;
+    }
+    .newsletter-gdpr a { color: var(--gold-lt); text-decoration: underline; }
+    .newsletter-captcha { display: flex; justify-content: center; margin: 1rem auto; }
+    .sib-hide-loader-icon { display: none; }
 
     /* ── FOOTER ── */
     footer {
@@ -505,9 +522,12 @@
     <div class="despre-text">
       <div class="section-label">Despre mine</div>
       <h2 class="section-title">De ce am creat aceste resurse</h2>
-      <p>Sunt Alina Savu — contabil cu peste 12 ani de experiență în domeniul contabil și fiscal. De-a lungul carierei am învățat că cea mai mare provocare nu este lipsa informației, ci faptul că aceasta este adesea greu de înțeles sau interpretată.</p>
-      <p>Am creat Claritate Fiscală din dorința de a transforma legislația și regulile fiscale în explicații clare, logice și ușor de aplicat în practică — ca antreprenorii, PFA-urile, administratorii de firme și colegii contabili să găsească rapid răspunsuri corecte, fără să piardă ore căutând informații din surse diferite.</p>
-      <p>Îmi propun ca fiecare explicație oferită prin Claritate Fiscală să fie cât mai clară, bine fundamentată și ușor de înțeles, astfel încât să găsești rapid informațiile de care ai nevoie. Claritate Fiscală e mai mult decât un site — e un proiect de suflet, construit din pasiunea mea pentru contabilitate și din dorința de a face informația fiscală accesibilă pentru oricine are nevoie de ea.</p>
+      <p>Bun venit la Claritate Fiscală!</p>
+      <p>Sunt contabil cu peste 12 ani de experiență în domeniul contabil și fiscal, iar de-a lungul carierei mele am învățat că una dintre cele mai mari provocări nu este lipsa informației, ci faptul că aceasta este adesea greu de înțeles sau interpretată.</p>
+      <p>Am creat Claritate Fiscală din dorința de a transforma legislația și regulile fiscale în explicații clare, logice și ușor de aplicat în practică. Îmi doresc ca antreprenorii, PFA-urile, administratorii de firme și chiar colegii contabili să găsească rapid răspunsuri corecte, fără să piardă ore întregi căutând informații din surse diferite.</p>
+      <p>Experiența acumulată în peste un deceniu de activitate m-a ajutat să înțeleg că fiecare întrebare merită un răspuns bine documentat și explicat pe înțelesul tuturor. Îmi propun ca fiecare explicație oferită prin Claritate Fiscală să fie cât mai clară, bine fundamentată și ușor de înțeles, astfel încât utilizatorii să poată găsi rapid informațiile de care au nevoie.</p>
+      <p>Claritate Fiscală este mai mult decât un site – este un proiect de suflet, construit din pasiunea mea pentru contabilitate și din dorința sinceră de a face informația fiscală mai ușor de înțeles și mai accesibilă pentru oricine are nevoie de ea.</p>
+      <p>Îți mulțumesc că ai ajuns aici și sper ca acest proiect să îți ofere claritatea și încrederea de care ai nevoie pentru a lua cele mai bune decizii.</p>
       <ul class="check-list">
         <li>Informații actualizate cu legislația 2026 în vigoare</li>
         <li>Exemple practice cu calcule reale, nu teorie abstractă</li>
@@ -741,11 +761,46 @@
   </div>
 
   <div class="newsletter-divider">
-    <p class="newsletter-coming">📬 Newsletter în curând — lasă adresa ta și te anunț la lansare:</p>
-    <form class="newsletter-form" onsubmit="return false;">
-      <input type="email" placeholder="adresa@ta.ro" />
-      <button type="submit">Înscrie-mă</button>
-    </form>
+    <p class="newsletter-coming">📬 Abonează-te la newsletter:</p>
+
+    <div id="error-message" class="sib-form-message-panel" style="background-color:#ffeded; color:#661d1d; border:1px solid #ff4949;">
+      Abonarea nu a putut fi salvată. Te rugăm să încerci din nou.
+    </div>
+    <div id="success-message" class="sib-form-message-panel" style="background-color:#e7faf0; color:#085229; border:1px solid #13ce66;">
+      Abonarea a fost realizată cu succes! Verifică-ți emailul pentru confirmare.
+    </div>
+
+    <div id="sib-form-container">
+      <form id="sib-form" method="POST" action="https://12d93b7a.sibforms.com/serve/MUIFAFa6DLgjsfNrftmUC28oyjlhMO9K2taMiR75uySBFQIhM2frlswzieSHhLTi-T3NzLkdWEErJlsVcG315p5WTRK6s5bzReIWnX4fjsI86F64hgmFLfuZxf68WgyJJODR0L7k0aTBSLgZkEmIrrmZLPOudCj3_70rR_gJePOgDfJcDo6jXmaD81cCI2YV19ABumpDe8tG-UhYDg==" data-type="subscription">
+        <div class="newsletter-form">
+          <input type="text" id="EMAIL" name="EMAIL" autocomplete="off" placeholder="adresa@ta.ro" data-required="true" required />
+          <button class="sib-form-block__button sib-form-block__button-with-loader" type="submit">
+            <svg class="icon sib-hide-loader-icon" viewBox="0 0 512 512" style="width:16px;height:16px;vertical-align:middle;margin-right:6px;">
+              <path d="M460.116 373.846l-20.823-12.022c-5.541-3.199-7.54-10.159-4.663-15.874 30.137-59.886 28.343-131.652-5.386-189.946-33.641-58.394-94.896-95.833-161.827-99.676C261.028 55.961 256 50.751 256 44.352V20.309c0-6.904 5.808-12.337 12.703-11.982 83.556 4.306 160.163 50.864 202.11 123.677 42.063 72.696 44.079 162.316 6.031 236.832-3.14 6.148-10.75 8.461-16.728 5.01z" />
+            </svg>
+            Abonează-te
+          </button>
+        </div>
+
+        <div class="newsletter-gdpr">
+          Sunt de acord să primesc emailuri de la Claritate Fiscală, conform <a href="politica-de-confidentialitate.html">Politicii de Confidențialitate</a>.
+        </div>
+
+        <div class="newsletter-captcha">
+          <script>
+            function handleCaptchaResponse() {
+              var event = new Event('captchaChange');
+              document.getElementById('sib-captcha').dispatchEvent(event);
+            }
+          </script>
+          <div class="g-recaptcha" id="sib-captcha" data-sitekey="6LdtUzwtAAAAAKxs7T3ugNzqf5u7Ne0bEJBiha7u" data-callback="handleCaptchaResponse" data-theme="dark"></div>
+        </div>
+
+        <input type="text" name="email_address_check" value="" style="display:none" tabindex="-1" autocomplete="off" />
+        <input type="hidden" name="locale" value="ro" />
+      </form>
+    </div>
+
     <p class="newsletter-note">Te vei abona la newsletter-ul Claritate Fiscală. Te poți dezabona oricând.</p>
   </div>
 </section>
@@ -760,6 +815,28 @@
     <a href="https://anpc.ro" target="_blank" rel="noopener">ANPC</a>
   </div>
 </footer>
+
+<script>
+  window.REQUIRED_CODE_ERROR_MESSAGE = 'Alege codul țării';
+  window.LOCALE = 'ro';
+  window.EMAIL_INVALID_MESSAGE = window.SMS_INVALID_MESSAGE = "Informațiile introduse nu sunt valide. Verifică formatul și încearcă din nou.";
+  window.REQUIRED_ERROR_MESSAGE = "Acest câmp nu poate fi lăsat necompletat.";
+  window.GENERIC_INVALID_MESSAGE = "Informațiile introduse nu sunt valide. Verifică formatul și încearcă din nou.";
+  window.INVALID_NUMBER = "Informațiile introduse nu sunt valide. Verifică formatul și încearcă din nou.";
+  window.INVALID_DATE = "Te rugăm să introduci o dată validă";
+  window.REQUIRED_MULTISELECT_MESSAGE = 'Selectează cel puțin o opțiune';
+  window.translation = {
+    common: {
+      selectedList: '{quantity} listă selectată',
+      selectedLists: '{quantity} liste selectate',
+      selectedOption: '{quantity} selectat(e)',
+      selectedOptions: '{quantity} selectat(e)',
+    }
+  };
+  var AUTOHIDE = Boolean(0);
+</script>
+<script defer src="https://sibforms.com/forms/end-form/build/main.js"></script>
+<script src="https://www.google.com/recaptcha/api.js?hl=ro"></script>
 
 </body>
 </html>
