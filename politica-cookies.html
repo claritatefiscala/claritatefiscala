@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Politică de Cookies · Claritate Fiscală</title>
+  <meta name="description" content="Politica de cookies Claritate Fiscală — ce cookie-uri tehnice sunt folosite pe acest site (hosting, formular newsletter, plăți) și cum le poți controla." />
+  <link rel="stylesheet" href="fonts/fonts.css" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --navy:   #1a2744;
+      --navy-2: #243258;
+      --gold:   #c9a84c;
+      --gold-lt:#e8d5a3;
+      --cream:  #faf8f4;
+      --white:  #ffffff;
+      --text:   #2c2c2c;
+      --muted:  #6b7280;
+      --border: #e5e1d8;
+      --radius: 12px;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; color: var(--text); background: var(--white); line-height: 1.75; }
+
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(255,255,255,0.95); backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--border); padding: 0 5%;
+      display: flex; align-items: center; justify-content: space-between; height: 64px;
+    }
+    .nav-logo { font-family: 'Playfair Display', serif; font-size: 1.1rem; color: var(--navy); text-decoration: none; font-weight: 700; }
+    .nav-logo span { color: var(--gold); }
+    .nav-back { font-size: 0.85rem; color: var(--muted); text-decoration: none; display: flex; align-items: center; gap: 0.4rem; transition: color .2s; }
+    .nav-back:hover { color: var(--navy); }
+
+    .page-hero {
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-2) 60%, #2e4070 100%);
+      color: var(--white); padding: 56px 5% 48px;
+    }
+    .page-hero-inner { max-width: 760px; margin: 0 auto; }
+    .page-cat {
+      display: inline-block; background: rgba(201,168,76,0.2); color: var(--gold-lt);
+      border: 1px solid rgba(201,168,76,0.35); font-size: 0.72rem; font-weight: 600;
+      text-transform: uppercase; letter-spacing: 0.08em; padding: 0.3rem 0.8rem;
+      border-radius: 20px; margin-bottom: 1.2rem;
+    }
+    .page-hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(1.5rem, 3.5vw, 2.1rem); line-height: 1.25; margin-bottom: 0.8rem; }
+    .page-hero .lead { font-size: 0.97rem; color: rgba(255,255,255,0.75); max-width: 600px; }
+    .page-meta { font-size: 0.78rem; color: rgba(255,255,255,0.45); margin-top: 1.2rem; }
+
+    .page-body { max-width: 760px; margin: 0 auto; padding: 3rem 5% 5rem; }
+
+    .page-body h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.25rem; color: var(--navy);
+      margin: 2.8rem 0 0.7rem;
+      padding-bottom: 0.4rem;
+      border-bottom: 2px solid var(--gold-lt);
+    }
+    .page-body h2:first-of-type { margin-top: 0; }
+    .page-body p { margin-bottom: 1rem; font-size: 0.96rem; }
+    .page-body ul { margin: 0.5rem 0 1rem 1.4rem; font-size: 0.96rem; }
+    .page-body li { margin-bottom: 0.4rem; }
+    .page-body strong { color: var(--navy); }
+    .page-body a { color: var(--gold); text-decoration: none; }
+    .page-body a:hover { text-decoration: underline; }
+
+    .info-box {
+      background: var(--cream);
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--gold);
+      border-radius: 0 var(--radius) var(--radius) 0;
+      padding: 1rem 1.2rem;
+      margin: 1.5rem 0;
+      font-size: 0.92rem;
+    }
+    .info-box strong { color: var(--navy); display: block; margin-bottom: 0.3rem; }
+
+    .tbl-wrap { overflow-x: auto; margin: 1.5rem 0; }
+    table { width: 100%; border-collapse: collapse; font-size: 0.88rem; }
+    th { background: var(--navy); color: var(--white); padding: 0.7rem 1rem; text-align: left; font-weight: 600; }
+    td { padding: 0.65rem 1rem; border-bottom: 1px solid var(--border); vertical-align: top; }
+    tr:nth-child(even) td { background: var(--cream); }
+
+    footer { border-top: 1px solid var(--border); padding: 1.5rem 5%; text-align: center; font-size: 0.8rem; color: var(--muted); }
+    footer a { color: var(--gold); text-decoration: none; }
+
+    @media (max-width: 600px) {
+      .page-hero { padding: 44px 5% 36px; }
+      .page-body { padding: 2rem 5% 4rem; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">Claritate <span>Fiscală</span></a>
+  <a href="index.html" class="nav-back">← Înapoi la site</a>
+</nav>
+
+<header class="page-hero">
+  <div class="page-hero-inner">
+    <span class="page-cat">Legal · Cookies</span>
+    <h1>Politică de Cookies</h1>
+    <p class="lead">Ce cookie-uri sunt folosite pe acest site, de ce, și cum le poți controla din browser.</p>
+    <div class="page-meta">Actualizat: iunie 2026 · Claritate Fiscală</div>
+  </div>
+</header>
+
+<div class="page-body">
+
+  <h2>1. Ce sunt cookie-urile</h2>
+
+  <p>Cookie-urile sunt fișiere text mici, salvate în browserul tău atunci când vizitezi un site. Sunt folosite pentru a face site-ul să funcționeze corect, pentru securitate, sau pentru a reține preferințe.</p>
+
+  <h2>2. Cookie-uri proprii</h2>
+
+  <p>Acest site <strong>nu plasează cookie-uri proprii de urmărire, analiză sau marketing</strong>. Nu construim profiluri de utilizatori și nu folosim, în prezent, instrumente de analiză a traficului (ex. Google Analytics).</p>
+
+  <h2>3. Cookie-uri tehnice plasate de furnizorii noștri</h2>
+
+  <p>Pentru a funcționa, site-ul folosește câțiva furnizori externi care pot plasa propriile cookie-uri tehnice, strict necesare serviciului pe care îl prestează:</p>
+
+  <div class="tbl-wrap">
+    <table>
+      <thead>
+        <tr><th>Furnizor</th><th>Scop</th><th>Unde apare</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Cloudflare</strong></td>
+          <td>Securitate și livrare a conținutului (protecție împotriva atacurilor automate, performanță DNS/CDN)</td>
+          <td>Pe tot site-ul, la nivel de infrastructură</td>
+        </tr>
+        <tr>
+          <td><strong>Brevo (Sendinblue)</strong></td>
+          <td>Funcționarea formularului de înscriere la newsletter</td>
+          <td>Secțiunea de newsletter</td>
+        </tr>
+        <tr>
+          <td><strong>Google reCAPTCHA</strong></td>
+          <td>Verificare anti-spam / anti-bot pentru formularul de newsletter</td>
+          <td>Secțiunea de newsletter</td>
+        </tr>
+        <tr>
+          <td><strong>Payhip / Stripe</strong></td>
+          <td>Procesarea plății și prevenirea fraudei, la momentul achiziției unui produs</td>
+          <td>Pagina de checkout (Payhip)</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p>Acești furnizori acționează ca operatori independenți pentru cookie-urile pe care le plasează. Poți citi politicile lor proprii: <a href="https://www.cloudflare.com/cookie-policy/" target="_blank" rel="noopener">Cloudflare</a>, <a href="https://www.brevo.com/legal/cookiespolicy/" target="_blank" rel="noopener">Brevo</a>, <a href="https://policies.google.com/technologies/cookies" target="_blank" rel="noopener">Google</a>, <a href="https://payhip.com/privacy-policy" target="_blank" rel="noopener">Payhip</a>, <a href="https://stripe.com/en-ro/cookies-policy" target="_blank" rel="noopener">Stripe</a>.</p>
+
+  <h2>4. Cookie-uri de analiză sau marketing</h2>
+
+  <p>Nu folosim în prezent cookie-uri de analiză (ex. Google Analytics) sau de marketing/retargeting. Dacă vom decide să le instalăm în viitor, vom face acest lucru <strong>numai împreună cu un banner de consimțământ</strong> funcțional, care îți va permite să accepți sau să refuzi aceste cookie-uri înainte de a fi activate, și vom actualiza această politică în consecință.</p>
+
+  <h2>5. Cum poți controla cookie-urile</h2>
+
+  <p>Poți permite, bloca sau șterge cookie-urile din setările browserului tău. Majoritatea browserelor îți permit să refuzi toate cookie-urile sau să fii notificat când un site dorește să plaseze unul. Reține că blocarea anumitor cookie-uri tehnice (ex. cele de la Payhip/Stripe) poate afecta finalizarea unei comenzi.</p>
+
+  <ul>
+    <li><a href="https://support.google.com/chrome/answer/95647" target="_blank" rel="noopener">Google Chrome</a></li>
+    <li><a href="https://support.mozilla.org/ro/kb/cookie-uri-informatii-pe-care-le-colecteaza-site-urile" target="_blank" rel="noopener">Mozilla Firefox</a></li>
+    <li><a href="https://support.apple.com/ro-ro/guide/safari/sfri11471/mac" target="_blank" rel="noopener">Safari</a></li>
+    <li><a href="https://support.microsoft.com/ro-ro/microsoft-edge" target="_blank" rel="noopener">Microsoft Edge</a></li>
+  </ul>
+
+  <h2>6. Actualizări ale acestei politici</h2>
+
+  <p>Putem actualiza această politică periodic, mai ales dacă adăugăm noi instrumente (ex. Analytics, însoțit obligatoriu de un banner de consimțământ). Data ultimei modificări este indicată în antetul paginii.</p>
+
+  <div class="info-box">
+    <strong>Întrebări despre cookie-uri?</strong>
+    Scrie-ne la <a href="mailto:claritate.fiscala@gmail.com">claritate.fiscala@gmail.com</a>.
+  </div>
+
+</div>
+
+<footer>
+  <span>© 2026 Alina Savu · Claritate Fiscală</span>
+  <span style="margin: 0 0.5rem">·</span>
+  <a href="politica-de-confidentialitate.html">Politică de confidențialitate</a>
+  <span style="margin: 0 0.5rem">·</span>
+  <a href="termeni-si-conditii.html">Termeni și condiții</a>
+  <span style="margin: 0 0.5rem">·</span>
+  <a href="index.html">Înapoi la site</a>
+</footer>
+
+</body>
+</html>
