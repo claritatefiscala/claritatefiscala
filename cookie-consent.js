@@ -12,28 +12,24 @@
  *   — publicitatea rămâne permanent blocată (nu folosim Google Ads)
  */
 (function () {
-  var GA4_MEASUREMENT_ID = 'G-62R32ECZ7G'; // ex: 'G-ABC123XYZ' — lasă gol pentru a păstra Analytics dezactivat
+  var GA4_MEASUREMENT_ID = 'G-62R32ECZ7G';
 
   if (!GA4_MEASUREMENT_ID) return;
 
   var CONSENT_KEY = 'cf_cookie_consent';
 
-  // ── Inițializare dataLayer + funcție gtag ──────────────────────────────────
   window.dataLayer = window.dataLayer || [];
   function gtag() { window.dataLayer.push(arguments); }
   window.gtag = gtag;
 
-  // ── Consent Mode v2: setează implicit TOATE semnalele pe DENIED ───────────
-  // Această instrucțiune TREBUIE să fie înainte de încărcarea scriptului gtag.js
   gtag('consent', 'default', {
     analytics_storage:  'denied',
     ad_storage:         'denied',
     ad_user_data:       'denied',
     ad_personalization: 'denied',
-    wait_for_update:    500        // ms — așteptăm decizia vizitatorului
+    wait_for_update:    500
   });
 
-  // ── Încarcă gtag.js (necesar pentru Consent Mode v2) ─────────────────────
   var s = document.createElement('script');
   s.async = true;
   s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA4_MEASUREMENT_ID;
@@ -42,7 +38,6 @@
   gtag('js', new Date());
   gtag('config', GA4_MEASUREMENT_ID, { anonymize_ip: true });
 
-  // ── Funcții ajutătoare ────────────────────────────────────────────────────
   function getConsent() {
     try { return localStorage.getItem(CONSENT_KEY); } catch (e) { return null; }
   }
@@ -51,14 +46,11 @@
   }
 
   function grantAnalytics() {
-    // Consent Mode v2: acordă permisiunea pentru analitica — publicitatea rămâne denied
     gtag('consent', 'update', {
       analytics_storage: 'granted'
-      // ad_storage, ad_user_data, ad_personalization rămân denied (fără Google Ads)
     });
   }
 
-  // ── Banner ────────────────────────────────────────────────────────────────
   function showBanner() {
     if (document.getElementById('cf-cookie-banner')) return;
     var el = document.createElement('div');
@@ -86,19 +78,16 @@
     document.getElementById('cf-cookie-refuse').onclick = function () {
       setConsent('refused');
       el.remove();
-      // semnalele rămân denied implicit — nicio acțiune suplimentară
     };
   }
 
-  // ── Inițializare ──────────────────────────────────────────────────────────
   function init() {
     var consent = getConsent();
     if (consent === 'accepted') {
-      grantAnalytics(); // vizitator care a acceptat anterior — restaurează starea
+      grantAnalytics();
     } else if (consent !== 'refused') {
-      showBanner();     // vizitator nou — arată bannerul
+      showBanner();
     }
-    // dacă 'refused' — rămâne denied, nu se face nimic
   }
 
   if (document.readyState === 'complete' || document.readyState === 'interactive') {
@@ -107,7 +96,6 @@
     document.addEventListener('DOMContentLoaded', init);
   }
 
-  // Permite revenirea asupra alegerii — leagă un link "Setări cookie-uri" la window.cfReopenCookieBanner()
   window.cfReopenCookieBanner = function () {
     try { localStorage.removeItem(CONSENT_KEY); } catch (e) {}
     showBanner();
