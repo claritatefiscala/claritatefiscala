@@ -6,6 +6,7 @@
   <title>Claritate Fiscală · Alina Savu</title>
   <link rel="icon" type="image/svg+xml" href="icon_brand.svg" />
   <link rel="stylesheet" href="fonts/fonts.css" />
+  <script src="cookie-consent.js"></script>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -459,7 +460,10 @@
       .stats-bar { flex-wrap: wrap; gap: 1rem; }
       .stat { border-right: none; border-bottom: 1px solid var(--border); padding: 0.8rem 1.5rem; }
       .stat:last-child { border-bottom: none; }
-      nav .nav-links { display: none; }
+      .nav-links { gap: 0; }
+      .nav-links li:not(:last-child) { display: none; }
+      footer { flex-direction: column; text-align: center; }
+      .footer-links { flex-wrap: wrap; justify-content: center; gap: 0.7rem 1.1rem; }
     }
   </style>
 </head>
