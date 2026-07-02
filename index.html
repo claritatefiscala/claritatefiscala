@@ -1,15 +1,6 @@
 <!DOCTYPE html>
 <html lang="ro">
 <head>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-62R32ECZ7G"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-62R32ECZ7G');
-</script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Claritate Fiscală · Alina Savu</title>
@@ -141,17 +132,15 @@
       flex-shrink: 0;
       width: 260px; height: 300px;
       border-radius: 16px;
-      background: rgba(255,255,255,0.08);
       border: 2px solid rgba(201,168,76,0.3);
-      display: flex; align-items: center; justify-content: center;
-      flex-direction: column;
-      gap: 0.8rem;
-      color: rgba(255,255,255,0.4);
-      font-size: 0.8rem;
-      text-align: center;
-      padding: 1rem;
+      overflow: hidden;
     }
-    .hero-photo svg { opacity: 0.3; }
+    .hero-photo img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+    }
 
     /* ── STATS BAR ── */
     .stats-bar {
@@ -501,10 +490,7 @@
     </div>
   </div>
   <div class="hero-photo">
-    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
-      <circle cx="12" cy="8" r="4"/><path d="M6 20v-2a6 6 0 0 1 12 0v2"/>
-    </svg>
-    Fotografia ta aici
+    <img src="foto-alina.jpg" alt="Alina Savu · Claritate Fiscală" />
   </div>
 </section>
 
