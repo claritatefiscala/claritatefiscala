@@ -19,20 +19,20 @@
   <circle cx="100" cy="700" r="200" fill="none" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
 <rect x="0" y="0" width="800" height="52" fill="rgba(201,168,76,0.18)"/>
 <rect x="0" y="49" width="800" height="2" fill="rgba(201,168,76,0.4)"/>
-<text x="400" y="33" text-anchor="middle" font-family="'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="700" letter-spacing="3" fill="#c9a84c">PACHET TRIO · PFA COMPLET</text>
+<text x="400" y="33" text-anchor="middle" font-family="'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="700" letter-spacing="3" fill="#c9a84c">PACHET TRIO · MICRO COMPLET</text>
 <rect x="60" y="94" width="80" height="3" fill="url(#gold)" rx="2"/>
 <text x="60" y="136" font-family="'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="600" letter-spacing="2.5" fill="#c9a84c">2 GHIDURI + CALCULATOR · ECONOMISEȘTI 68 LEI</text>
-<text x="60" y="230" font-size="56" font-weight="700" fill="#ffffff">Pachet Complet</text>
-<text x="60" y="295" font-size="56" font-weight="700" fill="url(#gold)">PFA</text>
-<text x="60" y="345" font-size="22" fill="rgba(255,255,255,0.55)" font-family="'Helvetica Neue', Arial, sans-serif" letter-spacing="1">Ghiduri, declarație și calcule — totul pentru PFA</text>
+<text x="60" y="230" font-size="56" font-weight="700" fill="#ffffff">Pachet Micro</text>
+<text x="60" y="295" font-size="56" font-weight="700" fill="url(#gold)">Complet</text>
+<text x="60" y="345" font-size="22" fill="rgba(255,255,255,0.55)" font-family="'Helvetica Neue', Arial, sans-serif" letter-spacing="1">Reguli, declarații și calcule — totul într-un loc</text>
 <rect x="60" y="374" width="680" height="1" fill="rgba(201,168,76,0.2)"/>
 <text x="60" y="404" font-family="'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="600" letter-spacing="2.5" fill="rgba(255,255,255,0.35)">CE INCLUDE:</text>
 <rect x="60" y="420" width="220" height="130" rx="12" fill="rgba(255,255,255,0.06)" stroke="rgba(201,168,76,0.4)" stroke-width="1.5"/>
 <text x="82" y="452" font-family="'Helvetica Neue', Arial, sans-serif" font-size="20" fill="#c9a84c">▤</text>
-<text x="112" y="450" font-family="'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="700" fill="#c9a84c">GHID PFA 2026</text>
+<text x="112" y="450" font-family="'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="700" fill="#c9a84c">GHID MICRO 2026</text>
 <text x="82" y="472" font-family="'Helvetica Neue', Arial, sans-serif" font-size="11" fill="rgba(255,255,255,0.55)">Ghid complet 2026 · 22 pagini</text>
-<text x="82" y="496" font-family="'Helvetica Neue', Arial, sans-serif" font-size="11" fill="rgba(255,255,255,0.4)">✓ Înregistrare · CAS, CASS, impozit</text>
-<text x="82" y="516" font-family="'Helvetica Neue', Arial, sans-serif" font-size="11" fill="rgba(255,255,255,0.4)">✓ Deductibile · PFA vs SRL</text>
+<text x="82" y="496" font-family="'Helvetica Neue', Arial, sans-serif" font-size="11" fill="rgba(255,255,255,0.4)">✓ Plafon 100.000 € · cota 1%</text>
+<text x="82" y="516" font-family="'Helvetica Neue', Arial, sans-serif" font-size="11" fill="rgba(255,255,255,0.4)">✓ Dividende 16% · înființare SRL</text>
 <text x="82" y="536" font-family="'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="700" fill="rgba(201,168,76,0.5)" text-decoration="line-through">99 lei</text>
 <rect x="300" y="420" width="220" height="130" rx="12" fill="rgba(255,255,255,0.06)" stroke="rgba(74,222,128,0.4)" stroke-width="1.5"/>
 <text x="322" y="452" font-family="'Helvetica Neue', Arial, sans-serif" font-size="20" fill="#4ade80">▥</text>
