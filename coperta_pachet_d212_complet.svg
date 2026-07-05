@@ -19,11 +19,11 @@
   <circle cx="100" cy="700" r="200" fill="none" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
 <rect x="0" y="0" width="800" height="52" fill="rgba(201,168,76,0.18)"/>
 <rect x="0" y="49" width="800" height="2" fill="rgba(201,168,76,0.4)"/>
-<text x="400" y="33" text-anchor="middle" font-family="'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="700" letter-spacing="3" fill="#c9a84c">PACHET DUO · D212 COMPLET</text>
+<text x="400" y="33" text-anchor="middle" font-family="'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="700" letter-spacing="3" fill="#c9a84c">PACHET DUO · D212 ESENȚIAL</text>
 <rect x="60" y="94" width="80" height="3" fill="url(#gold)" rx="2"/>
 <text x="60" y="136" font-family="'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="600" letter-spacing="2.5" fill="#c9a84c">GHID D212 + CALCULATOR · ECONOMISEȘTI 19 LEI</text>
 <text x="60" y="230" font-size="56" font-weight="700" fill="#ffffff">Pachet D212</text>
-<text x="60" y="295" font-size="56" font-weight="700" fill="url(#gold)">Complet</text>
+<text x="60" y="295" font-size="56" font-weight="700" fill="url(#gold)">Esențial</text>
 <text x="60" y="345" font-size="22" fill="rgba(255,255,255,0.55)" font-family="'Helvetica Neue', Arial, sans-serif" letter-spacing="1">Completează și verifică D212 înainte de depunere</text>
 <rect x="60" y="374" width="680" height="1" fill="rgba(201,168,76,0.2)"/>
 <text x="60" y="404" font-family="'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="600" letter-spacing="2.5" fill="rgba(255,255,255,0.35)">CE INCLUDE:</text>
