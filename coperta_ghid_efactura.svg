@@ -19,27 +19,29 @@
   <circle cx="100" cy="700" r="200" fill="none" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
 <rect x="60" y="70" width="120" height="3" fill="url(#accent)" rx="2"/>
 <text x="60" y="120" font-family="'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="600" letter-spacing="3" fill="#c9a84c">GHID PRACTIC</text>
-<text x="60" y="220" font-size="56" font-weight="700" fill="#ffffff" letter-spacing="-1">PFA</text>
+<rect x="60" y="138" width="246" height="34" rx="8" fill="rgba(201,168,76,0.15)" stroke="#c9a84c" stroke-width="1"/>
+<text x="78" y="160" font-family="'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="700" fill="#c9a84c">⚡ Termen: 5 ZILE LUCRĂTOARE</text>
+<text x="60" y="220" font-size="56" font-weight="700" fill="#ffffff" letter-spacing="-1">e-Factura</text>
 <text x="60" y="310" font-size="52" font-weight="400" fill="#e8d5a3" letter-spacing="1">în 2026</text>
 <rect x="60" y="340" width="680" height="1" fill="rgba(201,168,76,0.3)"/>
-<text x="60" y="380" font-family="'Helvetica Neue', Arial, sans-serif" font-size="16" fill="rgba(255,255,255,0.7)" letter-spacing="0.5">Ghid complet pentru antreprenori · Actualizat 2026</text>
+<text x="60" y="380" font-family="'Helvetica Neue', Arial, sans-serif" font-size="16" fill="rgba(255,255,255,0.7)" letter-spacing="0.5">Ghid complet: de la contul SPV la factura transmisă corect</text>
 <text x="60" y="440" font-family="'Helvetica Neue', Arial, sans-serif" font-size="15" fill="#c9a84c">✓</text>
-<text x="82" y="440" font-family="'Helvetica Neue', Arial, sans-serif" font-size="15" fill="rgba(255,255,255,0.85)">Înregistrare PFA pas cu pas</text>
+<text x="82" y="440" font-family="'Helvetica Neue', Arial, sans-serif" font-size="15" fill="rgba(255,255,255,0.85)">Cine e obligat în 2026 — SRL, PFA, B2B, B2C</text>
 <text x="60" y="470" font-family="'Helvetica Neue', Arial, sans-serif" font-size="15" fill="#c9a84c">✓</text>
-<text x="82" y="470" font-family="'Helvetica Neue', Arial, sans-serif" font-size="15" fill="rgba(255,255,255,0.85)">Normă de venit vs Sistem real</text>
+<text x="82" y="470" font-family="'Helvetica Neue', Arial, sans-serif" font-size="15" fill="rgba(255,255,255,0.85)">Contul SPV și prima factură, pas cu pas</text>
 <text x="60" y="500" font-family="'Helvetica Neue', Arial, sans-serif" font-size="15" fill="#c9a84c">✓</text>
-<text x="82" y="500" font-family="'Helvetica Neue', Arial, sans-serif" font-size="15" fill="rgba(255,255,255,0.85)">CAS, CASS și impozit — calcule clare</text>
+<text x="82" y="500" font-family="'Helvetica Neue', Arial, sans-serif" font-size="15" fill="rgba(255,255,255,0.85)">Regula celor 5 zile lucrătoare, pe exemple</text>
 <text x="60" y="530" font-family="'Helvetica Neue', Arial, sans-serif" font-size="15" fill="#c9a84c">✓</text>
-<text x="82" y="530" font-family="'Helvetica Neue', Arial, sans-serif" font-size="15" fill="rgba(255,255,255,0.85)">Cheltuieli deductibile · Declarații ANAF</text>
+<text x="82" y="530" font-family="'Helvetica Neue', Arial, sans-serif" font-size="15" fill="rgba(255,255,255,0.85)">Cazuri speciale: storno, avans, valută, retururi</text>
 <text x="60" y="560" font-family="'Helvetica Neue', Arial, sans-serif" font-size="15" fill="#c9a84c">✓</text>
-<text x="82" y="560" font-family="'Helvetica Neue', Arial, sans-serif" font-size="15" fill="rgba(255,255,255,0.85)">Radierea și suspendarea PFA</text>
+<text x="82" y="560" font-family="'Helvetica Neue', Arial, sans-serif" font-size="15" fill="rgba(255,255,255,0.85)">Mituri, erori de validare și cum le repari</text>
 <text x="60" y="590" font-family="'Helvetica Neue', Arial, sans-serif" font-size="15" fill="#c9a84c">✓</text>
-<text x="82" y="590" font-family="'Helvetica Neue', Arial, sans-serif" font-size="15" fill="rgba(255,255,255,0.85)">Comparativ PFA vs SRL · Noutăți 2026</text>
+<text x="82" y="590" font-family="'Helvetica Neue', Arial, sans-serif" font-size="15" fill="rgba(255,255,255,0.85)">BONUS: checklist săptămânal imprimabil</text>
 <rect x="60" y="650" width="680" height="1" fill="rgba(255,255,255,0.1)"/>
 <text x="60" y="700" font-family="'Helvetica Neue', Arial, sans-serif" font-size="18" font-weight="700" fill="#c9a84c" letter-spacing="0.5">Claritate Fiscală</text>
 <text x="60" y="725" font-family="'Helvetica Neue', Arial, sans-serif" font-size="13" fill="rgba(255,255,255,0.4)">Informații cu caracter orientativ. Consultă un expert fiscal pentru situația ta specifică.</text>
 <rect x="620" y="670" width="120" height="44" rx="8" fill="rgba(201,168,76,0.15)" stroke="#c9a84c" stroke-width="1"/>
-<text x="680" y="687" text-anchor="middle" font-family="'Helvetica Neue', Arial, sans-serif" font-size="11" fill="#c9a84c" font-weight="600">22 PAGINI</text>
-<text x="680" y="705" text-anchor="middle" font-family="'Helvetica Neue', Arial, sans-serif" font-size="11" fill="rgba(255,255,255,0.5)">PDF descărcabil</text>
+<text x="680" y="687" text-anchor="middle" font-family="'Helvetica Neue', Arial, sans-serif" font-size="11" fill="#c9a84c" font-weight="600">25 PAGINI</text>
+<text x="680" y="705" text-anchor="middle" font-family="'Helvetica Neue', Arial, sans-serif" font-size="11" fill="rgba(255,255,255,0.5)">PDF + bonus</text>
 <text x="60" y="745" font-family="'Helvetica Neue', Arial, sans-serif" font-size="10.5" fill="rgba(255,255,255,0.28)">Documentat din surse oficiale · redactat cu asistență AI · verificat editorial și asumat de autor</text>
 </svg>
