@@ -444,6 +444,7 @@
       font-size: 0.85rem;
       text-align: left;
     }
+    .sib-form-message-panel--active { display: block; }
     .newsletter-gdpr {
       max-width: 460px; margin: 0.9rem auto 0;
       font-size: 0.75rem;
@@ -930,14 +931,13 @@
   <div class="newsletter-divider">
     <p class="newsletter-coming">📬 Abonează-te la newsletter:</p>
 
-    <div id="error-message" class="sib-form-message-panel" style="background-color:#ffeded; color:#661d1d; border:1px solid #ff4949;">
-      Abonarea nu a putut fi salvată. Te rugăm să încerci din nou.
-    </div>
-    <div id="success-message" class="sib-form-message-panel" style="background-color:#e7faf0; color:#085229; border:1px solid #13ce66;">
-      Abonarea a fost realizată cu succes! Verifică-ți emailul pentru confirmare.
-    </div>
-
     <div id="sib-form-container">
+      <div id="error-message" class="sib-form-message-panel" style="background-color:#ffeded; color:#661d1d; border:1px solid #ff4949;">
+        Abonarea nu a putut fi salvată. Te rugăm să încerci din nou.
+      </div>
+      <div id="success-message" class="sib-form-message-panel" style="background-color:#e7faf0; color:#085229; border:1px solid #13ce66;">
+        Abonarea a fost realizată cu succes! Verifică-ți emailul pentru confirmare.
+      </div>
       <form id="sib-form" method="POST" action="https://12d93b7a.sibforms.com/serve/MUIFAFa6DLgjsfNrftmUC28oyjlhMO9K2taMiR75uySBFQIhM2frlswzieSHhLTi-T3NzLkdWEErJlsVcG315p5WTRK6s5bzReIWnX4fjsI86F64hgmFLfuZxf68WgyJJODR0L7k0aTBSLgZkEmIrrmZLPOudCj3_70rR_gJePOgDfJcDo6jXmaD81cCI2YV19ABumpDe8tG-UhYDg==" data-type="subscription">
         <div class="newsletter-form">
           <input type="text" id="EMAIL" name="EMAIL" autocomplete="off" placeholder="adresa@ta.ro" data-required="true" required />

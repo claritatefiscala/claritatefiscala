@@ -70,6 +70,7 @@
       gap: 0.5rem;
     }
     .sib-form-message-panel { display: none; }
+    .sib-form-message-panel--active { display: flex; }
     .unsub-message svg { width: 18px; height: 18px; flex-shrink: 0; margin-top: 0.1rem; }
     .unsub-message--error { color: #661d1d; background: #ffeded; border: 1px solid #ff4949; }
     .unsub-message--error svg { fill: #c0392b; }
@@ -138,6 +139,7 @@
 <div class="page-body">
   <div class="unsub-card">
 
+    <div id="sib-form-container">
     <form id="sib-form" method="POST" action="https://12d93b7a.sibforms.com/serve/MUIFAAhx5PxBLwxvr8lwtSC5SKV5Zxb5TAVw6cebCAAJuVRshHQ8ZKp9bKPaXYFMWDRArA68TVgN-0i3HORVo2TieoqaX_vj_TegW2RC-_4aEBs0QjDmuitYKGuiVTbR8DeL5eMRqPqf0C5CYkHbrnowXhQKulmagx68CXy-rDtsZ-ULCxmWjKvPohrTkoeGV5C9EUlIk5LIuKYpEA==" data-type="unsubscription">
 
       <div id="error-message" class="sib-form-message-panel unsub-message unsub-message--error">
@@ -154,11 +156,17 @@
       <input type="text" id="EMAIL" name="EMAIL" autocomplete="off" placeholder="adresa@ta.ro" data-required="true" required class="unsub-input" />
       <p class="unsub-hint">Introdu adresa de email pe care ai folosit-o la abonare.</p>
 
-      <button type="submit" class="unsub-button">Dezabonează-mă</button>
+      <button type="submit" class="unsub-button sib-form-block__button-with-loader">
+        <svg class="icon sib-hide-loader-icon" viewBox="0 0 512 512" style="width:16px;height:16px;vertical-align:middle;margin-right:6px;">
+          <path d="M460.116 373.846l-20.823-12.022c-5.541-3.199-7.54-10.159-4.663-15.874 30.137-59.886 28.343-131.652-5.386-189.946-33.641-58.394-94.896-95.833-161.827-99.676C261.028 55.961 256 50.751 256 44.352V20.309c0-6.904 5.808-12.337 12.703-11.982 83.556 4.306 160.163 50.864 202.11 123.677 42.063 72.696 44.079 162.316 6.031 236.832-3.14 6.148-10.75 8.461-16.728 5.01z" />
+        </svg>
+        Dezabonează-mă
+      </button>
 
       <input type="text" name="email_address_check" value="" class="input--hidden" />
       <input type="hidden" name="locale" value="ro" />
     </form>
+    </div>
 
   </div>
 
