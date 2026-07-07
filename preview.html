@@ -158,6 +158,14 @@
       object-position: center top;
       display: block;
     }
+    .hero-photo-card {
+      background: var(--navy);
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      gap: 0.6rem; text-align: center; padding: 1rem;
+    }
+    .hero-photo-initial { font-family: 'Playfair Display', serif; font-size: 4.5rem; color: var(--gold); font-weight: 700; line-height: 1; }
+    .hero-photo-name { color: rgba(255,255,255,0.85); font-size: 1rem; font-weight: 600; }
+    .hero-photo-brand { color: var(--gold-lt); font-size: 0.85rem; }
 
     /* -- STATS BAR -- */
     .stats-bar {
@@ -224,6 +232,8 @@
     }
     .despre-img-name { color: rgba(255,255,255,0.7); font-size: 0.9rem; font-weight: 500; }
     .despre-img-brand { color: var(--gold-lt); font-size: 0.75rem; }
+    .despre-img-photo { padding: 0; overflow: hidden; }
+    .despre-img-photo img { width: 100%; height: 100%; object-fit: cover; object-position: center top; display: block; }
     .despre-text { flex: 1; }
     .despre-text p { color: #444; margin-bottom: 1rem; }
     .check-list { list-style: none; margin-bottom: 2rem; }
@@ -495,7 +505,7 @@
     <li><a href="ghiduri.html">Ghiduri</a></li>
     <li><a href="noutati.html">Noutăți</a></li>
     <li><a href="contact.html">Contact</a></li>
-    <li><a href="ghiduri.html" class="nav-cta">Vezi ghidurile</a></li>
+    <li><a href="index.html#social" class="nav-cta">Urmărește-mă</a></li>
   </ul>
 </nav>
 
@@ -510,8 +520,10 @@
       <a href="despre.html" class="btn-outline">Despre mine</a>
     </div>
   </div>
-  <div class="hero-photo">
-    <img src="foto-alina.jpg" alt="Alina Savu · Claritate Fiscală" />
+  <div class="hero-photo hero-photo-card">
+    <div class="hero-photo-initial">A</div>
+    <div class="hero-photo-name">Alina Savu</div>
+    <div class="hero-photo-brand">Claritate Fiscală</div>
   </div>
 </section>
 
@@ -534,10 +546,8 @@
 <!-- DESPRE (teaser) -->
 <section class="despre" id="despre">
   <div class="despre-inner">
-    <div class="despre-img">
-      <div class="despre-img-initial">A</div>
-      <div class="despre-img-name">Alina Savu</div>
-      <div class="despre-img-brand">Claritate Fiscală</div>
+    <div class="despre-img despre-img-photo">
+      <img src="foto-alina.jpg" alt="Alina Savu · Claritate Fiscală" />
     </div>
     <div class="despre-text">
       <div class="section-label">Despre mine</div>
@@ -625,7 +635,7 @@
   </div>
 
   <div style="text-align:center; margin-top:2.5rem;">
-    <a href="ghiduri.html" class="btn-buy" style="padding:0.75rem 1.7rem; font-size:0.95rem;">Vezi toate cele 14 ghiduri și pachete →</a>
+    <a href="ghiduri.html" class="btn-buy" style="padding:0.75rem 1.7rem; font-size:0.95rem;">Vezi toate ghidurile și pachetele →</a>
   </div>
 </section>
 
