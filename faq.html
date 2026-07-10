@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Întrebări frecvente · Claritate Fiscală</title>
+  <meta name="description" content="Răspunsuri la cele mai frecvente întrebări despre produsele Claritate Fiscală: actualizări gratuite, comandă, plată, livrare, factură și retur." />
+  <!-- Open Graph -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:locale"      content="ro_RO" />
+  <meta property="og:site_name"   content="Claritate Fiscală" />
+  <meta property="og:url"         content="https://claritatefiscala.ro/faq.html" />
+  <meta property="og:title"       content="Întrebări frecvente · Claritate Fiscală" />
+  <meta property="og:description" content="Răspunsuri la cele mai frecvente întrebări despre produsele Claritate Fiscală: actualizări gratuite, comandă, plată, livrare, factură și retur." />
+  <meta property="og:image"       content="https://claritatefiscala.ro/og-image.jpg" />
+  <meta property="og:image:width"  content="1200" />
+  <meta property="og:image:height" content="630" />
+  <!-- Twitter Card -->
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:title"       content="Întrebări frecvente · Claritate Fiscală" />
+  <meta name="twitter:description" content="Răspunsuri la cele mai frecvente întrebări despre produsele Claritate Fiscală: actualizări gratuite, comandă, plată, livrare, factură și retur." />
+  <meta name="twitter:image"       content="https://claritatefiscala.ro/og-image.jpg" />
+  <link rel="icon" type="image/svg+xml" href="icon_brand.svg" />
+  <link rel="stylesheet" href="fonts/fonts.css" />
+  <script src="cookie-consent.js"></script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --navy:   #1a2744;
+      --navy-2: #243258;
+      --gold:   #c9a84c;
+      --gold-lt:#e8d5a3;
+      --cream:  #faf8f4;
+      --white:  #ffffff;
+      --text:   #2c2c2c;
+      --muted:  #6b7280;
+      --border: #e5e1d8;
+      --radius: 12px;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; color: var(--text); background: var(--white); line-height: 1.7; }
+
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(255,255,255,0.95); backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--border); padding: 0 5%;
+      display: flex; align-items: center; justify-content: space-between; height: 64px;
+    }
+    .nav-logo { font-family: 'Playfair Display', serif; font-size: 1.1rem; color: var(--navy); text-decoration: none; font-weight: 700; }
+    .nav-logo span { color: var(--gold); }
+    .nav-back { font-size: 0.85rem; color: var(--muted); text-decoration: none; display: flex; align-items: center; gap: 0.4rem; transition: color .2s; }
+    .nav-back:hover { color: var(--navy); }
+
+    .page-hero {
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-2) 60%, #2e4070 100%);
+      color: var(--white); padding: 56px 5% 48px;
+    }
+    .page-hero-inner { max-width: 780px; margin: 0 auto; }
+    .page-cat {
+      display: inline-block; background: rgba(201,168,76,0.2); color: var(--gold-lt);
+      border: 1px solid rgba(201,168,76,0.35); font-size: 0.72rem; font-weight: 600;
+      text-transform: uppercase; letter-spacing: 0.08em; padding: 0.3rem 0.8rem;
+      border-radius: 20px; margin-bottom: 1.2rem;
+    }
+    .page-hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(1.5rem, 3.5vw, 2.1rem); line-height: 1.25; margin-bottom: 0.8rem; }
+    .page-hero .lead { font-size: 0.97rem; color: rgba(255,255,255,0.75); max-width: 620px; }
+
+    .page-body { max-width: 780px; margin: 0 auto; padding: 3rem 5% 5rem; }
+
+    .faq-cat {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.15rem; color: var(--navy);
+      margin: 2.6rem 0 1rem;
+      padding-bottom: 0.4rem;
+      border-bottom: 2px solid var(--gold-lt);
+    }
+    .faq-cat:first-of-type { margin-top: 0; }
+
+    details.faq-item {
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      margin-bottom: 0.7rem;
+      background: var(--white);
+      overflow: hidden;
+    }
+    details.faq-item[open] { border-color: var(--gold-lt); }
+    details.faq-item summary {
+      list-style: none;
+      cursor: pointer;
+      padding: 1rem 1.2rem;
+      font-weight: 600;
+      color: var(--navy);
+      font-size: 0.97rem;
+      display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+    }
+    details.faq-item summary::-webkit-details-marker { display: none; }
+    details.faq-item summary::after {
+      content: '+';
+      font-family: 'Playfair Display', serif;
+      font-size: 1.3rem;
+      color: var(--gold);
+      flex-shrink: 0;
+      transition: transform .2s;
+    }
+    details.faq-item[open] summary::after { content: '−'; }
+    details.faq-item .faq-a {
+      padding: 0 1.2rem 1.1rem;
+      font-size: 0.93rem;
+      color: var(--text);
+    }
+    details.faq-item .faq-a p { margin-bottom: 0.7rem; }
+    details.faq-item .faq-a p:last-child { margin-bottom: 0; }
+    details.faq-item .faq-a a { color: var(--gold); text-decoration: none; }
+    details.faq-item .faq-a a:hover { text-decoration: underline; }
+    details.faq-item .faq-a strong { color: var(--navy); }
+
+    .info-box {
+      background: var(--cream);
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--gold);
+      border-radius: 0 var(--radius) var(--radius) 0;
+      padding: 1rem 1.2rem;
+      margin: 1.5rem 0 0;
+      font-size: 0.92rem;
+    }
+    .info-box strong { color: var(--navy); display: block; margin-bottom: 0.3rem; }
+    .info-box a { color: var(--gold); }
+
+    footer { border-top: 1px solid var(--border); padding: 1.5rem 5%; text-align: center; font-size: 0.8rem; color: var(--muted); }
+    footer a { color: var(--gold); text-decoration: none; }
+
+    @media (max-width: 600px) {
+      .page-hero { padding: 44px 5% 36px; }
+      .page-body { padding: 2rem 5% 4rem; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">Claritate <span>Fiscală</span></a>
+  <a href="index.html" class="nav-back">← Înapoi la site</a>
+</nav>
+
+<header class="page-hero">
+  <div class="page-hero-inner">
+    <span class="page-cat">Suport · Cumpărători</span>
+    <h1>Întrebări frecvente</h1>
+    <p class="lead">Răspunsuri scurte la cele mai comune întrebări despre produse, actualizări, comandă și livrare. Nu găsești răspunsul aici? Scrie-mi la <a href="mailto:claritate.fiscala@gmail.com" style="color:var(--gold-lt);">claritate.fiscala@gmail.com</a>.</p>
+  </div>
+</header>
+
+<div class="page-body">
+
+  <h2 class="faq-cat">Despre produse</h2>
+
+  <details class="faq-item">
+    <summary>Ce sunt ghidurile Claritate Fiscală?</summary>
+    <div class="faq-a">
+      <p>Sunt materiale digitale (PDF) și un calculator (Excel) care explică pe înțeles obligațiile fiscale ale PFA-urilor și microîntreprinderilor din România: impozit, CAS, CASS, declarații, termene și cheltuieli deductibile. Conținutul este documentat din surse oficiale — ANAF, Codul fiscal, Monitorul Oficial.</p>
+    </div>
+  </details>
+
+  <details class="faq-item">
+    <summary>Pentru cine sunt potrivite?</summary>
+    <div class="faq-a">
+      <p>Pentru PFA-uri, viitori PFA-uri și asociați de microîntreprinderi care vor să înțeleagă exact ce taxe plătesc, când le plătesc și cum să evite greșelile frecvente — fără termeni juridici greu de urmărit.</p>
+    </div>
+  </details>
+
+  <details class="faq-item">
+    <summary>În ce format primesc produsele?</summary>
+    <div class="faq-a">
+      <p>Ghidurile sunt în format <strong>PDF</strong>, iar Calculatorul Taxe PFA este în format <strong>Excel (.xlsx)</strong>. Toate sunt fișiere descărcabile, fără livrare fizică.</p>
+    </div>
+  </details>
+
+  <details class="faq-item">
+    <summary>Ghidurile țin cont de legislația din 2026?</summary>
+    <div class="faq-a">
+      <p>Da. Fiecare produs este o <strong>ediție anuală</strong> — ediția 2026 reflectă legislația fiscală aplicabilă în acest an. Dacă apar modificări relevante în cursul anului, ediția 2026 este actualizată gratuit (vezi secțiunea „Actualizări" mai jos).</p>
+    </div>
+  </details>
+
+  <details class="faq-item">
+    <summary>Pot folosi ghidurile în locul unui contabil sau consultant fiscal?</summary>
+    <div class="faq-a">
+      <p>Nu. Produsele au caracter <strong>informativ și educațional</strong> și nu constituie consultanță fiscală, juridică sau contabilă personalizată. Pentru situația ta specifică, apelează la un expert contabil sau consultant fiscal autorizat.</p>
+    </div>
+  </details>
+
+  <h2 class="faq-cat">Actualizări</h2>
+
+  <details class="faq-item">
+    <summary>Dacă legislația se modifică, trebuie să cumpăr din nou ghidul?</summary>
+    <div class="faq-a">
+      <p>Nu. Dacă ai cumpărat ediția 2026 și apar modificări legislative care afectează conținutul ghidului în perioada de valabilitate a acestei ediții, primești gratuit versiunea actualizată. Edițiile anuale noi (2027, 2028 etc.) sunt produse distincte.</p>
+    </div>
+  </details>
+
+  <details class="faq-item">
+    <summary>Ce înseamnă „modificări legislative care afectează conținutul ghidului"?</summary>
+    <div class="faq-a">
+      <p>Înseamnă o schimbare de plafon, procedură, termen sau regulă de calcul discutată explicit în ghidul respectiv. De exemplu, o modificare privind accizele nu afectează Ghidul PFA și nu declanșează o actualizare a acestuia; o modificare a plafonului de la sistem real la normă de venit, da.</p>
+    </div>
+  </details>
+
+  <details class="faq-item">
+    <summary>Cum aflu că a apărut o actualizare și cum o primesc?</summary>
+    <div class="faq-a">
+      <p>Nu trebuie să faci nimic. Când e nevoie de o actualizare, îți trimitem gratuit <strong>versiunea completă și actualizată</strong> a ghidului (nu pagini separate) la adresa de e-mail folosită la achiziție.</p>
+    </div>
+  </details>
+
+  <details class="faq-item">
+    <summary>Până când sunt valabile actualizările gratuite?</summary>
+    <div class="faq-a">
+      <p>Actualizările gratuite sunt incluse pentru ediția 2026, până la publicarea ediției 2027. Fiecare ghid are pe pagina 2 un tabel de versiuni în care poți urmări versiunea curentă și data ultimei actualizări.</p>
+    </div>
+  </details>
+
+  <details class="faq-item">
+    <summary>Ce se întâmplă când apare ediția 2027?</summary>
+    <div class="faq-a">
+      <p>Ediția 2027 este un <strong>produs nou</strong>, separat de ediția 2026. Actualizările gratuite ale ediției 2026 se opresc la publicarea ediției 2027 — nu la o dată fixă din calendar.</p>
+    </div>
+  </details>
+
+  <h2 class="faq-cat">Comandă, plată și livrare</h2>
+
+  <details class="faq-item">
+    <summary>Cum cumpăr un produs?</summary>
+    <div class="faq-a">
+      <p>Apeși pe „Cumpără acum" pe pagina produsului dorit. Comanda și plata se procesează prin <strong>Payhip</strong>, iar plata cu cardul prin <strong>Stripe</strong>. Datele cardului nu sunt stocate pe serverele noastre.</p>
+    </div>
+  </details>
+
+  <details class="faq-item">
+    <summary>Cum primesc produsul după plată?</summary>
+    <div class="faq-a">
+      <p>Prin <strong>descărcare instantă</strong>: imediat după confirmarea plății, Payhip afișează pagina de descărcare și trimite automat un email cu linkul de descărcare la adresa folosită la achiziție.</p>
+    </div>
+  </details>
+
+  <details class="faq-item">
+    <summary>Nu am primit emailul cu produsul — ce fac?</summary>
+    <div class="faq-a">
+      <p>Verifică mai întâi folderul Spam/Promoții. Dacă tot nu îl găsești, scrie la <a href="mailto:claritate.fiscala@gmail.com">claritate.fiscala@gmail.com</a> și îți retrimit linkul de descărcare.</p>
+    </div>
+  </details>
+
+  <details class="faq-item">
+    <summary>Am nevoie de factură fiscală — pot primi?</summary>
+    <div class="faq-a">
+      <p>Da. Bonul primit automat de la Payhip/Stripe confirmă plata, dar nu este factură fiscală. Dacă ai nevoie de factură (de exemplu pentru decontare la firmă), scrie la <a href="mailto:claritate.fiscala@gmail.com">claritate.fiscala@gmail.com</a> cu datele de facturare și ți-o trimit separat.</p>
+    </div>
+  </details>
+
+  <details class="faq-item">
+    <summary>Pot returna produsul dacă m-am răzgândit?</summary>
+    <div class="faq-a">
+      <p>Fiind conținut digital livrat prin descărcare, dreptul de retragere nu se aplică odată ce ai descărcat/accesat produsul, conform art. 16 lit. m) din Directiva 2011/83/UE. Excepție: dacă fișierul primit este corupt/inutilizabil sau diferit de descrierea de pe site, scrie-mi și îți trimit fișierul corect sau contravaloarea, la alegerea ta. Detalii complete în <a href="termeni-si-conditii.html">Termeni și Condiții</a>.</p>
+    </div>
+  </details>
+
+  <h2 class="faq-cat">Suport</h2>
+
+  <details class="faq-item">
+    <summary>Am o întrebare despre conținutul unui ghid — pe cine întreb?</summary>
+    <div class="faq-a">
+      <p>Scrie-mi direct la <a href="mailto:claritate.fiscala@gmail.com">claritate.fiscala@gmail.com</a> — răspund personal, de obicei în 1–2 zile lucrătoare.</p>
+    </div>
+  </details>
+
+  <div class="info-box">
+    <strong>Nu ai găsit răspunsul?</strong>
+    Scrie-mi la <a href="mailto:claritate.fiscala@gmail.com">claritate.fiscala@gmail.com</a> sau vezi <a href="politica-actualizare.html">Politica de actualizare a produselor</a> și <a href="termeni-si-conditii.html">Termenii și Condițiile</a>.
+  </div>
+
+</div>
+
+<footer>
+  <span>© 2026 Alina Savu · Claritate Fiscală</span>
+  <span style="margin: 0 0.5rem">·</span>
+  <a href="politica-de-confidentialitate.html">Politică de confidențialitate</a>
+  <span style="margin: 0 0.5rem">·</span>
+  <a href="termeni-si-conditii.html">Termeni și Condiții</a>
+  <span style="margin: 0 0.5rem">·</span>
+  <a href="politica-actualizare.html">Politica de actualizare</a>
+  <span style="margin: 0 0.5rem">·</span>
+  <a href="index.html">Înapoi la site</a>
+  <div style="margin-top:0.6rem; font-size:0.75rem;">Material educativ cu caracter general. Nu constituie consultanță fiscală personalizată.</div>
+  <div style="margin-top:0.6rem; font-size:0.75rem;">Conținut documentat de Alina Savu din sursele oficiale (ANAF, Codul fiscal, Monitorul Oficial), redactat cu asistență AI și verificat editorial înainte de publicare.</div>
+</footer>
+
+</body>
+</html>
