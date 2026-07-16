@@ -19,8 +19,8 @@
   <circle cx="100" cy="700" r="200" fill="none" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
 <rect x="60" y="70" width="120" height="3" fill="url(#accent)" rx="2"/>
 <text x="60" y="120" font-family="'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="600" letter-spacing="3" fill="#c9a84c">GHID PRACTIC</text>
-<rect x="60" y="138" width="198" height="34" rx="8" fill="rgba(201,168,76,0.15)" stroke="#c9a84c" stroke-width="1"/>
-<text x="78" y="160" font-family="'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="700" fill="#c9a84c">⚡ Termen: 25 MAI 2026</text>
+<rect x="60" y="138" width="208" height="34" rx="8" fill="rgba(201,168,76,0.15)" stroke="#c9a84c" stroke-width="1"/>
+<text x="78" y="160" font-family="'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="700" fill="#c9a84c">⚡ Termen anual: 25 mai</text>
 <text x="60" y="220" font-size="50" font-weight="700" fill="#ffffff" letter-spacing="-1">Declarația Unică</text>
 <text x="60" y="310" font-size="52" font-weight="400" fill="#e8d5a3" letter-spacing="1">D212 · 2026</text>
 <rect x="60" y="340" width="680" height="1" fill="rgba(201,168,76,0.3)"/>
