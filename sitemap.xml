@@ -111,6 +111,11 @@
 
   <!-- Articole -->
   <url>
+    <loc>https://claritatefiscala.ro/tva-servicii-digitale.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://claritatefiscala.ro/noutati-fiscale-2026-pfa.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
