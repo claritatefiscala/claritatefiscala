@@ -111,6 +111,11 @@
 
   <!-- Articole -->
   <url>
+    <loc>https://claritatefiscala.ro/pfa-nou-obligatii-primele-30-zile.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://claritatefiscala.ro/tva-servicii-digitale.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
