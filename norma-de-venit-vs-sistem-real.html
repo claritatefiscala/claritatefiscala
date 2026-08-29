@@ -193,24 +193,28 @@
 
   <h2>Calcul comparativ — exemplu practic pentru 2026</h2>
 
-  <p style="font-size:0.85rem; color:var(--text-2, #6b7280);">Exemplu orientativ, calculat pe baza legislației valabile în iulie 2026. Cifrele tale reale pot diferi.</p>
+  <p style="font-size:0.85rem; color:var(--text-2, #6b7280);">Exemplu orientativ, calculat pe baza legislației valabile în august 2026. Cifrele tale reale pot diferi.</p>
 
-  <p>Venit brut: <strong>80.000 lei/an</strong>. Normă ANAF: <strong>40.000 lei</strong>. Cheltuielile deductibile reale schimbă complet ecuația — iată două scenarii opuse, calculate cu plafoanele CAS/CASS valabile pentru veniturile din 2026 (raportate la salariul minim brut de 4.050 lei, valabil la 1 ianuarie 2026 — acest reper rămâne fix pentru tot anul, chiar dacă salariul minim crește ulterior).</p>
+  <p>Venit brut: <strong>80.000 lei/an</strong>. Normă ANAF: <strong>55.000 lei</strong>. Cheltuielile deductibile reale schimbă complet ecuația — iată două scenarii opuse, calculate cu plafoanele CAS/CASS valabile pentru veniturile din 2026 (raportate la salariul minim brut de 4.050 lei, valabil la 1 ianuarie 2026 — acest reper rămâne fix pentru tot anul, chiar dacă salariul minim crește ulterior).</p>
+
+  <div class="callout">
+    <strong>De ce 55.000 și nu 40.000:</strong> începând cu veniturile anului 2026, norma anuală de venit pentru fiecare activitate nu poate fi mai mică decât 12 salarii minime brute în vigoare la 1 ianuarie — adică <strong>48.600 lei</strong> (art. 69 alin. (3) din Codul fiscal, în forma dată de Legea nr. 239/2025). O normă de 40.000 lei nu mai există în 2026. Excepția: norma redusă proporțional, dacă activitatea se desfășoară doar o parte din an (art. 69 alin. (5)).
+  </div>
 
   <div class="callout">
     <strong>Cum funcționează calculul în sistem real:</strong> baza impozit = venit net − CAS − CASS. Ambele contribuții sunt deductibile din baza impozabilă. La normă de venit, impozitul se aplică direct pe valoarea normei, fără deduceri.
   </div>
 
-  <h3>Scenariul A — cheltuieli mici: norma câștigă clar</h3>
+  <h3>Scenariul A — cheltuieli mici: norma câștigă, dar la limită</h3>
 
   <div class="calc-grid">
     <div class="calc-box">
-      <h4>🔵 Normă de venit (40.000 lei)</h4>
-      <div class="calc-row"><span>Normă ANAF</span><span>40.000 lei</span></div>
-      <div class="calc-row"><span>CASS 10% × 40.000</span><span>4.000 lei</span></div>
-      <div class="calc-row"><span>CAS (40.000 &lt; 48.600)</span><span>0 lei</span></div>
-      <div class="calc-row"><span>Impozit 10% × 40.000</span><span>4.000 lei</span></div>
-      <div class="calc-row"><span>Total taxe</span><span>8.000 lei</span></div>
+      <h4>🔵 Normă de venit (55.000 lei)</h4>
+      <div class="calc-row"><span>Normă ANAF</span><span>55.000 lei</span></div>
+      <div class="calc-row"><span>CASS 10% × 55.000</span><span>5.500 lei</span></div>
+      <div class="calc-row"><span>CAS (bază 48.600 — norma e între 12 și 24 sal. min.)</span><span>12.150 lei</span></div>
+      <div class="calc-row"><span>Impozit 10% × 55.000</span><span>5.500 lei</span></div>
+      <div class="calc-row"><span>Total taxe</span><span>23.150 lei</span></div>
     </div>
     <div class="calc-box">
       <h4>🟢 Sistem real — cheltuieli: 10.000 lei</h4>
@@ -224,14 +228,14 @@
       <div class="calc-row"><span>Total taxe</span><span>24.235 lei</span></div>
     </div>
   </div>
-  <p>→ Norma economisește <strong>16.235 lei</strong> față de sistem real. Motivul: venitul net (70.000 lei) depășește pragul de 12 salarii minime (48.600 lei), ceea ce declanșează automat CAS-ul la baza fixă de 48.600 lei — adică 12.150 lei contribuție de pensie.</p>
+  <p>→ Norma economisește doar <strong>1.085 lei</strong> față de sistem real. Diferența e mult mai mică decât se aștepta multă lume, pentru că din 2026 CAS-ul se datorează în ambele variante: la sistem real pentru că venitul net (70.000 lei) depășește 48.600 lei, iar la normă pentru că însăși norma minimă este 48.600 lei. Avantajul normei se reduce la faptul că, la normă, CAS și CASS nu se scad din baza impozitului — dar impozitul se aplică pe o normă (55.000) mai mică decât venitul net real (70.000).</p>
 
-  <h3>Scenariul B — cheltuieli mari: sistem real câștigă</h3>
+  <h3>Scenariul B — cheltuieli mari: sistemul real câștigă detașat</h3>
 
   <div class="calc-grid">
     <div class="calc-box">
-      <h4>🔵 Normă de venit (40.000 lei)</h4>
-      <div class="calc-row"><span>Total taxe (același)</span><span>8.000 lei</span></div>
+      <h4>🔵 Normă de venit (55.000 lei)</h4>
+      <div class="calc-row"><span>Total taxe (același)</span><span>23.150 lei</span></div>
     </div>
     <div class="calc-box">
       <h4>🟢 Sistem real — cheltuieli: 50.000 lei</h4>
@@ -245,10 +249,10 @@
       <div class="calc-row"><span>Total taxe</span><span>5.700 lei</span></div>
     </div>
   </div>
-  <p>→ Sistem real economisește <strong>2.300 lei</strong> față de normă — când cheltuielile profesionale sunt suficient de mari încât să scadă venitul net sub pragul de 48.600 lei, evitând complet CAS-ul.</p>
+  <p>→ Sistemul real economisește <strong>17.450 lei</strong> față de normă. Cheltuielile profesionale mari scad venitul net sub pragul de 48.600 lei, iar CAS-ul devine opțional — în timp ce la normă el rămâne datorat, pentru că norma nu poate coborî sub acel prag.</p>
 
   <div class="callout">
-    <strong>Regula practică:</strong> Cel mai important prag este 48.600 lei venit net (12 salarii minime). Sub acest nivel CAS este opțional. Peste el, CAS devine datorat la baza prevăzută de lege — indiferent cât de puțin ai depășit pragul.
+    <strong>Ce s-a schimbat în 2026, pe scurt:</strong> norma nu mai este automat varianta ieftină. Pentru că norma minimă (48.600 lei) coincide cu pragul de la care se datorează CAS, la normă de venit <strong>CAS se plătește practic întotdeauna</strong>. Pragul de 48.600 lei venit net rămâne decisiv, dar acum el joacă în favoarea sistemului real: doar acolo poți ajunge sub prag și evita CAS-ul. Dacă ai comparat regimurile pe cifre de anul trecut, reia calculul.
   </div>
 
   <h2>Cum alegi regimul potrivit</h2>
@@ -260,8 +264,8 @@
       </thead>
       <tbody>
         <tr><td>Codul tău CAEN nu are normă de venit publicată</td><td><strong>Sistem real</strong> — singura opțiune</td></tr>
-        <tr><td>Norma ANAF este mult mai mică decât venitul tău real</td><td><strong>Normă de venit</strong> — plătești mai puțin</td></tr>
-        <tr><td>Ai cheltuieli profesionale mari (echipamente, software, contabil)</td><td><strong>Sistem real</strong> — cheltuielile reduc baza</td></tr>
+        <tr><td>Norma ANAF este mult mai mică decât venitul tău net real</td><td><strong>Normă de venit</strong> — plătești mai puțin, dar CAS se datorează oricum (norma minimă e 48.600 lei)</td></tr>
+        <tr><td>Ai cheltuieli profesionale mari (echipamente, software, contabil)</td><td><strong>Sistem real</strong> — cheltuielile reduc baza și, sub 48.600 lei venit net, scapi și de CAS</td></tr>
         <tr><td>Venitul tău real este aproape de normă</td><td>Calculează ambele variante înainte de decizie</td></tr>
         <tr><td>Venitul depășește 126.038 lei</td><td><strong>Sistem real</strong> — obligatoriu din anul următor</td></tr>
         <tr><td>Vrei simplitate administrativă maximă</td><td><strong>Normă de venit</strong> — nu ții evidența cheltuielilor</td></tr>
@@ -278,7 +282,7 @@
   </div>
 
   <div class="callout" style="font-size:0.85rem; margin-top:2.5rem;">
-    <strong>Informații valabile iulie 2026.</strong> Plafonul de 126.038 lei corespunde echivalentului în lei a 25.000 euro, la cursul mediu anual BNR pentru 2025 (5,0415 lei/euro) — plafonul se recalculează anual la un curs nou. Plafoanele CAS/CASS pentru veniturile din 2026 se calculează în funcție de salariul minim brut în vigoare la 1 ianuarie 2026 (4.050 lei) și rămân fixe pentru tot anul. Verifică actualizările pe <a href="https://anaf.ro" target="_blank" rel="noopener" style="color:var(--navy)">anaf.ro</a> și consultă un expert contabil înainte de a lua decizii fiscale.
+    <strong>Informații valabile august 2026.</strong> Plafonul de 126.038 lei corespunde echivalentului în lei a 25.000 euro, la cursul mediu anual BNR pentru 2025 (5,0415 lei/euro) — plafonul se recalculează anual la un curs nou. Plafoanele CAS/CASS pentru veniturile din 2026 se calculează în funcție de salariul minim brut în vigoare la 1 ianuarie 2026 (4.050 lei) și rămân fixe pentru tot anul, chiar dacă salariul minim a crescut la 4.325 lei de la 1 iulie 2026 (HG nr. 146/2026) — art. 135^1 alin. (3) din Codul fiscal. Norma anuală minimă de 48.600 lei rezultă din art. 69 alin. (3), în forma dată de Legea nr. 239/2025. Verifică actualizările pe <a href="https://anaf.ro" target="_blank" rel="noopener" style="color:var(--navy)">anaf.ro</a> și consultă un expert contabil înainte de a lua decizii fiscale.
   </div>
 
   <div class="cta-box">
