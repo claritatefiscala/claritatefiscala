@@ -4,7 +4,7 @@
   <!-- Homepage -->
   <url>
     <loc>https://claritatefiscala.ro/</loc>
-    <lastmod>2026-09-05</lastmod>
+    <lastmod>2026-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -18,7 +18,7 @@
   </url>
   <url>
     <loc>https://claritatefiscala.ro/noutati.html</loc>
-    <lastmod>2026-09-05</lastmod>
+    <lastmod>2026-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -132,61 +132,92 @@
   <!-- Articole -->
   <url>
     <loc>https://claritatefiscala.ro/pfa-nou-obligatii-primele-30-zile.html</loc>
-    <lastmod>2026-08-12</lastmod>
+    <lastmod>2026-10-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://claritatefiscala.ro/tva-servicii-digitale.html</loc>
-    <lastmod>2026-09-05</lastmod>
+    <lastmod>2026-10-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://claritatefiscala.ro/noutati-fiscale-2026-pfa.html</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-10-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://claritatefiscala.ro/pfa-vs-srl-2026.html</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-10-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://claritatefiscala.ro/greseli-d212.html</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-10-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://claritatefiscala.ro/cheltuieli-deductibile-pfa.html</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-10-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://claritatefiscala.ro/norma-de-venit-vs-sistem-real.html</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-10-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://claritatefiscala.ro/tva-pentru-pfa.html</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-10-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://claritatefiscala.ro/saft-d406-firme-mici-cine-depune.html</loc>
+    <lastmod>2026-10-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://claritatefiscala.ro/cass-pfa-2026-calcul-exemple.html</loc>
+    <lastmod>2026-10-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://claritatefiscala.ro/tva-21-2026-facturi-avansuri-storno-d300.html</loc>
+    <lastmod>2026-10-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://claritatefiscala.ro/notificare-conformare-ro-e-tva-ce-faci.html</loc>
+    <lastmod>2026-10-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://claritatefiscala.ro/depasire-plafon-micro-100000-euro-2026.html</loc>
+    <lastmod>2026-10-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://claritatefiscala.ro/d300-d301-d390-cine-depune-termen-25.html</loc>
-    <lastmod>2026-09-05</lastmod>
+    <lastmod>2026-10-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://claritatefiscala.ro/diurna-clauza-mobilitate-delegare.html</loc>
-    <lastmod>2026-09-05</lastmod>
+    <lastmod>2026-10-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
