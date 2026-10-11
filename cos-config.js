@@ -7,7 +7,7 @@ window.CF_CONFIG = {
   API: 'https://plata.claritatefiscala.ro',
 
   // Termenul de livrare afișat clientului (decizia ta: poate fi schimbat oricând).
-  TERMEN_LIVRARE: '24 de ore lucrătoare',
+  TERMEN_LIVRARE: '24 de ore',
 
   EMAIL_CONTACT: 'claritate.fiscala@gmail.com'
 };
