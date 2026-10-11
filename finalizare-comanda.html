@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Finalizare comandă · Claritate Fiscală</title>
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="stylesheet" href="fonts/fonts.css" />
+  <link rel="stylesheet" href="cos.css" />
+  <script src="cookie-consent.js"></script>
+  <script src="https://js.stripe.com/endive/stripe.js"></script>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-logo">Claritate <span>Fiscală</span></a>
+  <div class="nav-links">
+    <a href="ghiduri.html" class="nav-extra">Ghiduri</a>
+    <a href="cos.html" class="nav-cos" aria-label="Coșul tău">Coș <span class="badge" data-cos-count style="display:none">0</span></a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="hero-inner">
+    <h1>Finalizare comandă</h1>
+    <p>Completează datele și plătește securizat cu cardul.</p>
+    <div class="steps" aria-label="Pașii comenzii">
+      <span class="step"><b>1</b> Coș</span><span class="step-sep"></span>
+      <span class="step activ"><b>2</b> Date și plată</span><span class="step-sep"></span>
+      <span class="step"><b>3</b> Confirmare</span>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="wrap" id="zona-comanda">
+
+    <form id="comanda-form" novalidate autocomplete="on">
+
+      <section class="card" aria-labelledby="t-date">
+        <h2 id="t-date">Datele tale</h2>
+        <div class="rand-camp">
+          <div class="camp"><label for="prenume">Prenume *</label><input type="text" id="prenume" name="prenume" autocomplete="given-name" maxlength="60" required /><div class="eroare-camp" id="e-prenume"></div></div>
+          <div class="camp"><label for="nume">Nume *</label><input type="text" id="nume" name="nume" autocomplete="family-name" maxlength="60" required /><div class="eroare-camp" id="e-nume"></div></div>
+        </div>
+        <div class="rand-camp">
+          <div class="camp"><label for="telefon">Telefon *</label><input type="tel" id="telefon" name="telefon" autocomplete="tel" maxlength="30" required /><div class="eroare-camp" id="e-telefon"></div></div>
+          <div class="camp"><label for="email">Adresă email *</label><input type="email" id="email" name="email" autocomplete="email" maxlength="254" required /><div class="eroare-camp" id="e-email"></div></div>
+        </div>
+        <p class="nota">Pe adresa de email primești produsele. Verifică-o cu atenție.</p>
+        <div class="camp"><label for="email2">Confirmă adresa de email *</label><input type="email" id="email2" name="email2" autocomplete="off" maxlength="254" required /><div class="eroare-camp" id="e-email2"></div></div>
+      </section>
+
+      <section class="card" aria-labelledby="t-fact">
+        <h2 id="t-fact">Date de facturare</h2>
+        <fieldset style="border:0">
+          <legend class="legenda">Tip client</legend>
+          <div class="radio-grup">
+            <label><input type="radio" name="tip" value="pf" checked /> Persoană fizică</label>
+            <label><input type="radio" name="tip" value="pj" /> Persoană juridică</label>
+          </div>
+        </fieldset>
+
+        <div id="bloc-pj" class="ascuns">
+          <div class="rand-camp">
+            <div class="camp"><label for="cif">CIF *</label><input type="text" id="cif" name="cif" maxlength="20" autocomplete="off" placeholder="ex: RO12345678" /><div class="eroare-camp" id="e-cif"></div></div>
+            <div class="camp"><label for="denumire">Denumire companie *</label><input type="text" id="denumire" name="denumire" maxlength="120" autocomplete="organization" /><div class="eroare-camp" id="e-denumire"></div></div>
+          </div>
+        </div>
+
+        <p class="nota" id="nota-adresa">Pentru persoane fizice, adresa este opțională. O completezi doar dacă vrei să apară pe factură.</p>
+        <div class="camp"><label for="strada" id="l-strada">Stradă, număr</label><input type="text" id="strada" name="strada" maxlength="150" autocomplete="address-line1" /><div class="eroare-camp" id="e-strada"></div></div>
+        <div class="camp"><label for="strada2">Apartament, bloc, scară (opțional)</label><input type="text" id="strada2" name="strada2" maxlength="100" autocomplete="address-line2" /></div>
+        <div class="rand-camp trei">
+          <div class="camp"><label for="judet" id="l-judet">Județ</label><select id="judet" name="judet" autocomplete="address-level1"><option value="">Alege județul</option></select><div class="eroare-camp" id="e-judet"></div></div>
+          <div class="camp"><label for="localitate" id="l-localitate">Localitate</label><input type="text" id="localitate" name="localitate" maxlength="80" autocomplete="address-level2" /><div class="eroare-camp" id="e-localitate"></div></div>
+          <div class="camp"><label for="cod_postal" id="l-cp">Cod poștal</label><input type="text" id="cod_postal" name="cod_postal" maxlength="6" inputmode="numeric" autocomplete="postal-code" /><div class="eroare-camp" id="e-cod_postal"></div></div>
+        </div>
+      </section>
+
+      <section class="card" aria-labelledby="t-plata">
+        <h2 id="t-plata">Metodă de plată</h2>
+        <div id="payment-element" aria-live="polite"></div>
+        <div class="securizat">🔒 Plată securizată prin Stripe. Datele cardului nu trec prin site-ul nostru.</div>
+      </section>
+    </form>
+
+    <aside class="card sumar" aria-label="Sumar comandă">
+      <h2>Sumar comandă</h2>
+      <div id="sumar-linii"></div>
+      <div class="rand total"><span>Total de plată</span><span id="sumar-total">—</span></div>
+      <p class="nota-tva">Prețuri finale. Vânzătorul nu este plătitor de TVA.</p>
+
+      <div class="bifa" style="margin-top:1rem">
+        <input type="checkbox" id="acord_termeni" form="comanda-form" />
+        <label for="acord_termeni" style="text-transform:none;letter-spacing:0;font-weight:400;color:var(--text);font-size:.88rem;margin:0">Am citit și accept <a href="termeni-si-conditii.html" target="_blank" rel="noopener">Termenii și condițiile</a> și <a href="politica-de-confidentialitate.html" target="_blank" rel="noopener">Politica de prelucrare a datelor</a>, inclusiv condițiile privind livrarea conținutului digital și dreptul de retragere.</label>
+      </div>
+      <div class="eroare-camp" id="e-acord_termeni" style="color:var(--err);font-size:.8rem"></div>
+      <div class="bifa">
+        <input type="checkbox" id="acord_marketing" form="comanda-form" />
+        <label for="acord_marketing" style="text-transform:none;letter-spacing:0;font-weight:400;color:var(--text);font-size:.88rem;margin:0">Vreau să primesc pe e-mail materiale informative și oferte de la Claritate Fiscală. (opțional)</label>
+      </div>
+
+      <div id="mesaj-eroare" class="mesaj eroare ascuns" role="alert"></div>
+      <button type="submit" form="comanda-form" id="btn-plata" class="btn btn-aur" disabled>Se încarcă…</button>
+      <a class="btn btn-contur" href="cos.html">← Înapoi la coș</a>
+      <p class="nota-tva" id="nota-livrare" style="margin-top:.8rem"></p>
+    </aside>
+  </div>
+</main>
+
+<footer>
+  <span>© 2026 Alina Savu · Claritate Fiscală</span> ·
+  <a href="politica-de-confidentialitate.html">Politică de confidențialitate</a> ·
+  <a href="termeni-si-conditii.html">Termeni și Condiții</a> ·
+  <a href="faq.html">Întrebări frecvente</a>
+</footer>
+
+<script src="cos-config.js"></script>
+<script src="cos.js"></script>
+<script src="finalizare.js"></script>
+</body>
+</html>

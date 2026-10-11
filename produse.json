@@ -1,0 +1,127 @@
+{
+  "_nota": "Sursa unică de prețuri. Prețuri în lei (RON), fără TVA (vânzător neplătitor de TVA). Modifici prețul aici și se schimbă peste tot (coș, plată). Valorile din 'pret' se verifică și în Worker, nu doar în browser.",
+  "moneda": "RON",
+  "produse": [
+    {
+      "id": "produs-ghid-pfa",
+      "nume": "PFA — Ghid Complet 2026",
+      "tip": "produs",
+      "pret": 119,
+      "pagina": "produs-ghid-pfa.html",
+      "include": ["Ghid PFA Complet 2026 (PDF)", "Bonus: Checklist „Înființarea PFA – de la idee la prima factură”"]
+    },
+    {
+      "id": "produs-ghid-micro",
+      "nume": "Microîntreprinderea în 2026 — Ghid Complet",
+      "tip": "produs",
+      "pret": 119,
+      "pagina": "produs-ghid-micro.html",
+      "include": ["Ghid Microîntreprinderea în 2026 (PDF)", "Bonus: Calendar Fiscal Micro 2026"]
+    },
+    {
+      "id": "produs-d212",
+      "nume": "Declarația Unică D212 — Ghid Complet 2026",
+      "tip": "produs",
+      "pret": 99,
+      "pagina": "produs-d212.html",
+      "include": ["Ghid Declarația Unică D212 2026 (PDF)", "Bonus: Foaia de pregătire D212"]
+    },
+    {
+      "id": "produs-efactura",
+      "nume": "Ghid RO e-Factura 2026",
+      "tip": "produs",
+      "pret": 119,
+      "pagina": "produs-efactura.html",
+      "include": ["Ghid RO e-Factura 2026 (PDF)", "Bonus: Checklist săptămânal e-Factura"]
+    },
+    {
+      "id": "produs-calculator",
+      "nume": "Calculator Taxe PFA 2026",
+      "tip": "produs",
+      "pret": 79,
+      "pagina": "produs-calculator.html",
+      "include": ["Calculator Taxe PFA 2026 (Excel, 3 file: Normă de venit, Sistem real, PFA vs SRL)"]
+    },
+    {
+      "id": "pachet-pfa-esential",
+      "nume": "Pachet PFA Esențial",
+      "tip": "pachet",
+      "pret": 159,
+      "pagina": "pachet-pfa-esential.html",
+      "componente": ["produs-ghid-pfa", "produs-calculator"],
+      "include": ["Ghid PFA Complet", "Checklist „Înființarea PFA – de la idee la prima factură”", "Calculator Taxe PFA 2026"]
+    },
+    {
+      "id": "pachet-pfa-complet",
+      "nume": "Pachet PFA Complet",
+      "tip": "pachet",
+      "pret": 219,
+      "pagina": "pachet-pfa-complet.html",
+      "componente": ["produs-ghid-pfa", "produs-d212", "produs-calculator"],
+      "include": ["PFA în 2026 – Ghid Complet", "Checklist „Înființarea PFA – de la idee la prima factură”", "Ghid Declarația Unică D212 2026", "Foaia de pregătire D212", "Calculator Taxe PFA 2026 (Normă de venit, Sistem real, PFA vs SRL)"]
+    },
+    {
+      "id": "pachet-pfa-complet-plus",
+      "nume": "Pachet PFA Complet Plus",
+      "tip": "pachet",
+      "pret": 249,
+      "pagina": "pachet-pfa-complet-plus.html",
+      "componente": ["produs-ghid-pfa", "produs-d212", "produs-calculator", "produs-efactura"],
+      "include": ["PFA în 2026 — Ghid Complet (PDF)", "Bonus: Checklist „Înființarea PFA – de la idee la prima factură”", "Ghid Declarația Unică D212 2026 (PDF)", "Bonus: Foaia de pregătire D212", "Calculator Taxe PFA 2026 (Excel, 3 file)", "RO e-Factura 2026 — Ghid Complet", "Bonus: Checklist săptămânal e-Factura"]
+    },
+    {
+      "id": "pachet-micro-esential",
+      "nume": "Pachet Micro Esențial",
+      "tip": "pachet",
+      "pret": 159,
+      "pagina": "pachet-micro-esential.html",
+      "componente": ["produs-ghid-micro", "produs-calculator"],
+      "include": ["Ghid Microîntreprinderea în 2026", "Calendar Fiscal Micro 2026", "Calculator Taxe PFA 2026"]
+    },
+    {
+      "id": "pachet-micro-complet",
+      "nume": "Pachet Micro Complet",
+      "tip": "pachet",
+      "pret": 219,
+      "pagina": "pachet-micro-complet.html",
+      "componente": ["produs-ghid-micro", "produs-d212", "produs-calculator"],
+      "include": ["Ghid Micro", "Calendar Fiscal Micro 2026", "Ghid D212", "Foaia de pregătire D212", "Calculator Taxe PFA 2026"]
+    },
+    {
+      "id": "pachet-micro-complet-plus",
+      "nume": "Pachet Micro Complet Plus",
+      "tip": "pachet",
+      "pret": 249,
+      "pagina": "pachet-micro-complet-plus.html",
+      "componente": ["produs-ghid-micro", "produs-d212", "produs-calculator", "produs-efactura"],
+      "include": ["Microîntreprinderea în 2026 — Ghid Complet (PDF)", "Bonus: Calendar Fiscal Micro 2026", "Ghid Declarația Unică D212 2026 (PDF)", "Bonus: Foaia de pregătire D212", "Calculator Taxe PFA 2026 (Excel, 3 file)", "RO e-Factura 2026 — Ghid Complet", "Bonus: Checklist săptămânal e-Factura"]
+    },
+    {
+      "id": "pachet-d212-esential",
+      "nume": "Pachet D212 Esențial",
+      "tip": "pachet",
+      "pret": 149,
+      "pagina": "pachet-d212-esential.html",
+      "componente": ["produs-d212", "produs-calculator"],
+      "include": ["Ghid D212 2026", "Foaia de pregătire D212", "Calculator Taxe PFA 2026"]
+    },
+    {
+      "id": "pachet-asociat-micro-srl",
+      "nume": "Pachet Asociat Micro SRL",
+      "tip": "pachet",
+      "pret": 179,
+      "pagina": "pachet-asociat-micro-srl.html",
+      "componente": ["produs-ghid-micro", "produs-d212"],
+      "include": ["Ghid Micro", "Calendar Fiscal Micro 2026", "Ghid D212", "Foaia de pregătire D212"]
+    },
+    {
+      "id": "pachet-pfa-sau-srl",
+      "nume": "Pachet PFA sau SRL?",
+      "tip": "pachet",
+      "pret": 209,
+      "pagina": "pachet-pfa-sau-srl.html",
+      "componente": ["produs-ghid-pfa", "produs-ghid-micro", "produs-calculator"],
+      "include": ["Ghid PFA", "Checklist Înființare PFA", "Ghid Micro", "Calendar Fiscal Micro", "Calculator Taxe PFA 2026 (include comparația PFA vs SRL)"]
+    }
+  ]
+}

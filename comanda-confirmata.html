@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Confirmare comandă · Claritate Fiscală</title>
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="stylesheet" href="fonts/fonts.css" />
+  <link rel="stylesheet" href="cos.css" />
+  <script src="cookie-consent.js"></script>
+  <script src="https://js.stripe.com/endive/stripe.js"></script>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-logo">Claritate <span>Fiscală</span></a>
+  <div class="nav-links">
+    <a href="ghiduri.html" class="nav-extra">Ghiduri</a>
+    <a href="cos.html" class="nav-cos" aria-label="Coșul tău">Coș <span class="badge" data-cos-count style="display:none">0</span></a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="hero-inner">
+    <h1>Confirmare comandă</h1>
+    <div class="steps" aria-label="Pașii comenzii">
+      <span class="step"><b>1</b> Coș</span><span class="step-sep"></span>
+      <span class="step"><b>2</b> Date și plată</span><span class="step-sep"></span>
+      <span class="step activ"><b>3</b> Confirmare</span>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="wrap una">
+    <div class="card confirmare" id="confirmare" aria-live="polite">
+      <p>Se verifică plata…</p>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <span>© 2026 Alina Savu · Claritate Fiscală</span> ·
+  <a href="politica-de-confidentialitate.html">Politică de confidențialitate</a> ·
+  <a href="termeni-si-conditii.html">Termeni și Condiții</a> ·
+  <a href="faq.html">Întrebări frecvente</a>
+</footer>
+
+<script src="cos-config.js"></script>
+<script src="cos.js"></script>
+<script src="confirmare.js"></script>
+</body>
+</html>

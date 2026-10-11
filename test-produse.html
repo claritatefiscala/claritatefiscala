@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pagină de test coș (nu se publică în meniu) · Claritate Fiscală</title>
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="stylesheet" href="fonts/fonts.css" />
+  <link rel="stylesheet" href="cos.css" />
+</head>
+<body>
+<nav>
+  <a href="/" class="nav-logo">Claritate <span>Fiscală</span></a>
+  <div class="nav-links"><a href="cos.html" class="nav-cos">Coș <span class="badge" data-cos-count style="display:none">0</span></a></div>
+</nav>
+<header class="hero"><div class="hero-inner"><h1>Pagină de test</h1><p>Doar pentru verificarea coșului. Nu este legată de nicăieri în site.</p></div></header>
+<main><div class="wrap una"><div class="card" id="lista"><h2>Produse</h2></div></div></main>
+<script src="cos-config.js"></script>
+<script src="cos.js"></script>
+<script>
+  CF.produse().then(function (p) {
+    var z = document.getElementById('lista');
+    p.lista.forEach(function (x) {
+      var a1 = CF.el('a', { class: 'btn btn-contur', href: '#', 'data-adauga-cos': x.id, style: 'width:auto;display:inline-block;margin:0 .5rem 0 0;padding:.4rem .9rem;font-size:.85rem', text: 'Adaugă în coș' });
+      var a2 = CF.el('a', { class: 'btn btn-aur', href: '#', 'data-cumpara-acum': x.id, style: 'width:auto;display:inline-block;margin:0;padding:.4rem .9rem;font-size:.85rem', text: 'Cumpără acum' });
+      z.appendChild(CF.el('div', { class: 'linie' }, [
+        CF.el('div', null, [CF.el('div', { class: 'linie-nume', text: x.nume }), CF.el('div', { style: 'margin-top:.4rem' }, [a1, a2])]),
+        CF.el('div', { class: 'linie-pret', text: CF.lei(x.pret) })
+      ]));
+    });
+  });
+</script>
+</body>
+</html>
