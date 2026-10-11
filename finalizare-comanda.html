@@ -68,7 +68,7 @@
           </div>
         </div>
 
-        <p class="nota" id="nota-adresa">Pentru persoane fizice, adresa este opțională. O completezi doar dacă vrei să apară pe factură.</p>
+        <p class="nota" id="nota-adresa">Adresa completă este necesară pentru emiterea facturii.</p>
         <div class="camp"><label for="strada" id="l-strada">Stradă, număr</label><input type="text" id="strada" name="strada" maxlength="150" autocomplete="address-line1" /><div class="eroare-camp" id="e-strada"></div></div>
         <div class="camp"><label for="strada2">Apartament, bloc, scară (opțional)</label><input type="text" id="strada2" name="strada2" maxlength="100" autocomplete="address-line2" /></div>
         <div class="rand-camp trei">
@@ -93,9 +93,14 @@
 
       <div class="bifa" style="margin-top:1rem">
         <input type="checkbox" id="acord_termeni" form="comanda-form" />
-        <label for="acord_termeni" style="text-transform:none;letter-spacing:0;font-weight:400;color:var(--text);font-size:.88rem;margin:0">Am citit și accept <a href="termeni-si-conditii.html" target="_blank" rel="noopener">Termenii și condițiile</a> și <a href="politica-de-confidentialitate.html" target="_blank" rel="noopener">Politica de prelucrare a datelor</a>, inclusiv condițiile privind livrarea conținutului digital și dreptul de retragere.</label>
+        <label for="acord_termeni" style="text-transform:none;letter-spacing:0;font-weight:400;color:var(--text);font-size:.88rem;margin:0">Am citit și accept <a href="termeni-si-conditii.html" target="_blank" rel="noopener">Termenii și condițiile</a> și <a href="politica-de-confidentialitate.html" target="_blank" rel="noopener">Politica de confidențialitate</a>.</label>
       </div>
       <div class="eroare-camp" id="e-acord_termeni" style="color:var(--err);font-size:.8rem"></div>
+      <div class="bifa">
+        <input type="checkbox" id="acord_digital" form="comanda-form" />
+        <label for="acord_digital" style="text-transform:none;letter-spacing:0;font-weight:400;color:var(--text);font-size:.88rem;margin:0">Sunt de acord ca furnizarea conținutului digital să înceapă imediat după confirmarea plății și am luat cunoștință de faptul că, după începerea furnizării, îmi pierd dreptul de retragere.</label>
+      </div>
+      <div class="eroare-camp" id="e-acord_digital" style="color:var(--err);font-size:.8rem"></div>
       <div class="bifa">
         <input type="checkbox" id="acord_marketing" form="comanda-form" />
         <label for="acord_marketing" style="text-transform:none;letter-spacing:0;font-weight:400;color:var(--text);font-size:.88rem;margin:0">Vreau să primesc pe e-mail materiale informative și oferte de la Claritate Fiscală. (opțional)</label>

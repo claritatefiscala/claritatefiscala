@@ -7,6 +7,9 @@
     'Hunedoara','Ialomița','Iași','Ilfov','Maramureș','Mehedinți','Mureș','Neamț','Olt','Prahova','Satu Mare','Sălaj',
     'Sibiu','Suceava','Teleorman','Timiș','Tulcea','Vaslui','Vâlcea','Vrancea'];
 
+  // Eticheta butonului de plată: formularea cerută de OUG 34/2014, art. 8 alin. (2).
+  var ETICHETA_BUTON = 'Comandă ce implică o obligație de plată';
+
   var $ = function (id) { return document.getElementById(id); };
   var form = $('comanda-form'), btn = $('btn-plata'), blocEroare = $('mesaj-eroare');
   var stripe = null, elements = null, linii = [], total = 0, ocupat = false;
@@ -21,10 +24,9 @@
   function actualizeazaTip() {
     var pj = tip() === 'pj';
     $('bloc-pj').classList.toggle('ascuns', !pj);
-    $('nota-adresa').classList.toggle('ascuns', pj);
     ['l-strada', 'l-judet', 'l-localitate', 'l-cp'].forEach(function (id) {
       var l = $(id), t = l.textContent.replace(/ \*$/, '');
-      l.textContent = pj ? t + ' *' : t;
+      l.textContent = t + ' *';   // adresa e obligatorie pentru toți
     });
   }
   Array.prototype.forEach.call(form.elements.tip, function (r) { r.addEventListener('change', actualizeazaTip); });
@@ -52,17 +54,20 @@
     if (pj) {
       ceVa('cif', /^(RO)?\s?\d{2,10}$/i.test(v('cif')) ? '' : 'Introdu un CIF valid (ex: RO12345678).');
       ceVa('denumire', v('denumire') ? '' : 'Completează denumirea companiei.');
-      ceVa('strada', v('strada') ? '' : 'Completează adresa.');
-      ceVa('judet', v('judet') ? '' : 'Alege județul.');
-      ceVa('localitate', v('localitate') ? '' : 'Completează localitatea.');
-      ceVa('cod_postal', /^\d{6}$/.test(v('cod_postal')) ? '' : 'Codul poștal are 6 cifre.');
     } else {
-      ['cif', 'denumire', 'strada', 'judet', 'localitate'].forEach(function (id) { eroareCamp(id, ''); });
-      ceVa('cod_postal', (!v('cod_postal') || /^\d{6}$/.test(v('cod_postal'))) ? '' : 'Codul poștal are 6 cifre.');
+      ['cif', 'denumire'].forEach(function (id) { eroareCamp(id, ''); });
     }
+    // Adresa completă este obligatorie pentru toți clienții (necesară pentru factură).
+    ceVa('strada', v('strada') ? '' : 'Completează adresa.');
+    ceVa('judet', v('judet') ? '' : 'Alege județul.');
+    ceVa('localitate', v('localitate') ? '' : 'Completează localitatea.');
+    ceVa('cod_postal', /^\d{6}$/.test(v('cod_postal')) ? '' : 'Codul poștal are 6 cifre.');
     var acord = $('acord_termeni').checked;
     $('e-acord_termeni').textContent = acord ? '' : 'Bifează acceptarea termenilor pentru a continua.';
     if (!acord && !primul) primul = 'acord_termeni';
+    var acordDig = $('acord_digital').checked;
+    $('e-acord_digital').textContent = acordDig ? '' : 'Bifează această confirmare pentru a continua.';
+    if (!acordDig && !primul) primul = 'acord_digital';
 
     if (primul) { var f = $(primul); if (f && f.focus) f.focus(); }
     return !primul;
@@ -70,7 +75,7 @@
 
   function arataEroare(msg) {
     blocEroare.textContent = msg; blocEroare.classList.remove('ascuns');
-    btn.disabled = false; btn.textContent = 'Plătește ' + CF.lei(total); ocupat = false;
+    btn.disabled = false; btn.textContent = ETICHETA_BUTON; ocupat = false;
   }
   function indisponibil(msg) {
     arataEroare(msg); btn.textContent = 'Plată indisponibilă'; btn.disabled = true;
@@ -103,6 +108,7 @@
         facturare: { tip: tip(), cif: v('cif'), denumire: v('denumire'), strada: v('strada'), strada2: v('strada2'),
                      judet: v('judet'), localitate: v('localitate'), cod_postal: v('cod_postal') },
         acord_termeni: $('acord_termeni').checked,
+        acord_digital: $('acord_digital').checked,
         acord_marketing: $('acord_marketing').checked
       };
       payload.cheie_unica = cheieSesiune + '-' + hash(JSON.stringify(payload));
@@ -148,7 +154,7 @@
       zona.appendChild(CF.el('div', { class: 'rand' }, [CF.el('span', { text: l.nume }), CF.el('span', { text: CF.lei(l.pret) })]));
     });
     $('sumar-total').textContent = CF.lei(total);
-    $('nota-livrare').textContent = 'După confirmarea plății, primești produsele pe email în maximum ' + (cfg.TERMEN_LIVRARE || '24 de ore lucrătoare') + '.';
+    $('nota-livrare').textContent = 'După confirmarea plății, primești produsele pe email în maximum ' + (cfg.TERMEN_LIVRARE || '24 de ore') + '.';
   }
 
   function gol() {
@@ -187,7 +193,7 @@
       appearance: { theme: 'stripe', variables: { colorPrimary: '#1a2744', fontFamily: 'Inter, sans-serif', borderRadius: '9px' } }
     });
     elements.create('payment', { layout: 'tabs' }).mount('#payment-element');
-    btn.disabled = false; btn.textContent = 'Plătește ' + CF.lei(total);
+    btn.disabled = false; btn.textContent = ETICHETA_BUTON;
   }
 
   porneste();
