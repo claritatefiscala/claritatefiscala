@@ -497,6 +497,9 @@
       footer { flex-direction: column; text-align: center; }
       .footer-links { flex-wrap: wrap; justify-content: center; gap: 0.7rem 1.1rem; }
     }
+  
+    .nav-cos { display:inline-flex; align-items:center; gap:.4rem; font-weight:600; }
+    .nav-cos .badge { background:var(--gold); color:var(--navy); border-radius:999px; font-size:.72rem; font-weight:700; min-width:1.35rem; height:1.35rem; display:inline-flex; align-items:center; justify-content:center; padding:0 .35rem; }
   </style>
 </head>
 <body>
@@ -508,6 +511,7 @@
     <li><a href="ghiduri.html">Ghiduri</a></li>
     <li><a href="noutati.html">Noutăți</a></li>
     <li><a href="contact.html">Contact</a></li>
+    <li><a href="cos.html" class="nav-cos">Coș <span class="badge" data-cos-count style="display:none">0</span></a></li>
     <li><a href="/#social" class="nav-cta">Urmărește-mă</a></li>
   </ul>
 </nav>
@@ -568,7 +572,7 @@
 <section class="ghiduri" id="ghiduri">
   <div class="section-label">Produse digitale</div>
   <h2 class="section-title">Ghiduri practice de fiscalitate</h2>
-  <p class="section-sub">Resurse pe care le descarci imediat și le folosești de azi. Actualizate cu legislația 2026 în vigoare.</p>
+  <p class="section-sub">Resurse pe care le primești pe email după plată și le folosești de azi. Actualizate cu legislația 2026 în vigoare.</p>
 
   <div class="ghiduri-grid">
 
@@ -586,7 +590,7 @@
           <div class="ghid-price">
             119 lei
           </div>
-          <a href="https://payhip.com/b/eGjgL" class="btn-buy">Cumpără</a>
+          <a href="#" data-cumpara-acum="produs-ghid-pfa" class="btn-buy">Cumpără</a>
         </div>
       </div>
     </div>
@@ -607,7 +611,7 @@
             <span class="ghid-price-old">416 lei</span>
             249 lei
           </div>
-          <a href="https://payhip.com/b/HhBgT" class="btn-buy">Cumpără</a>
+          <a href="#" data-cumpara-acum="pachet-pfa-complet-plus" class="btn-buy">Cumpără</a>
         </div>
       </div>
     </div>
@@ -628,7 +632,7 @@
             <span class="ghid-price-old">416 lei</span>
             249 lei
           </div>
-          <a href="https://payhip.com/b/i9QPD" class="btn-buy">Cumpără</a>
+          <a href="#" data-cumpara-acum="pachet-micro-complet-plus" class="btn-buy">Cumpără</a>
         </div>
       </div>
     </div>
@@ -792,5 +796,7 @@
 <script defer src="https://sibforms.com/forms/end-form/build/main.js"></script>
 <script src="https://www.google.com/recaptcha/api.js?hl=ro"></script>
 
+<script src="cos-config.js"></script>
+<script src="cos.js"></script>
 </body>
 </html>

@@ -131,13 +131,21 @@
       .page-body { padding: 2rem 5% 3rem; }
     }
 
+  
+    .prod-cta-sec { display:inline-block; margin-left:.6rem; padding:.78rem 1.3rem; border:2px solid var(--gold); color:var(--gold-lt); background:transparent; border-radius:8px; font-weight:600; font-size:.95rem; text-decoration:none; }
+    .prod-cta-sec:hover { background:rgba(232,213,163,.15); }
+    .btn-sec-lg { display:inline-block; margin-left:.6rem; padding:.9rem 1.5rem; border:2px solid var(--navy); color:var(--navy); border-radius:8px; font-weight:600; text-decoration:none; }
+    .btn-sec-lg:hover { background:var(--cream); }
+    .nav-right { display:flex; align-items:center; gap:1.2rem; }
+    .nav-cos { display:inline-flex; align-items:center; gap:.4rem; font-weight:600; color:var(--navy); text-decoration:none; font-size:.85rem; }
+    .nav-cos .badge { background:var(--gold); color:var(--navy); border-radius:999px; font-size:.72rem; font-weight:700; min-width:1.35rem; height:1.35rem; display:inline-flex; align-items:center; justify-content:center; padding:0 .35rem; }
   </style>
 </head>
 <body>
 
 <nav>
   <a href="/" class="nav-logo">Claritate <span>Fiscală</span></a>
-  <a href="ghiduri.html" class="nav-back">← Înapoi la ghiduri</a>
+  <div class="nav-right"><a href="ghiduri.html" class="nav-back">← Înapoi la ghiduri</a><a href="cos.html" class="nav-cos">Coș <span class="badge" data-cos-count style="display:none">0</span></a></div>
 </nav>
 
 <header class="prod-hero">
@@ -147,7 +155,7 @@
       <h1>Calculator Taxe PFA 2026</h1>
       <p class="lead">Calculator Excel cu 3 file: Normă de venit, Sistem real și comparativ PFA vs SRL. Introduci veniturile și obții instant impozitul, CAS și CASS datorate, conform plafoanelor din 2026.</p>
       <div class="prod-price-row"><span class="prod-price">79 lei</span></div>
-      <a href="https://payhip.com/b/x6aTB" class="prod-cta">Cumpără acum →</a>
+      <a href="#" data-cumpara-acum="produs-calculator" class="prod-cta">Cumpără acum →</a><a href="#" data-adauga-cos="produs-calculator" class="prod-cta-sec">Adaugă în coș</a>
       <div class="prod-meta">Format: Excel (.xlsx) · 3 file de calcul · compatibil Microsoft Excel și Google Sheets</div>
       <div class="prod-update-badge">✔ Ediția 2026 · Include actualizări gratuite pentru această ediție</div>
     </div>
@@ -173,8 +181,8 @@
   <p>Compatibil cu Microsoft Excel și Google Sheets.</p>
 
   <h2>Cum primești produsul</h2>
-  <p>Plata se procesează prin <strong>Payhip</strong> (card bancar, prin Stripe). Imediat după confirmarea plății, primești automat pe email un link de descărcare pentru fișierele achiziționate, plus un bon/chitanță de plată emis de Payhip/Stripe, ca dovadă a tranzacției.</p>
-  <div class="info-box"><strong>De reținut:</strong> bonul primit de la Payhip/Stripe confirmă plata, dar nu este o factură fiscală. Dacă ai nevoie de factură (de exemplu pentru decontare la firmă), scrie la <a href="mailto:claritate.fiscala@gmail.com">claritate.fiscala@gmail.com</a> cu datele de facturare și îți trimit factura separat.</div>
+  <p>Plătești online, direct pe acest site, cu cardul (plata este procesată securizat de Stripe). După confirmarea plății, îți trimit manual fișierele achiziționate pe adresa de email din comandă, în cel mult <strong>24 de ore</strong>.</p>
+  <div class="info-box"><strong>De reținut:</strong> confirmarea de plată nu este o factură fiscală. Factura se emite pe baza datelor de facturare completate la comandă (persoană fizică sau firmă) și o primești pe email. Dacă ai întrebări, scrie la <a href="mailto:claritate.fiscala@gmail.com">claritate.fiscala@gmail.com</a>.</div>
   <p>Detalii complete despre livrare, plată și dreptul de retragere: <a href="termeni-si-conditii.html">Termeni și Condiții</a>.</p>
   <div class="info-box"><strong>🔄 Actualizări gratuite</strong> Acest produs face parte din ediția 2026. Dacă în cursul anului apar modificări legislative care afectează conținutul ghidului, primești gratuit versiunea actualizată la adresa de e-mail folosită la achiziție. Detalii: <a href="politica-actualizare.html">Politica de actualizare a produselor</a>.</div>
 
@@ -187,7 +195,7 @@
 
   <div class="cta-bottom-wrap">
     <div class="cta-bottom-price">79 lei</div>
-    <a href="https://payhip.com/b/x6aTB" class="btn-buy-lg">Cumpără acum →</a>
+    <a href="#" data-cumpara-acum="produs-calculator" class="btn-buy-lg">Cumpără acum →</a><a href="#" data-adauga-cos="produs-calculator" class="btn-sec-lg">Adaugă în coș</a>
   </div>
 
 <div class="info-box"><strong>Notă:</strong> Materialele Claritate Fiscală au caracter educativ general și nu constituie consultanță fiscală personalizată în sensul OG nr. 71/2001. Pentru situația ta specifică, apelează la un expert contabil sau consultant fiscal autorizat.</div>
@@ -210,5 +218,7 @@
   <div style="margin-top:0.6rem; font-size:0.75rem;">Conținut documentat de Alina Savu din sursele oficiale (ANAF, Codul fiscal, Monitorul Oficial), redactat cu asistență AI și verificat editorial înainte de publicare.</div>
 </footer>
 
+<script src="cos-config.js"></script>
+<script src="cos.js"></script>
 </body>
 </html>

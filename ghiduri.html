@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ghiduri și pachete PFA/SRL 2026 · Claritate Fiscală</title>
-  <meta name="description" content="Toate ghidurile și pachetele Claritate Fiscală: PFA, microîntreprindere, Declarația Unică D212, RO e-Factura și calculator de taxe. Descărcare imediată." />
+  <meta name="description" content="Toate ghidurile și pachetele Claritate Fiscală: PFA, microîntreprindere, Declarația Unică D212, RO e-Factura și calculator de taxe. Livrare pe email în 24 de ore." />
   <link rel="icon" type="image/svg+xml" href="icon_brand.svg" />
   <!-- Open Graph -->
   <meta property="og:type"        content="website" />
@@ -12,14 +12,14 @@
   <meta property="og:site_name"   content="Claritate Fiscală" />
   <meta property="og:url"         content="https://claritatefiscala.ro/ghiduri.html" />
   <meta property="og:title"       content="Ghiduri și pachete PFA/SRL 2026 · Claritate Fiscală" />
-  <meta property="og:description" content="Toate ghidurile și pachetele Claritate Fiscală: PFA, microîntreprindere, Declarația Unică D212, RO e-Factura și calculator de taxe. Descărcare imediată." />
+  <meta property="og:description" content="Toate ghidurile și pachetele Claritate Fiscală: PFA, microîntreprindere, Declarația Unică D212, RO e-Factura și calculator de taxe. Livrare pe email în 24 de ore." />
   <meta property="og:image"       content="https://claritatefiscala.ro/og-image.jpg" />
   <meta property="og:image:width"  content="1200" />
   <meta property="og:image:height" content="630" />
   <!-- Twitter Card -->
   <meta name="twitter:card"        content="summary_large_image" />
   <meta name="twitter:title"       content="Ghiduri și pachete PFA/SRL 2026 · Claritate Fiscală" />
-  <meta name="twitter:description" content="Toate ghidurile și pachetele Claritate Fiscală: PFA, microîntreprindere, Declarația Unică D212, RO e-Factura și calculator de taxe. Descărcare imediată." />
+  <meta name="twitter:description" content="Toate ghidurile și pachetele Claritate Fiscală: PFA, microîntreprindere, Declarația Unică D212, RO e-Factura și calculator de taxe. Livrare pe email în 24 de ore." />
   <meta name="twitter:image"       content="https://claritatefiscala.ro/og-image.jpg" />
   <link rel="stylesheet" href="fonts/fonts.css" />
   <script src="cookie-consent.js"></script>
@@ -483,6 +483,9 @@
       footer { flex-direction: column; text-align: center; }
       .footer-links { flex-wrap: wrap; justify-content: center; gap: 0.7rem 1.1rem; }
     }
+  
+    .nav-cos { display:inline-flex; align-items:center; gap:.4rem; font-weight:600; }
+    .nav-cos .badge { background:var(--gold); color:var(--navy); border-radius:999px; font-size:.72rem; font-weight:700; min-width:1.35rem; height:1.35rem; display:inline-flex; align-items:center; justify-content:center; padding:0 .35rem; }
   </style>
 </head>
 <body>
@@ -494,6 +497,7 @@
     <li><a href="ghiduri.html">Ghiduri</a></li>
     <li><a href="noutati.html">Noutăți</a></li>
     <li><a href="contact.html">Contact</a></li>
+    <li><a href="cos.html" class="nav-cos">Coș <span class="badge" data-cos-count style="display:none">0</span></a></li>
     <li><a href="/#social" class="nav-cta">Urmărește-mă</a></li>
   </ul>
 </nav>
@@ -502,7 +506,7 @@
 <section class="ghiduri" id="ghiduri">
   <div class="section-label">Produse digitale</div>
   <h2 class="section-title">Ghiduri practice de fiscalitate</h2>
-  <p class="section-sub">Resurse pe care le descarci imediat și le folosești de azi. Actualizate cu legislația 2026 în vigoare.</p>
+  <p class="section-sub">Resurse pe care le primești pe email după plată și le folosești de azi. Actualizate cu legislația 2026 în vigoare.</p>
 
   <!-- Ghiduri & Instrumente -->
   <div class="subsection-label">Ghiduri &amp; Instrumente</div>
@@ -520,7 +524,7 @@
         <p>Înființare, forme juridice, impozit, CAS, CASS, cheltuieli deductibile, declarații obligatorii și comparația PFA vs SRL. Bonus: checklist imprimabil „Înființarea PFA, pas cu pas”.</p>
         <div class="ghid-footer">
           <div class="ghid-price">119 lei</div>
-          <a href="https://payhip.com/b/eGjgL" class="btn-buy">Cumpără</a>
+          <a href="#" data-cumpara-acum="produs-ghid-pfa" class="btn-buy">Cumpără</a>
         </div>
       </div>
     </div>
@@ -537,7 +541,7 @@
         <p>Plafonul de 100.000 €, cota de 1%, condiția salariatului, dividende și CASS, TVA și comparația cu PFA. Bonus: Calendar Fiscal Micro 2026 imprimabil.</p>
         <div class="ghid-footer">
           <div class="ghid-price">119 lei</div>
-          <a href="https://payhip.com/b/bJCeQ" class="btn-buy">Cumpără</a>
+          <a href="#" data-cumpara-acum="produs-ghid-micro" class="btn-buy">Cumpără</a>
         </div>
       </div>
     </div>
@@ -554,7 +558,7 @@
         <p>Capitolul I și Capitolul II explicate pas cu pas, cu exemple calculate, capturi de ecran și depunere prin SPV. Bonus: Foaia de pregătire D212.</p>
         <div class="ghid-footer">
           <div class="ghid-price">99 lei</div>
-          <a href="https://payhip.com/b/pAzXw" class="btn-buy">Cumpără</a>
+          <a href="#" data-cumpara-acum="produs-d212" class="btn-buy">Cumpără</a>
         </div>
       </div>
     </div>
@@ -571,7 +575,7 @@
         <p>Cine are obligația, termenele legale, emiterea și transmiterea facturilor, facturi corective și erori frecvente. Bonus: checklist săptămânal e-Factura.</p>
         <div class="ghid-footer">
           <div class="ghid-price">119 lei</div>
-          <a href="https://payhip.com/b/WvAGL" class="btn-buy">Cumpără</a>
+          <a href="#" data-cumpara-acum="produs-efactura" class="btn-buy">Cumpără</a>
         </div>
       </div>
     </div>
@@ -588,7 +592,7 @@
         <p>Introduci veniturile și obții instant impozitul, CAS și CASS. Normă de venit, sistem real și comparativ PFA vs SRL. Compatibil Excel și Google Sheets.</p>
         <div class="ghid-footer">
           <div class="ghid-price">79 lei</div>
-          <a href="https://payhip.com/b/x6aTB" class="btn-buy">Cumpără</a>
+          <a href="#" data-cumpara-acum="produs-calculator" class="btn-buy">Cumpără</a>
         </div>
       </div>
     </div>
@@ -615,7 +619,7 @@
             <span class="ghid-price-old">198 lei</span>
             159 lei
           </div>
-          <a href="https://payhip.com/b/6luMS" class="btn-buy">Cumpără</a>
+          <a href="#" data-cumpara-acum="pachet-pfa-esential" class="btn-buy">Cumpără</a>
         </div>
       </div>
     </div>
@@ -636,7 +640,7 @@
             <span class="ghid-price-old">178 lei</span>
             149 lei
           </div>
-          <a href="https://payhip.com/b/2gHyG" class="btn-buy">Cumpără</a>
+          <a href="#" data-cumpara-acum="pachet-d212-esential" class="btn-buy">Cumpără</a>
         </div>
       </div>
     </div>
@@ -657,7 +661,7 @@
             <span class="ghid-price-old">198 lei</span>
             159 lei
           </div>
-          <a href="https://payhip.com/b/lf4Rj" class="btn-buy">Cumpără</a>
+          <a href="#" data-cumpara-acum="pachet-micro-esential" class="btn-buy">Cumpără</a>
         </div>
       </div>
     </div>
@@ -684,7 +688,7 @@
             <span class="ghid-price-old">416 lei</span>
             249 lei
           </div>
-          <a href="https://payhip.com/b/HhBgT" class="btn-buy">Cumpără</a>
+          <a href="#" data-cumpara-acum="pachet-pfa-complet-plus" class="btn-buy">Cumpără</a>
         </div>
       </div>
     </div>
@@ -705,7 +709,7 @@
             <span class="ghid-price-old">416 lei</span>
             249 lei
           </div>
-          <a href="https://payhip.com/b/i9QPD" class="btn-buy">Cumpără</a>
+          <a href="#" data-cumpara-acum="pachet-micro-complet-plus" class="btn-buy">Cumpără</a>
         </div>
       </div>
     </div>
@@ -726,7 +730,7 @@
             <span class="ghid-price-old">297 lei</span>
             219 lei
           </div>
-          <a href="https://payhip.com/b/iJHx2" class="btn-buy">Cumpără</a>
+          <a href="#" data-cumpara-acum="pachet-pfa-complet" class="btn-buy">Cumpără</a>
         </div>
       </div>
     </div>
@@ -747,7 +751,7 @@
             <span class="ghid-price-old">297 lei</span>
             219 lei
           </div>
-          <a href="https://payhip.com/b/fIzNt" class="btn-buy">Cumpără</a>
+          <a href="#" data-cumpara-acum="pachet-micro-complet" class="btn-buy">Cumpără</a>
         </div>
       </div>
     </div>
@@ -768,7 +772,7 @@
             <span class="ghid-price-old">218 lei</span>
             179 lei
           </div>
-          <a href="https://payhip.com/b/2VrfD" class="btn-buy">Cumpără</a>
+          <a href="#" data-cumpara-acum="pachet-asociat-micro-srl" class="btn-buy">Cumpără</a>
         </div>
       </div>
     </div>
@@ -789,7 +793,7 @@
             <span class="ghid-price-old">317 lei</span>
             209 lei
           </div>
-          <a href="https://payhip.com/b/fckem" class="btn-buy">Cumpără</a>
+          <a href="#" data-cumpara-acum="pachet-pfa-sau-srl" class="btn-buy">Cumpără</a>
         </div>
       </div>
     </div>
@@ -898,5 +902,7 @@
 <script defer src="https://sibforms.com/forms/end-form/build/main.js"></script>
 <script src="https://www.google.com/recaptcha/api.js?hl=ro"></script>
 
+<script src="cos-config.js"></script>
+<script src="cos.js"></script>
 </body>
 </html>
