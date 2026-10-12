@@ -115,3 +115,19 @@
   if (document.readyState === 'complete' || document.readyState === 'interactive') init();
   else document.addEventListener('DOMContentLoaded', init);
 })();
+
+// Acces permanent la retragerea online; independent de alegerea pentru Analytics.
+(function () {
+  function addWithdrawalLink() {
+    var footer = document.querySelector('footer');
+    if (!footer || document.getElementById('cf-withdrawal-link')) return;
+    var link = document.createElement('a');
+    link.id = 'cf-withdrawal-link';
+    link.href = 'retragere.html';
+    link.textContent = 'Retrage-te din contract aici';
+    link.style.cssText = 'display:block;flex-basis:100%;margin-top:.75rem;font-size:.9rem;text-decoration:underline;';
+    footer.appendChild(link);
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', addWithdrawalLink);
+  else addWithdrawalLink();
+})();

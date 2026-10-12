@@ -29,6 +29,10 @@
       ' de la confirmarea plății. Verifică și dosarul Spam/Promoții.' }));
     zona.appendChild(CF.el('p', { style: 'margin-top:1rem;font-size:.9rem', text:
       'Ai întrebări sau nu ai primit produsele în termen? Scrie-ne la ' + (cfg.EMAIL_CONTACT || '') + ' și menționează numărul comenzii.' }));
+    zona.appendChild(CF.el('p', { style: 'margin-top:1rem;font-size:.9rem' }, [
+      CF.el('a', { href: 'retragere.html' + (info && info.comanda ? '?comanda=' + encodeURIComponent(info.comanda) : ''), text: 'Retrage-te din contract aici' }),
+      '. Condițiile sunt explicate în formular și în Termenii și condițiile site-ului.'
+    ]));
     zona.appendChild(CF.el('a', { class: 'btn btn-aur', href: '/', style: 'display:inline-block;width:auto;margin-top:1.2rem', text: 'Înapoi la site' }));
   }
 

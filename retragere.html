@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Retragere din contract · Claritate Fiscală</title>
+  <meta name="description" content="Transmite online declarația de retragere din contractul încheiat cu Claritate Fiscală și primește confirmarea de primire pe email." />
+  <link rel="canonical" href="https://claritatefiscala.ro/retragere.html" />
+  <link rel="stylesheet" href="fonts/fonts.css" />
+  <link rel="stylesheet" href="cos.css" />
+  <script src="cookie-consent.js"></script>
+  <style>
+    .camp textarea { width:100%;font:inherit;padding:.7rem .85rem;border:1px solid var(--border);border-radius:9px;background:var(--cream);resize:vertical; }
+    .camp textarea:focus { outline:2px solid var(--navy);outline-offset:1px; }
+    .review { white-space:pre-wrap;overflow-wrap:anywhere;line-height:1.75; }
+    .camp-hidden { position:absolute;left:-10000px;width:1px;height:1px;overflow:hidden; }
+    [hidden] { display:none !important; }
+    button:focus-visible,a:focus-visible { outline:3px solid var(--navy);outline-offset:3px; }
+  </style>
+</head>
+<body>
+<nav>
+  <a class="nav-logo" href="/">Claritate <span>Fiscală</span></a>
+  <div class="nav-links"><a href="contact.html">Contact</a><a href="termeni-si-conditii.html">Termeni și condiții</a></div>
+</nav>
+<header class="hero"><div class="hero-inner">
+  <h1>Retragere din contract</h1>
+  <p>Completează datele, verifică declarația și confirmă retragerea.</p>
+</div></header>
+<main class="wrap una">
+  <div>
+    <section class="card" aria-labelledby="dreptul">
+      <h2 id="dreptul">Când se aplică</h2>
+      <p>Consumatorii au, în general, 14 zile de la încheierea contractului pentru a se retrage. Pentru fișierele PDF și Excel, acest drept se pierde după începerea furnizării, dacă sunt îndeplinite condițiile legale privind acordul expres, luarea la cunoștință și confirmarea contractului.</p>
+      <p style="margin-top:.7rem">La Claritate Fiscală, furnizarea începe la trimiterea fișierelor pe email. Detalii în <a href="termeni-si-conditii.html">Termeni și condiții</a>. Drepturile privind un produs defect sau neconform rămân distincte: pentru acestea, <a href="contact.html">contactează-ne</a>.</p>
+    </section>
+    <section class="card" id="date" aria-labelledby="date-titlu">
+      <h2 id="date-titlu">1. Datele declarației</h2>
+      <form id="retragere-form">
+        <div class="camp"><label for="nume">Nume și prenume *</label><input id="nume" name="nume" type="text" autocomplete="name" maxlength="120" required /></div>
+        <div class="camp"><label for="email">Email pentru confirmarea de primire *</label><input id="email" name="email" type="email" autocomplete="email" maxlength="254" required /><p class="nota">Confirmarea va fi trimisă la această adresă.</p></div>
+        <div class="camp"><label for="comanda">Numărul comenzii</label><input id="comanda" name="comanda" type="text" maxlength="100" placeholder="CF-…" /><p class="nota">Îl găsești în emailul comenzii. Dacă nu îl ai, descrie achiziția mai jos.</p></div>
+        <div class="camp"><label for="detalii">Detalii pentru identificarea contractului</label><textarea id="detalii" name="detalii" rows="3" maxlength="1500" placeholder="De exemplu: produsul cumpărat și data comenzii"></textarea></div>
+        <div class="camp-hidden" aria-hidden="true"><label for="website">Lasă gol</label><input id="website" name="website" type="text" tabindex="-1" autocomplete="off" /></div>
+        <p class="nota">Datele sunt folosite pentru înregistrarea și gestionarea retragerii, conform <a href="politica-de-confidentialitate.html">Politicii de confidențialitate</a>. Nu este necesar să motivezi retragerea.</p>
+        <button class="btn btn-aur" type="submit">Verifică declarația</button>
+      </form>
+      <noscript><p class="mesaj eroare">Pentru formularul online este necesar JavaScript. Poți transmite declarația și prin email la <a href="mailto:claritate.fiscala@gmail.com">claritate.fiscala@gmail.com</a>.</p></noscript>
+    </section>
+    <section class="card" id="verificare" aria-labelledby="verificare-titlu" hidden>
+      <h2 id="verificare-titlu" tabindex="-1">2. Confirmă retragerea</h2>
+      <p class="review" id="declaratie"></p>
+      <p class="nota" style="margin-top:1rem">Apăsând „Confirmă retragerea”, transmiți declarația către Claritate Fiscală. Confirmarea de primire va include declarația, data și ora transmiterii. Primirea declarației și verificarea condițiilor retragerii sunt etape distincte.</p>
+      <button class="btn btn-aur" type="button" id="confirma">Confirmă retragerea</button>
+      <button class="btn btn-contur" type="button" id="modifica">Modifică datele</button>
+    </section>
+    <div id="eroare" class="mesaj eroare" role="alert" hidden></div>
+    <section class="card" id="rezultat" aria-labelledby="rezultat-titlu" hidden>
+      <h2 id="rezultat-titlu" tabindex="-1">Declarația a fost înregistrată</h2>
+      <p id="confirmare-email"></p>
+      <p class="review" id="dovada" style="margin-top:1rem"></p>
+      <button class="btn btn-contur" id="descarca" type="button">Descarcă dovada de primire</button>
+    </section>
+  </div>
+</main>
+<footer>
+  <p>© 2026 Alina Savu · Claritate Fiscală</p>
+  <p><a href="termeni-si-conditii.html">Termeni și condiții</a> · <a href="politica-de-confidentialitate.html">Confidențialitate</a> · <a href="contact.html">Contact</a> · <a href="https://reclamatiisal.anpc.ro" target="_blank" rel="noopener noreferrer">ANPC SAL</a></p>
+</footer>
+<script src="cos-config.js"></script>
+<script src="retragere.js"></script>
+</body>
+</html>
